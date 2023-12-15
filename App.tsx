@@ -1,8 +1,8 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 
 function App(): React.JSX.Element {
-  return <View style={styles.mainDiv}></View>;
+  return <ScrollView style={styles.mainDiv}></ScrollView>;
 }
 
 const styles = StyleSheet.create({

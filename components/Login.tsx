@@ -1,28 +1,31 @@
-import {ImageBackground, StyleSheet, View} from 'react-native';
+import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 export default function Login(): JSX.Element {
+  const image = {uri: 'https://legacy.reactjs.org/logo-og.png'};
   return (
-    <View style={styles.MainCont}>
-      <ImageBackground
-        source={require('../assets/coffeebg.png')}
-        resizeMode="cover" // Try changing this to "contain"
-        style={styles.bgImage}></ImageBackground>
+    <View style={styles.container}>
+      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+        <Text style={styles.text}>Inside</Text>
+      </ImageBackground>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  MainCont: {
-    flex: 2,
-    backgroundColor: 'white',
-    display: 'flex',
-    flexDirection: 'column',
+  container: {
+    flex: 1,
   },
-
-  bgImage: {
-    flex: 3,
-    display: 'flex',
-    flexDirection: 'column',
+  image: {
+    flex: 1,
+    backgroundColor: 'red',
+  },
+  text: {
+    color: 'white',
+    fontSize: 42,
+    lineHeight: 84,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: '#000000c0',
   },
 });

@@ -12,10 +12,10 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   mainDiv: {
-    flex: 1,
+    flex: 1, // Ensure that the ScrollView takes up the entire screen height
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#F9F9F9',
+    backgroundColor: 'red',
   },
 });
 

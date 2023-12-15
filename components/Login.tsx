@@ -6,7 +6,7 @@ export default function Login(): JSX.Element {
     <View style={styles.MainCont}>
       <ImageBackground
         source={require('../assets/coffeebg.png')}
-        resizeMode="cover"
+        resizeMode="cover" // Try changing this to "contain"
         style={styles.bgImage}></ImageBackground>
     </View>
   );
@@ -14,11 +14,15 @@ export default function Login(): JSX.Element {
 
 const styles = StyleSheet.create({
   MainCont: {
-    flex: 1,
-    backgroundColor: 'red',
+    flex: 2,
+    backgroundColor: 'white',
+    display: 'flex',
+    flexDirection: 'column',
   },
 
   bgImage: {
-    flex: 1,
+    flex: 3,
+    display: 'flex',
+    flexDirection: 'column',
   },
 });

@@ -1,4 +1,5 @@
 import {ImageBackground, StyleSheet, View} from 'react-native';
+import React from 'react';
 
 export default function Login(): JSX.Element {
   return (
@@ -14,11 +15,10 @@ export default function Login(): JSX.Element {
 const styles = StyleSheet.create({
   MainCont: {
     flex: 1,
+    backgroundColor: 'red',
   },
 
   bgImage: {
     flex: 1,
-    alignSelf: 'stretch',
-    width: null,
   },
 });

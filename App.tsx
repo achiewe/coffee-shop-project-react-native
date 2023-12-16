@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'red',
+    backgroundColor: '#F9F9F9',
   },
 });
 

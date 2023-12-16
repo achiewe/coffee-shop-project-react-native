@@ -40,5 +40,9 @@ const styles = StyleSheet.create({
   coffeeTitle: {
     color: 'white',
     fontSize: 34,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    textAlign: 'center',
+    width: 280,
   },
 });

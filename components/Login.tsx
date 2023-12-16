@@ -1,4 +1,4 @@
-import {ImageBackground, StyleSheet, Text, View} from 'react-native';
+import {ImageBackground, StyleSheet, View} from 'react-native';
 import React from 'react';
 
 export default function Login(): JSX.Element {
@@ -7,9 +7,7 @@ export default function Login(): JSX.Element {
       <ImageBackground
         source={require('../assets/coffeebg.png')}
         resizeMode="cover"
-        style={styles.image}>
-        <Text style={styles.text}>Inside</Text>
-      </ImageBackground>
+        style={styles.image}></ImageBackground>
     </View>
   );
 }
@@ -20,13 +18,5 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-  },
-  text: {
-    color: 'white',
-    fontSize: 42,
-    lineHeight: 84,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    backgroundColor: '#000000c0',
   },
 });

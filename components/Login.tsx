@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 17,
+    paddingBottom: 15,
   },
 
   coffeeTitle: {
@@ -65,5 +66,9 @@ const styles = StyleSheet.create({
     width: 250,
   },
 
-  button: {},
+  button: {
+    width: 317,
+    height: 54,
+    backgroundColor: '#FFF',
+  },
 });

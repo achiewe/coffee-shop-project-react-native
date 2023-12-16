@@ -6,6 +6,7 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
+import {LinearGradient} from 'react-native-linear-gradient';
 
 export default function Login(): JSX.Element {
   return (
@@ -14,6 +15,10 @@ export default function Login(): JSX.Element {
         source={require('../assets/coffeebg.png')}
         resizeMode="cover"
         style={styles.image}>
+        <LinearGradient
+          colors={['#4c669f', '#3b5998', '#192f6a']}
+          style={styles.linearGradient}
+        />
         <View style={styles.textDiv}>
           <Text style={styles.coffeeTitle}>
             Coffee so good, your taste buds will love it.
@@ -35,6 +40,12 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+
+  linearGradient: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-end',
   },

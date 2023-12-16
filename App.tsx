@@ -4,18 +4,18 @@ import Login from './components/Login';
 
 function App(): React.JSX.Element {
   return (
-    <View style={styles}>
+    <View style={styles.mainDiv}>
       <Login />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  // mainDiv: {
-  //   display: 'flex',
-  //   flexDirection: 'column',
-  //   backgroundColor: 'red',
-  // },
+  mainDiv: {
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: 'red',
+  },
 });
 
 export default App;

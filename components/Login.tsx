@@ -12,6 +12,9 @@ export default function Login(): JSX.Element {
           <Text style={styles.coffeeTitle}>
             Coffee so good, your taste buds will love it.
           </Text>
+          <Text style={styles.paraCoffee}>
+            The best grain, the finest roast, the powerful flavor.
+          </Text>
         </View>
       </ImageBackground>
     </View>
@@ -44,5 +47,14 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
     width: 280,
+  },
+
+  paraCoffee: {
+    color: '#A9A9A9',
+    fontSize: 14,
+    fontStyle: 'normal',
+    fontWeight: '400',
+    textAlign: 'center',
+    width: 250,
   },
 });

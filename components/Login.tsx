@@ -1,4 +1,4 @@
-import {ImageBackground, StyleSheet, View} from 'react-native';
+import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 export default function Login(): JSX.Element {
@@ -7,8 +7,11 @@ export default function Login(): JSX.Element {
       <ImageBackground
         source={require('../assets/coffeebg.png')}
         resizeMode="cover"
-        style={styles.image}></ImageBackground>
-      <View style={styles.textDiv}></View>
+        style={styles.image}>
+        <View style={styles.textDiv}>
+          <Text style={styles.coffeeTitle}> hei</Text>
+        </View>
+      </ImageBackground>
     </View>
   );
 }
@@ -19,11 +22,18 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
   },
   textDiv: {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
     gap: 17,
+  },
+
+  coffeeTitle: {
+    color: 'white',
   },
 });

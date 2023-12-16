@@ -12,6 +12,7 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   mainDiv: {
+    flex: 1,
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: 'red',

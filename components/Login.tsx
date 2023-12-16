@@ -9,7 +9,9 @@ export default function Login(): JSX.Element {
         resizeMode="cover"
         style={styles.image}>
         <View style={styles.textDiv}>
-          <Text style={styles.coffeeTitle}> he asdasdasdassdi</Text>
+          <Text style={styles.coffeeTitle}>
+            Coffee so good, your taste buds will love it.
+          </Text>
         </View>
       </ImageBackground>
     </View>
@@ -24,7 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
   },
   textDiv: {
     width: '100%',
@@ -37,5 +39,6 @@ const styles = StyleSheet.create({
 
   coffeeTitle: {
     color: 'white',
+    fontSize: 34,
   },
 });

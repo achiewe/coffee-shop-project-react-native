@@ -2,10 +2,12 @@ import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 export default function Login(): JSX.Element {
-  const image = {uri: 'https://legacy.reactjs.org/logo-og.png'};
   return (
     <View style={styles.container}>
-      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+      <ImageBackground
+        source={require('../assets/coffeebg.png')}
+        resizeMode="cover"
+        style={styles.image}>
         <Text style={styles.text}>Inside</Text>
       </ImageBackground>
     </View>

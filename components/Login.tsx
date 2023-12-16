@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
+
   textDiv: {
     width: '100%',
     display: 'flex',

@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    backgroundColor: 'red',
+    width: '100%',
+    height: 800,
   },
   text: {
     color: 'white',

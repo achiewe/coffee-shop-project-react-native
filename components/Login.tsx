@@ -1,4 +1,10 @@
-import {ImageBackground, StyleSheet, Text, View} from 'react-native';
+import {
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 
 export default function Login(): JSX.Element {
@@ -15,6 +21,7 @@ export default function Login(): JSX.Element {
           <Text style={styles.paraCoffee}>
             The best grain, the finest roast, the powerful flavor.
           </Text>
+          <TouchableOpacity style={styles.button}></TouchableOpacity>
         </View>
       </ImageBackground>
     </View>
@@ -57,4 +64,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: 250,
   },
+
+  button: {},
 });

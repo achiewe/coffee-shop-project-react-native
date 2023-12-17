@@ -4,7 +4,7 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from '@react-native-community/google-signin';
-import {View} from 'react-native';
+import ViewPropTypes from 'deprecated-react-native-prop-types';
 
 export default function SignInButton() {
   const handleSignIn = async () => {
@@ -36,13 +36,13 @@ export default function SignInButton() {
   }, []);
 
   return (
-    <View>
+    <ViewPropTypes>
       <GoogleSigninButton
         style={{width: 192, height: 48}}
         size={GoogleSigninButton.Size.Standard}
         color={GoogleSigninButton.Color.Dark}
         onPress={handleSignIn}
       />
-    </View>
+    </ViewPropTypes>
   );
 }

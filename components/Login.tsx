@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {LinearGradient} from 'react-native-linear-gradient';
+import SignInButton from './SignInButton';
 
 export default function Login(): JSX.Element {
   return (
@@ -25,7 +26,7 @@ export default function Login(): JSX.Element {
             <Text style={styles.paraCoffee}>
               The best grain, the finest roast, the powerful flavor.
             </Text>
-            <TouchableOpacity style={styles.button}></TouchableOpacity>
+            <SignInButton />
           </View>
         </ImageBackground>
       </LinearGradient>
@@ -79,11 +80,5 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     textAlign: 'center',
     width: 250,
-  },
-
-  button: {
-    width: 317,
-    height: 54,
-    backgroundColor: '#FFF',
   },
 });

@@ -11,24 +11,24 @@ import {LinearGradient} from 'react-native-linear-gradient';
 export default function Login(): JSX.Element {
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={require('../assets/coffeebg.png')}
-        resizeMode="cover"
-        style={styles.image}>
-        <LinearGradient
-          colors={['#4c669f', '#3b5998', '#192f6a']}
-          style={styles.linearGradient}
-        />
-        <View style={styles.textDiv}>
-          <Text style={styles.coffeeTitle}>
-            Coffee so good, your taste buds will love it.
-          </Text>
-          <Text style={styles.paraCoffee}>
-            The best grain, the finest roast, the powerful flavor.
-          </Text>
-          <TouchableOpacity style={styles.button}></TouchableOpacity>
-        </View>
-      </ImageBackground>
+      <LinearGradient
+        colors={['#000000', '#000000', '#000000']}
+        style={styles.linearGradient}>
+        <ImageBackground
+          source={require('../assets/coffeebg.png')}
+          resizeMode="contain"
+          style={styles.image}>
+          <View style={styles.textDiv}>
+            <Text style={styles.coffeeTitle}>
+              Coffee so good, your taste buds will love it.
+            </Text>
+            <Text style={styles.paraCoffee}>
+              The best grain, the finest roast, the powerful flavor.
+            </Text>
+            <TouchableOpacity style={styles.button}></TouchableOpacity>
+          </View>
+        </ImageBackground>
+      </LinearGradient>
     </View>
   );
 }
@@ -42,12 +42,15 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
+    marginBottom: 100,
+    width: '100%',
   },
 
   linearGradient: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-end',
+    elevation: 0,
   },
 
   textDiv: {
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 17,
-    paddingBottom: 15,
+    marginBottom: -60,
   },
 
   coffeeTitle: {
@@ -70,7 +73,7 @@ const styles = StyleSheet.create({
   },
 
   paraCoffee: {
-    color: '#A9A9A9',
+    color: 'white',
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: '400',

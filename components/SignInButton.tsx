@@ -14,13 +14,15 @@ export default function SignInButton() {
       // Handle successful sign-in
     } catch (error: any) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+        console.log('Sign-in cancelled');
         // Handle canceled sign-in
       } else if (error.code === statusCodes.IN_PROGRESS) {
+        console.log('Sign-in in progress');
         // Handle sign-in in progress
       } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+        console.log('Play Services not available');
         // Handle Play Services not available
       } else {
-        // Handle other errors
         console.error('Google Sign-In Error:', error);
       }
     }

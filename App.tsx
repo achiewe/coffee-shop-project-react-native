@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Login from './components/Login';
-import MainPage from './components/MainPage';
+import MainPage from './components/MainPage/MainPage';
 
 function App(): React.JSX.Element {
   const [showLogin, setShowLogin] = useState(true);

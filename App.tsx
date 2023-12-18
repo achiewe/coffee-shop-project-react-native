@@ -9,7 +9,7 @@ function App(): React.JSX.Element {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowLogin(false);
-    }, 3000); // Change 3000 to the desired delay in milliseconds
+    }, 2000); // Change 3000 to the desired delay in milliseconds
 
     // Clear the timeout if the component is unmounted before the delay completes
     return () => clearTimeout(timeout);

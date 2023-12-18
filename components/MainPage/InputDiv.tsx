@@ -8,12 +8,15 @@ export default function InputDiv() {
       style={styles.mainInput}
       start={{x: 1, y: 1}}
       end={{x: 1, y: 1}}>
-      <View style={styles.inputDiv}>
-        <Image source={require('../../assets/search-normal.png')} />
-        <TextInput
-          placeholder="Search coffee"
-          placeholderTextColor={'#989898'}
-        />
+      <View style={styles.InputSortDiv}>
+        <View style={styles.inputSearch}>
+          <Image source={require('../../assets/search-normal.png')} />
+          <TextInput
+            style={styles.textInput}
+            placeholder="Search coffee"
+            placeholderTextColor={'#989898'}
+          />
+        </View>
       </View>
     </LinearGradient>
   );
@@ -27,7 +30,7 @@ const styles = StyleSheet.create({
     height: 270,
   },
 
-  inputDiv: {
+  InputSortDiv: {
     width: 315,
     backgroundColor: '#313131',
     height: 52,
@@ -35,7 +38,19 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     paddingLeft: 21,
+  },
+
+  inputSearch: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+
+  textInput: {
+    color: 'white',
+    fontSize: 14,
   },
 });

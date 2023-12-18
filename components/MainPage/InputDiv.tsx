@@ -1,4 +1,10 @@
-import {Image, StyleSheet, TextInput, View} from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 export default function InputDiv() {
@@ -23,6 +29,7 @@ export default function InputDiv() {
             placeholderTextColor={'#989898'}
           />
         </View>
+        <TouchableOpacity style={styles.sortButton}></TouchableOpacity>
       </View>
     </LinearGradient>
   );
@@ -59,6 +66,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingLeft: 21,
+    paddingRight: 5,
   },
 
   inputSearch: {
@@ -71,5 +79,14 @@ const styles = StyleSheet.create({
   textInput: {
     color: 'white',
     fontSize: 14,
+  },
+
+  sortButton: {
+    width: 44,
+    height: 44,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#C67C4E',
+    borderRadius: 12,
   },
 });

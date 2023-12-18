@@ -8,10 +8,12 @@ export default function InputDiv() {
       style={styles.mainInput}
       start={{x: 1, y: 1}}
       end={{x: 1, y: 1}}>
-      <Image
-        source={require('../../assets/avatar.png')}
-        style={styles.avatarImg}
-      />
+      <View style={styles.imgDiv}>
+        <Image
+          source={require('../../assets/avatar.png')}
+          style={styles.avatarImg}
+        />
+      </View>
       <View style={styles.InputSortDiv}>
         <View style={styles.inputSearch}>
           <Image source={require('../../assets/search-normal.png')} />
@@ -33,6 +35,12 @@ const styles = StyleSheet.create({
     gap: 26,
     alignItems: 'center',
     height: 270,
+  },
+
+  imgDiv: {
+    width: 315,
+    display: 'flex',
+    alignItems: 'flex-end',
   },
 
   avatarImg: {

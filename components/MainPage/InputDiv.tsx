@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 export default function InputDiv() {
@@ -9,7 +9,11 @@ export default function InputDiv() {
       start={{x: 1, y: 1}}
       end={{x: 1, y: 1}}>
       <View style={styles.inputDiv}>
-        <TextInput placeholder="Search coffee" />
+        <Image source={require('../../assets/search-normal.png')} />
+        <TextInput
+          placeholder="Search coffee"
+          placeholderTextColor={'#989898'}
+        />
       </View>
     </LinearGradient>
   );
@@ -29,8 +33,9 @@ const styles = StyleSheet.create({
     height: 52,
     borderRadius: 15,
     display: 'flex',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
     paddingLeft: 21,
   },
 });

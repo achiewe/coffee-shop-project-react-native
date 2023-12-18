@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
+import {Image, StyleSheet, TextInput, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 export default function InputDiv() {

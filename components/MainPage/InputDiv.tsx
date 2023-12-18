@@ -6,8 +6,8 @@ export default function InputDiv() {
     <LinearGradient
       colors={['#131313', '#313131']}
       style={styles.mainInput}
-      start={{x: 0, y: 0}}
-      end={{x: 1, y: 0}}>
+      start={{x: 1, y: 1}}
+      end={{x: 1, y: 1}}>
       <Text> hu</Text>
     </LinearGradient>
   );

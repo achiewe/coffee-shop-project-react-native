@@ -1,11 +1,13 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import Login from './components/Login';
+import MainPage from './components/MainPage';
 
 function App(): React.JSX.Element {
   return (
     <View style={styles.mainDiv}>
       <Login />
+      <MainPage />
     </View>
   );
 }

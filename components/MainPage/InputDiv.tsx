@@ -8,7 +8,9 @@ export default function InputDiv() {
       style={styles.mainInput}
       start={{x: 1, y: 1}}
       end={{x: 1, y: 1}}>
-      <TextInput style={styles.inputCoffee} placeholder="Search coffee" />
+      <View style={styles.inputDiv}>
+        <TextInput placeholder="Search coffee" />
+      </View>
     </LinearGradient>
   );
 }
@@ -21,9 +23,14 @@ const styles = StyleSheet.create({
     height: 270,
   },
 
-  inputCoffee: {
+  inputDiv: {
     width: 315,
     backgroundColor: '#313131',
     height: 52,
+    borderRadius: 15,
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    paddingLeft: 21,
   },
 });

@@ -8,6 +8,7 @@ export default function InputDiv() {
       style={styles.mainInput}
       start={{x: 1, y: 1}}
       end={{x: 1, y: 1}}>
+        <Image source={require()}
       <View style={styles.InputSortDiv}>
         <View style={styles.inputSearch}>
           <Image source={require('../../assets/search-normal.png')} />

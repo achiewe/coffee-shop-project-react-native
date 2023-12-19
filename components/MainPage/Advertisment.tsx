@@ -15,6 +15,9 @@ export default function Advertisment() {
           <View style={styles.promoHalfTitle}>
             <Text style={styles.txt}> Buy one get</Text>
           </View>
+          <View style={styles.promoHalfSecTitle}>
+            <Text style={styles.txtSec}> one Free</Text>
+          </View>
         </View>
       </ImageBackground>
     </View>
@@ -61,6 +64,9 @@ const styles = StyleSheet.create({
 
   promoTitleDiv: {
     width: 200,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 14.5,
   },
 
   promoHalfTitle: {
@@ -77,5 +83,21 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     position: 'absolute',
     top: -23,
+  },
+
+  promoHalfSecTitle: {
+    width: 149,
+    backgroundColor: '#1C1C1C',
+    height: 23,
+    position: 'relative',
+  },
+
+  txtSec: {
+    color: '#FFF',
+    fontSize: 32,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    position: 'absolute',
+    top: -21,
   },
 });

@@ -29,7 +29,9 @@ export default function InputDiv() {
             placeholderTextColor={'#989898'}
           />
         </View>
-        <TouchableOpacity style={styles.sortButton}></TouchableOpacity>
+        <TouchableOpacity style={styles.sortButton}>
+          <Image source={require('../../assets/sorting.png')} />
+        </TouchableOpacity>
       </View>
     </LinearGradient>
   );

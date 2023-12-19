@@ -12,7 +12,9 @@ export default function Advertisment() {
           <Text style={styles.pomoTxt}> Promo</Text>
         </View>
         <View style={styles.promoTitleDiv}>
-          <View style={styles.promoHalfTitle}></View>
+          <View style={styles.promoHalfTitle}>
+            <Text style={styles.txt}> Buy one get</Text>
+          </View>
         </View>
       </ImageBackground>
     </View>
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    gap: 13,
+    gap: 31,
   },
 
   promoView: {
@@ -58,12 +60,22 @@ const styles = StyleSheet.create({
   },
 
   promoTitleDiv: {
-    width: 150,
+    width: 200,
   },
 
   promoHalfTitle: {
     width: '100%',
     backgroundColor: '#1C1C1C',
-    height: 25,
+    height: 27,
+    position: 'relative',
+  },
+
+  txt: {
+    color: '#FFF',
+    fontSize: 32,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    position: 'absolute',
+    top: -23,
   },
 });

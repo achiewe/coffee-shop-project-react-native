@@ -7,7 +7,9 @@ export default function Advertisment() {
         source={require('../../assets/coffeeImg.png')}
         resizeMode="contain"
         imageStyle={{borderRadius: 10}}
-        style={styles.coffeeImg}></ImageBackground>
+        style={styles.coffeeImg}>
+        <View style={styles.promoView}></View>
+      </ImageBackground>
     </View>
   );
 }
@@ -27,5 +29,18 @@ const styles = StyleSheet.create({
     paddingLeft: 24,
     paddingBottom: 8,
     paddingTop: 13,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  },
+
+  promoView: {
+    width: 60,
+    height: 26,
+    backgroundColor: '#ED5151',
+    borderRadius: 8,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

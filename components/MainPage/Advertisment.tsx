@@ -11,6 +11,9 @@ export default function Advertisment() {
         <View style={styles.promoView}>
           <Text style={styles.pomoTxt}> Promo</Text>
         </View>
+        <View style={styles.promoTitleDiv}>
+          <View style={styles.promoHalfTitle}></View>
+        </View>
       </ImageBackground>
     </View>
   );
@@ -34,6 +37,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
+    gap: 13,
   },
 
   promoView: {
@@ -51,5 +55,15 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#FFFFFF',
     fontStyle: 'normal',
+  },
+
+  promoTitleDiv: {
+    width: 150,
+  },
+
+  promoHalfTitle: {
+    width: '100%',
+    backgroundColor: '#1C1C1C',
+    height: 25,
   },
 });

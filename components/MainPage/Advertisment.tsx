@@ -1,5 +1,6 @@
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 
+// advertisment funtion
 export default function Advertisment() {
   return (
     <View style={styles.viewImg}>

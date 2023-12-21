@@ -7,6 +7,7 @@ function App(): React.JSX.Element {
   // create state for show the login component
   const [showLogin, setShowLogin] = useState(true);
 
+  // useEffect for set the screen login page at the beggining
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowLogin(false);

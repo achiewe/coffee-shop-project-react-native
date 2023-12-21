@@ -2,6 +2,7 @@ import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {LinearGradient} from 'react-native-linear-gradient';
 
+// add login function for first page
 export default function Login(): JSX.Element {
   return (
     <View style={styles.container}>

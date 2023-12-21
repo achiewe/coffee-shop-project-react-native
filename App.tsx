@@ -4,6 +4,7 @@ import Login from './components/Login';
 import MainPage from './components/MainPage/MainPage';
 
 function App(): React.JSX.Element {
+  // create state for show the login component
   const [showLogin, setShowLogin] = useState(true);
 
   useEffect(() => {

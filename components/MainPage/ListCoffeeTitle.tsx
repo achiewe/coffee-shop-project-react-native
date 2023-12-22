@@ -1,5 +1,10 @@
-import {View} from 'react-native';
+import {ScrollView} from 'react-native';
+import data from '../../data.json';
 
 export default function ListCoffeeTitle() {
-  return <View> </View>;
+  return (
+    <ScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}></ScrollView>
+  );
 }

@@ -1,6 +1,7 @@
 import {ScrollView, StyleSheet} from 'react-native';
 import InputDiv from './InputDiv';
 import Advertisment from './Advertisment';
+import ListCoffeeTitle from './ListCoffeeTitle';
 
 // mainPage function
 export default function MainPage() {
@@ -8,6 +9,7 @@ export default function MainPage() {
     <ScrollView style={styles.mainDiv}>
       <InputDiv />
       <Advertisment />
+      <ListCoffeeTitle />
     </ScrollView>
   );
 }

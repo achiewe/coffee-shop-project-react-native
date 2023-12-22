@@ -17,7 +17,7 @@ export default function ListCoffeeTitle() {
         return (
           <TouchableWithoutFeedback key={item.id}>
             <View key={item.id} style={style.TitleView}>
-              <Text>{item.category}</Text>
+              <Text style={style.titleText}>{item.category}</Text>
             </View>
           </TouchableWithoutFeedback>
         );
@@ -28,10 +28,25 @@ export default function ListCoffeeTitle() {
 
 const style = StyleSheet.create({
   MainContainer: {
-    width: '100%',
-    paddingLeft: 29,
+    width: '93%',
     display: 'flex',
     flexDirection: 'row',
+    marginLeft: 18,
   },
-  TitleView: {},
+  TitleView: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 10,
+    backgroundColor: '#F3F3F3',
+    height: 38,
+    padding: 10,
+    borderRadius: 12,
+  },
+  titleText: {
+    fontSize: 14,
+    color: '#2F4B4E',
+    fontWeight: '400',
+    fontStyle: 'normal',
+  },
 });

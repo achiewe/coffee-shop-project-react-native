@@ -27,7 +27,7 @@ export default function ListCoffeeTitle() {
   );
 }
 
-// style of the ListCoffeeTitle
+// style for the ListCoffeeTitle
 const style = StyleSheet.create({
   MainContainer: {
     width: '93%',

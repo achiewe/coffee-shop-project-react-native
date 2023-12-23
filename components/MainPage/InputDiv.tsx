@@ -38,6 +38,7 @@ export default function InputDiv() {
   );
 }
 
+// style of the InputDiv
 const styles = StyleSheet.create({
   mainInput: {
     display: 'flex',

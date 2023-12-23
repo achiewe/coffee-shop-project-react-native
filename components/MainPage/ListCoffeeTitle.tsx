@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import data from '../../data.json';
 
+// list of the data
 export default function ListCoffeeTitle() {
   return (
     <ScrollView

@@ -25,6 +25,7 @@ export default function Advertisment() {
   );
 }
 
+// style of the advertisment
 const styles = StyleSheet.create({
   viewImg: {
     width: '100%',

@@ -14,6 +14,7 @@ export default function MainPage() {
   );
 }
 
+// style for component
 const styles = StyleSheet.create({
   mainDiv: {
     flex: 1,

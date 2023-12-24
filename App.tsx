@@ -22,6 +22,7 @@ function App(): React.JSX.Element {
   );
 }
 
+// style of the component
 const styles = StyleSheet.create({
   mainDiv: {
     flex: 1,

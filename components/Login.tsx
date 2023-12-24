@@ -27,6 +27,7 @@ export default function Login(): JSX.Element {
   );
 }
 
+// style of the component
 const styles = StyleSheet.create({
   container: {
     flex: 1,

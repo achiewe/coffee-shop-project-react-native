@@ -32,11 +32,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#F1F1F1',
     borderRadius: 20,
-    gap: 59,
+    gap: 60,
     tintColor: '#8D8D8D',
   },
 
   pagePng: {
     tintColor: '#8D8D8D',
+    width: 23,
+    height: 23,
   },
 });

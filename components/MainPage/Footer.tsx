@@ -9,24 +9,9 @@ export default function Footer() {
           style={styles.pagePng}
         />
       </TouchableOpacity>
-
-      <TouchableOpacity>
-        <Image
-          source={require('../../assets/Heart.png')}
-          style={styles.pagePng}
-        />
-      </TouchableOpacity>
-
       <TouchableOpacity>
         <Image
           source={require('../../assets/Bag.png')}
-          style={styles.pagePng}
-        />
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <Image
-          source={require('../../assets/Notification.png')}
           style={styles.pagePng}
         />
       </TouchableOpacity>

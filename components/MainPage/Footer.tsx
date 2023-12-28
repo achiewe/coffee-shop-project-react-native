@@ -9,6 +9,13 @@ export default function Footer() {
           style={styles.pagePng}
         />
       </TouchableOpacity>
+
+      <TouchableOpacity>
+        <Image
+          source={require('../../assets/Heart.png')}
+          style={styles.pagePng}
+        />
+      </TouchableOpacity>
     </View>
   );
 }
@@ -32,7 +39,5 @@ const styles = StyleSheet.create({
 
   pagePng: {
     tintColor: '#8D8D8D',
-    width: 19,
-    height: 19,
   },
 });

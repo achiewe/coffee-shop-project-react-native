@@ -15,6 +15,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+    rowGap: 14,
+    columnGap: 24,
     flexWrap: 'wrap',
   },
 });

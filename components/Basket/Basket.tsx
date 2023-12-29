@@ -1,5 +1,5 @@
 import {View} from 'react-native';
 
-export default function MainDetail() {
+export default function Basket() {
   return <View> </View>;
 }

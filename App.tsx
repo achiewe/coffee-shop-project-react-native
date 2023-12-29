@@ -8,7 +8,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 //screens
 import MainPage from './components/MainPage/MainPage';
-import MainDetail from './components/Details/MainDetail';
+import Basket from './components/Basket/Basket';
 
 function App(): React.JSX.Element {
   // create state for show the login component

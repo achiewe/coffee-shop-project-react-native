@@ -8,20 +8,20 @@ import {RootStackParamList} from '../types';
 
 export default function Footer() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-  const route = useRoute();
+  // const route = useRoute();
 
   return (
     <View style={styles.footerWarp}>
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Image
           source={require('../assets/Home.png')}
-          style={route.name === 'Home' ? styles.pagePng : styles.onThePage}
+          // style={route.name === 'Home' ? styles.pagePng : styles.onThePage}
         />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('Basket')}>
         <Image
           source={require('../assets/Bag.png')}
-          style={route.name === 'Basket' ? styles.pagePng : styles.onThePage}
+          // style={route.name === 'Basket' ? styles.pagePng : styles.onThePage}
         />
       </TouchableOpacity>
     </View>

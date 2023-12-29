@@ -7,10 +7,10 @@ export default function Footer() {
 
   return (
     <View style={styles.footerWarp}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('MainPage')}>
         <Image source={require('../assets/Home.png')} style={styles.pagePng} />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Basket')}>
         <Image source={require('../assets/Bag.png')} style={styles.pagePng} />
       </TouchableOpacity>
     </View>

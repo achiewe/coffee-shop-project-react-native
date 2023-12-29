@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Login from './components/Login';
+import Footer from './components/Footer';
 
 // navigation
 import {NavigationContainer} from '@react-navigation/native';
@@ -9,6 +10,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 //screens
 import MainPage from './components/MainPage/MainPage';
 import Basket from './components/Basket/Basket';
+import {RootStackParamList} from './types';
 
 function App(): React.JSX.Element {
   // create state for show the login component
@@ -24,16 +26,21 @@ function App(): React.JSX.Element {
     return () => clearTimeout(timeout);
   }, []);
 
-  const stack = createNativeStackNavigator();
-
+  const stack = createNativeStackNavigator<RootStackParamList>();
   return (
-    <NavigationContainer>
-      <stack.Navigator initialRouteName="">
-        <View style={styles.mainDiv}>
-          {showLogin ? <Login /> : <MainPage />}
-        </View>
-      </stack.Navigator>
-    </NavigationContainer>
+    <View style={styles.mainDiv}>
+      {showLogin ? (
+        <Login />
+      ) : (
+        <NavigationContainer>
+          <stack.Navigator initialRouteName="MainPage">
+            <stack.Screen name="MainPage" component={MainPage} />
+            <stack.Screen name="Basket" component={Basket} />
+          </stack.Navigator>
+          <Footer />
+        </NavigationContainer>
+      )}
+    </View>
   );
 }
 

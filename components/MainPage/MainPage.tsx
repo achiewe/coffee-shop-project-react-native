@@ -2,7 +2,6 @@ import {ScrollView, StyleSheet} from 'react-native';
 import InputDiv from './InputDiv';
 import Advertisment from './Advertisment';
 import ListCoffeeTitle from './ListCoffeeTitle';
-import Footer from './Footer';
 
 // mainPage function
 export default function MainPage() {
@@ -11,7 +10,6 @@ export default function MainPage() {
       <InputDiv />
       <Advertisment />
       <ListCoffeeTitle />
-      <Footer />
     </ScrollView>
   );
 }

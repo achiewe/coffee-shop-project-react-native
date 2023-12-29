@@ -19,8 +19,16 @@ function App(): React.JSX.Element {
     return () => clearTimeout(timeout);
   }, []);
 
+  const stack = createNativeStackNavigator();
+
   return (
-    <View style={styles.mainDiv}>{showLogin ? <Login /> : <MainPage />}</View>
+    <NavigationContainer>
+      <stack.Navigator initialRouteName="">
+        <View style={styles.mainDiv}>
+          {showLogin ? <Login /> : <MainPage />}
+        </View>
+      </stack.Navigator>
+    </NavigationContainer>
   );
 }
 

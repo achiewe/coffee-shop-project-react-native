@@ -11,9 +11,7 @@ export default function ItemList() {
       {capuccinoCoffee.map(item => (
         <View style={styles.itemView} key={item.id}>
           <View style={styles.imageTitle}>
-            {item.coffees[0].image && (
-              <Image source={{uri: `../../assets/${item.coffees[0].image}`}} />
-            )}
+            <Image source={{uri: `../../assets/${item.coffees[0].image}`}} />
             <Text> genaa</Text>
           </View>
         </View>

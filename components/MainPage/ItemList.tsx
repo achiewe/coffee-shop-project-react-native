@@ -1,9 +1,20 @@
-import {ScrollView, Text} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 
 export default function ItemList() {
   return (
-    <ScrollView>
+    <View style={styles.mainContainer}>
       <Text> asdasd</Text>
-    </ScrollView>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  mainContainer: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+});

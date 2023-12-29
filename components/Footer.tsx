@@ -1,6 +1,10 @@
+import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {RootStackParamList} from '../types';
 
 export default function Footer() {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
   return (
     <View style={styles.footerWarp}>
       <TouchableOpacity>

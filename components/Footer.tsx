@@ -4,16 +4,10 @@ export default function Footer() {
   return (
     <View style={styles.footerWarp}>
       <TouchableOpacity>
-        <Image
-          source={require('../../assets/Home.png')}
-          style={styles.pagePng}
-        />
+        <Image source={require('../assets/Home.png')} style={styles.pagePng} />
       </TouchableOpacity>
       <TouchableOpacity>
-        <Image
-          source={require('../../assets/Bag.png')}
-          style={styles.pagePng}
-        />
+        <Image source={require('../assets/Bag.png')} style={styles.pagePng} />
       </TouchableOpacity>
     </View>
   );

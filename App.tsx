@@ -26,17 +26,17 @@ function App(): React.JSX.Element {
     return () => clearTimeout(timeout);
   }, []);
 
-  const stack = createNativeStackNavigator<RootStackParamList>();
+  const Stack = createNativeStackNavigator<RootStackParamList>();
   return (
     <View style={styles.mainDiv}>
       {showLogin ? (
         <Login />
       ) : (
         <NavigationContainer>
-          <stack.Navigator initialRouteName="Home">
-            <stack.Screen name="Home" component={MainPage} />
-            <stack.Screen name="Basket" component={Basket} />
-          </stack.Navigator>
+          <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen name="Home" component={MainPage} />
+            <Stack.Screen name="Basket" component={Basket} />
+          </Stack.Navigator>
           <Footer />
         </NavigationContainer>
       )}

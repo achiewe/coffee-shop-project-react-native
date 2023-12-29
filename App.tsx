@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Login from './components/Login';
-import MainPage from './components/MainPage/MainPage';
+
+// navigation
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+//screens
+import MainPage from './components/MainPage/MainPage';
+import MainDetail from './components/Details/MainDetail';
 
 function App(): React.JSX.Element {
   // create state for show the login component

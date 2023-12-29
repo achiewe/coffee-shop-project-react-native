@@ -1,11 +1,23 @@
-import {StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import data from '../../data.json';
+
+const capuccinoCoffee = data.coffee_categories.filter(
+  item => item.category === 'Cappuccino',
+);
 
 export default function ItemList() {
   return (
     <View style={styles.mainContainer}>
-      <View style={styles.itemView}>
-        <View style={styles.imageTitle}></View>
-      </View>
+      {capuccinoCoffee.map(item => (
+        <View style={styles.itemView} key={item.id}>
+          <View style={styles.imageTitle}>
+            {item.coffees[0].image && (
+              <Image source={{uri: `../../assets/${item.coffees[0].image}`}} />
+            )}
+            <Text> genaa</Text>
+          </View>
+        </View>
+      ))}
     </View>
   );
 }

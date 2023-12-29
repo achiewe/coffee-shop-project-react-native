@@ -1,5 +1,9 @@
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 
 export default function Basket() {
-  return <View> </View>;
+  return (
+    <View>
+      <Text> whats up guys</Text>
+    </View>
+  );
 }

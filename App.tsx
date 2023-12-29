@@ -33,8 +33,8 @@ function App(): React.JSX.Element {
         <Login />
       ) : (
         <NavigationContainer>
-          <stack.Navigator initialRouteName="MainPage">
-            <stack.Screen name="MainPage" component={MainPage} />
+          <stack.Navigator initialRouteName="Home">
+            <stack.Screen name="Home" component={MainPage} />
             <stack.Screen name="Basket" component={Basket} />
           </stack.Navigator>
           <Footer />

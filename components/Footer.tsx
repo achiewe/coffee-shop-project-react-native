@@ -1,17 +1,29 @@
-import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {
+  NavigationProp,
+  useNavigation,
+  useRoute,
+} from '@react-navigation/native';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {RootStackParamList} from '../types';
 
 export default function Footer() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
+  const route = useRoute();
+
   return (
     <View style={styles.footerWarp}>
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-        <Image source={require('../assets/Home.png')} style={styles.pagePng} />
+        <Image
+          source={require('../assets/Home.png')}
+          style={route.name === 'Home' ? styles.onThePage : styles.pagePng}
+        />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('Basket')}>
-        <Image source={require('../assets/Bag.png')} style={styles.pagePng} />
+        <Image
+          source={require('../assets/Bag.png')}
+          // style={route.name === 'Basket' ? styles.onThePage : styles.pagePng}
+        />
       </TouchableOpacity>
     </View>
   );
@@ -36,6 +48,12 @@ const styles = StyleSheet.create({
 
   pagePng: {
     tintColor: '#8D8D8D',
+    width: 23,
+    height: 23,
+  },
+
+  onThePage: {
+    tintColor: '#C67C4E',
     width: 23,
     height: 23,
   },

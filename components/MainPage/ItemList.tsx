@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     rowGap: 14,
     columnGap: 24,
     flexWrap: 'wrap',
+    marginTop: 28,
   },
 
   itemView: {

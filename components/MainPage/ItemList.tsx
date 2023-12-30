@@ -12,7 +12,7 @@ export default function ItemList() {
         <View style={styles.itemView} key={item.id}>
           <View style={styles.imageTitle}>
             <Image source={{uri: `../../assets/${item.coffees[0].image}`}} />
-            <Text> genaa</Text>
+            <Text> {item.coffees[0].title}</Text>
           </View>
         </View>
       ))}

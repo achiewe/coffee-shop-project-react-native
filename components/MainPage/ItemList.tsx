@@ -15,6 +15,9 @@ export default function ItemList() {
               <Image source={{uri: `../../assets/${item.image}`}} />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
+            <View style={styles.priceView}>
+              <Text style={styles.price}>{`$ ${item.price}`}</Text>
+            </View>
           </View>
         ))}
     </View>
@@ -51,4 +54,12 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontStyle: 'normal',
   },
+
+  priceView: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 30,
+  },
+
+  price: {},
 });

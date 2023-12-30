@@ -13,7 +13,7 @@ export default function ItemList() {
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
               <Image source={{uri: `../../assets/${item.image}`}} />
-              <Text>{item.title}</Text>
+              <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
           </View>
         ))}
@@ -43,5 +43,12 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     gap: 6,
+  },
+
+  CoffeeTitle: {
+    color: '#2F2D2C',
+    fontSize: 16,
+    fontWeight: '600',
+    fontStyle: 'normal',
   },
 });

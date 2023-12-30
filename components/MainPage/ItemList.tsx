@@ -1,11 +1,11 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import data from '../../data.json';
 
-const cappuccinoCoffee = data.coffee_categories.find(
-  category => category.category === 'Cappuccino',
-);
-
 export default function ItemList() {
+  const cappuccinoCoffee = data.coffee_categories.find(
+    category => category.category === 'Cappuccino',
+  );
+
   return (
     <View style={styles.mainContainer}>
       {cappuccinoCoffee &&

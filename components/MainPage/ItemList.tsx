@@ -1,4 +1,11 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Image,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import data from '../../data.json';
 
 export default function ItemList() {
@@ -12,7 +19,11 @@ export default function ItemList() {
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <Image source={{uri: `../../assets/${item.image}`}} />
+              <ImageBackground
+                style={styles.imageBackground}
+                source={require(`../../assets${item.image}`)}
+                resizeMode="contain"
+              />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
             <View style={styles.priceView}>
@@ -50,6 +61,11 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     gap: 6,
+  },
+
+  imageBackground: {
+    width: 315,
+    height: 140,
   },
 
   CoffeeTitle: {

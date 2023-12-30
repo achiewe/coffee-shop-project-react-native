@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import data from '../../data.json';
 
 export default function ItemList() {
@@ -17,6 +17,7 @@ export default function ItemList() {
             </View>
             <View style={styles.priceView}>
               <Text style={styles.price}>{`$ ${item.price}`}</Text>
+              <TouchableOpacity style={styles.addCartBut}></TouchableOpacity>
             </View>
           </View>
         ))}
@@ -58,8 +59,21 @@ const styles = StyleSheet.create({
   priceView: {
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
     gap: 30,
   },
 
-  price: {},
+  price: {
+    color: '#2F4B4E',
+    fontSize: 18,
+    fontWeight: '600',
+    fontStyle: 'normal',
+  },
+
+  addCartBut: {
+    backgroundColor: '#C67C4E',
+    borderRadius: 10,
+    width: 32,
+    height: 32,
+  },
 });

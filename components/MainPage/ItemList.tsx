@@ -21,7 +21,7 @@ export default function ItemList() {
             <View style={styles.imageTitle}>
               <ImageBackground
                 style={styles.imageBackground}
-                source={require(`../../assets${item.image}`)}
+                source={{uri: `${item.image}`}}
                 resizeMode="contain"
               />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>

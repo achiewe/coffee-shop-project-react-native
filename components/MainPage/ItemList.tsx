@@ -17,7 +17,9 @@ export default function ItemList() {
             </View>
             <View style={styles.priceView}>
               <Text style={styles.price}>{`$ ${item.price}`}</Text>
-              <TouchableOpacity style={styles.addCartBut}></TouchableOpacity>
+              <TouchableOpacity style={styles.addCartBut}>
+                <Image source={require('../../assets/add.png')} />
+              </TouchableOpacity>
             </View>
           </View>
         ))}
@@ -75,5 +77,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: 32,
     height: 32,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

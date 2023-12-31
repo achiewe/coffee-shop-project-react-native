@@ -6,6 +6,7 @@ import {
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {RootStackParamList} from '../types';
 
+// Footer component
 export default function Footer() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   // const route = useRoute();

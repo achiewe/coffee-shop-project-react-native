@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import data from '../../data.json';
 
+// function for data map
 export default function ItemList() {
   const cappuccinoCoffee = data.coffee_categories.find(
     category => category.category === 'Cappuccino',

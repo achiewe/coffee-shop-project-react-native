@@ -20,11 +20,7 @@ export default function ItemList() {
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <ImageBackground
-                style={styles.imageBackground}
-                source={{uri: `${item.image}`}}
-                resizeMode="contain"
-              />
+              <Image source={require('../../assets/classicCappuccino.png')} />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
             <View style={styles.priceView}>
@@ -63,11 +59,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     gap: 6,
-  },
-
-  imageBackground: {
-    width: 150,
-    height: 140,
   },
 
   CoffeeTitle: {

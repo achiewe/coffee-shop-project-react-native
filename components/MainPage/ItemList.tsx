@@ -1,11 +1,4 @@
-import {
-  Image,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import data from '../../data.json';
 
 // function for data map
@@ -20,7 +13,11 @@ export default function ItemList() {
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <Image source={require('../../assets/classicCappuccino.png')} />
+              <Image
+                source={{
+                  uri: 'https://reactnative.dev/img/tiny_logo.png',
+                }}
+              />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
             <View style={styles.priceView}>

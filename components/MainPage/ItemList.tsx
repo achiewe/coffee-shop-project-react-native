@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   itemView: {
     display: 'flex',
     flexDirection: 'column',
-
+    width: 141,
     gap: 15,
   },
 
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 30,
+    justifyContent: 'space-between',
   },
 
   price: {

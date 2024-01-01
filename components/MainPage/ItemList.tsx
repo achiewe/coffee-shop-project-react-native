@@ -46,15 +46,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+    flexWrap: 'wrap',
     rowGap: 14,
     columnGap: 24,
-    flexWrap: 'wrap',
     marginTop: 28,
   },
 
   itemView: {
     display: 'flex',
     flexDirection: 'column',
+
     gap: 15,
   },
 
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
   },
 
   imageBackground: {
-    width: 315,
+    width: 150,
     height: 140,
   },
 

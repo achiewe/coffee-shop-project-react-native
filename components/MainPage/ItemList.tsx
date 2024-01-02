@@ -7,13 +7,15 @@ export default function ItemList() {
     category => category.category === 'Cappuccino',
   );
 
+  const baseImagePath = '../../assets/';
+
   return (
     <View style={styles.mainContainer}>
       {cappuccinoCoffee &&
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <Image source={require(item.image)} />
+              <Image source={{uri: baseImagePath + item.image}} />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
             <View style={styles.priceView}>

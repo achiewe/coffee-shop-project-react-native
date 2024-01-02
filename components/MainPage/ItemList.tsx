@@ -13,11 +13,7 @@ export default function ItemList() {
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <Image
-                source={{
-                  uri: 'https://reactnative.dev/img/tiny_logo.png',
-                }}
-              />
+              <Image source={require(`${item.image}`)} />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
             <View style={styles.priceView}>

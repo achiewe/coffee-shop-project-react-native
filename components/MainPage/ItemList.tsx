@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
   addCartBut: {
     backgroundColor: '#C67C4E',
     borderRadius: 10,
+    flexDirection: 'row',
     width: 32,
     height: 32,
     display: 'flex',

@@ -13,7 +13,7 @@ export default function ItemList() {
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <Image source={require(`${item.image}`)} />
+              <Image source={require(item.image)} />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
             <View style={styles.priceView}>

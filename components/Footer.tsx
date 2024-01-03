@@ -29,6 +29,7 @@ export default function Footer() {
   );
 }
 
+// styles for the footer
 const styles = StyleSheet.create({
   footerWarp: {
     display: 'flex',

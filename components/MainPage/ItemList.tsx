@@ -30,6 +30,7 @@ export default function ItemList() {
   );
 }
 
+// style for itemList
 const styles = StyleSheet.create({
   mainContainer: {
     width: '100%',

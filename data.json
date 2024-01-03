@@ -8,7 +8,7 @@
           "id": 2,
           "title": "Classic Cappuccino",
           "price": 4.99,
-          "image": "classicCappuccino.png",
+          "image": "../../assets/classicCappuccino.png",
           "rating": 4.5
         },
         {

@@ -19,6 +19,10 @@ export default function Payment() {
           </View>
         </View>
         <View style={styles.lineStyle} />
+        <View style={styles.priceDelView}>
+          <Text style={styles.priceTitle}> Total Payment</Text>
+          <Text style={styles.amountPrice}>$ 5.53</Text>
+        </View>
       </View>
     </View>
   );
@@ -98,4 +102,6 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: '#EAEAEA',
   },
+
+  totalPayView: {},
 });

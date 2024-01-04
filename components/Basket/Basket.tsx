@@ -2,6 +2,7 @@ import {StyleSheet, View} from 'react-native';
 import BasketHeadline from './BasketHeadline';
 import ItemDiscount from './ItemDiscount';
 import Payment from './Payment';
+import AddOnBasket from './AddOnBasket';
 
 // component for the basket component
 export default function Basket(): React.JSX.Element {
@@ -10,6 +11,7 @@ export default function Basket(): React.JSX.Element {
       <BasketHeadline />
       <ItemDiscount />
       <Payment />
+      <AddOnBasket />
     </View>
   );
 }

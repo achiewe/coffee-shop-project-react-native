@@ -5,6 +5,9 @@ export default function BasketHeadline() {
     <View style={styles.mainContainer}>
       <View style={styles.basketView}>
         <Text style={styles.componentName}>Basket</Text>
+        <View style={styles.viewQuantity}>
+          <View style={styles.imageTitleView}></View>
+        </View>
       </View>
     </View>
   );
@@ -36,5 +39,20 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '600',
     color: '#FFFFFF',
+  },
+
+  viewQuantity: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 43,
+  },
+
+  imageTitleView: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 21,
+    alignItems: 'center',
   },
 });

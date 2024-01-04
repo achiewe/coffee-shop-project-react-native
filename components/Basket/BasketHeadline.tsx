@@ -4,7 +4,7 @@ export default function BasketHeadline() {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.basketView}>
-        <Text>Deliver</Text>
+        <Text style={styles.componentName}>Basket</Text>
       </View>
     </View>
   );
@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     gap: 35,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 40,
   },
 
   basketView: {
@@ -28,5 +29,12 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+
+  componentName: {
+    fontSize: 16,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    color: '#FFFFFF',
   },
 });

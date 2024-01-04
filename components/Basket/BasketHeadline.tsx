@@ -1,12 +1,18 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 
 export default function BasketHeadline() {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.basketView}>
         <Text style={styles.componentName}>Basket</Text>
-        <View style={styles.viewQuantity}>
-          <View style={styles.imageTitleView}></View>
+      </View>
+      <View style={styles.viewQuantity}>
+        <View style={styles.imageTitleView}>
+          <Image
+            style={styles.coffeeImage}
+            source={require('../../assets/classicCappuccino.png')}
+          />
+          <View style={styles.titleView}></View>
         </View>
       </View>
     </View>
@@ -46,6 +52,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     gap: 43,
   },
 
@@ -54,5 +61,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 21,
     alignItems: 'center',
+  },
+
+  coffeeImage: {
+    width: 54,
+    height: 54,
+  },
+
+  titleView: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 4,
   },
 });

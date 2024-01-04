@@ -8,6 +8,7 @@ export default function Payment() {
         <View style={styles.priceDeliveryView}>
           <View style={styles.priceView}>
             <Text style={styles.priceTitle}> Price</Text>
+            <Text style={styles.amountPrice}> $ 4.53</Text>
           </View>
         </View>
       </View>
@@ -60,5 +61,12 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     color: '#2F2D2C',
     fontStyle: 'normal',
+  },
+
+  amountPrice: {
+    fontSize: 14,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    color: '#2F2D2C',
   },
 });

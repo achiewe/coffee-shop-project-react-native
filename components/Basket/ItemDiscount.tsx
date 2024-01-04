@@ -5,10 +5,8 @@ export default function ItemDiscount() {
     <View style={styles.discountCont}>
       <View style={styles.line}></View>
       <View style={styles.discountView}>
-        <View style={styles.pngTextView}>
-          <Image source={require('../../assets/Discount.png')} />
-          <Text style={styles.discountText}> 1 Discount is applied</Text>
-        </View>
+        <Image source={require('../../assets/Discount.png')} />
+        <Text style={styles.discountText}> 1 Discount is applied</Text>
       </View>
     </View>
   );
@@ -36,19 +34,12 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+    gap: 12,
     padding: 16,
-    justifyContent: 'space-between',
     backgroundColor: '#FFF',
     borderWidth: 1,
     borderColor: '#EAEAEA',
     borderRadius: 14,
-  },
-
-  pngTextView: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
   },
 
   discountText: {

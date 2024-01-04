@@ -20,6 +20,6 @@ const styles = StyleSheet.create({
   lineStyle: {
     width: '100%',
     height: 1,
-    backgroundColor: '#EAEAEA',
+    backgroundColor: 'red',
   },
 });

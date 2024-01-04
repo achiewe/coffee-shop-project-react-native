@@ -18,8 +18,10 @@ const styles = StyleSheet.create({
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
+    flexDirection: 'column',
     alignItems: 'center',
     gap: 16,
+    marginTop: 20,
   },
 
   lineStyle: {

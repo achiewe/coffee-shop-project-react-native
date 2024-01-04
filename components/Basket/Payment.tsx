@@ -6,9 +6,16 @@ export default function Payment() {
       <Text style={styles.paymentText}> Payment Summary</Text>
       <View style={styles.priceContainer}>
         <View style={styles.priceDeliveryView}>
-          <View style={styles.priceView}>
+          <View style={styles.priceDelView}>
             <Text style={styles.priceTitle}> Price</Text>
             <Text style={styles.amountPrice}> $ 4.53</Text>
+          </View>
+          <View style={styles.priceDelView}>
+            <Text style={styles.priceTitle}> Delivery Fee</Text>
+            <View style={styles.deliveryAmount}>
+              <Text style={styles.amountPriceSale}> $ 2.0</Text>
+              <Text style={styles.amountPrice}>$ 1.0</Text>
+            </View>
           </View>
         </View>
       </View>
@@ -48,7 +55,7 @@ const styles = StyleSheet.create({
     gap: 14,
   },
 
-  priceView: {
+  priceDelView: {
     width: '100%',
     display: 'flex',
     flexDirection: 'row',
@@ -68,5 +75,19 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '600',
     color: '#2F2D2C',
+  },
+
+  amountPriceSale: {
+    fontSize: 14,
+    fontWeight: '400',
+    textDecorationLine: 'line-through',
+    color: '#2F2D2C',
+  },
+
+  deliveryAmount: {
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: 8,
   },
 });

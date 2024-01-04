@@ -14,6 +14,7 @@ export default function AddOnBasket() {
               <Text style={styles.amountOfMoney}> $ 5.53</Text>
             </View>
           </View>
+          <Text> asdasd</Text>
         </View>
       </View>
     </View>
@@ -29,8 +30,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 16,
     marginTop: 30,
-    paddingLeft: 16,
-    paddingRight: 16,
   },
 
   lineStyle: {
@@ -47,15 +46,16 @@ const styles = StyleSheet.create({
     width: '100%',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingRight: 40,
+    paddingLeft: 40,
   },
 
   paymentCashCard: {
     display: 'flex',
     flexDirection: 'row',
     gap: 22,
-    justifyContent: 'center',
   },
 
   cashPrice: {

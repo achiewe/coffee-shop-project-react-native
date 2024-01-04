@@ -1,4 +1,4 @@
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 
 export default function ItemQuantity() {
   return (
@@ -8,7 +8,7 @@ export default function ItemQuantity() {
           style={styles.coffeeImage}
           source={require('../../assets/classicCappuccino.png')}
         />
-        <View style={styles.titleView}></View>
+        <Text style={styles.coffeeTitle}>Cappucino</Text>
       </View>
     </View>
   );
@@ -36,9 +36,10 @@ const styles = StyleSheet.create({
     height: 54,
   },
 
-  titleView: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 4,
+  coffeeTitle: {
+    fontSize: 16,
+    color: '#2F2D2C',
+    fontStyle: 'normal',
+    fontWeight: '600',
   },
 });

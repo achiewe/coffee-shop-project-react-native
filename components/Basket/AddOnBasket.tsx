@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 16,
     marginTop: 30,
+    paddingLeft: 16,
+    paddingRight: 16,
   },
 
   lineStyle: {

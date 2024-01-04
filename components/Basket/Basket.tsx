@@ -1,10 +1,11 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import BasketHeadline from './BasketHeadline';
 
 // component for the basket component
-export default function Basket() {
+export default function Basket(): React.JSX.Element {
   return (
     <View style={styles.mainContainer}>
-      <Text> whats up guys</Text>
+      <BasketHeadline />
     </View>
   );
 }

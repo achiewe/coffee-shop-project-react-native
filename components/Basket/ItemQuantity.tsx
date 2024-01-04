@@ -10,6 +10,7 @@ export default function ItemQuantity() {
         />
         <Text style={styles.coffeeTitle}>Cappucino</Text>
       </View>
+      <View style={styles.qunatityView}></View>
     </View>
   );
 }
@@ -41,5 +42,12 @@ const styles = StyleSheet.create({
     color: '#2F2D2C',
     fontStyle: 'normal',
     fontWeight: '600',
+  },
+
+  qunatityView: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 10,
+    alignItems: 'center',
   },
 });

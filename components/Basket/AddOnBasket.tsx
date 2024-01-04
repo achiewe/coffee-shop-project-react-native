@@ -14,7 +14,7 @@ export default function AddOnBasket() {
               <Text style={styles.amountOfMoney}> $ 5.53</Text>
             </View>
           </View>
-          <Text> asdasd</Text>
+          <Image source={require('../../assets/dots.png')} />
         </View>
       </View>
     </View>

@@ -1,11 +1,13 @@
-import {StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 
 export default function AddOnBasket() {
   return (
     <View style={styles.addBasketView}>
       <View style={styles.lineStyle} />
       <View style={styles.paymentMethodCont}>
-        <View style={styles.paymentCashCard}></View>
+        <View style={styles.paymentCashCard}>
+          <Image source={require('../../assets/Heart.png')} />
+        </View>
       </View>
     </View>
   );

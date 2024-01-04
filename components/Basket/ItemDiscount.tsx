@@ -1,10 +1,15 @@
-import {StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 
 export default function ItemDiscount() {
   return (
     <View style={styles.discountCont}>
       <View style={styles.line}></View>
-      <View style={styles.discountView}></View>
+      <View style={styles.discountView}>
+        <View style={styles.pngTextView}>
+          <Image source={require('../../assets/Discount.png')} />
+          <Text style={styles.discountText}> 1 Discount is applied</Text>
+        </View>
+      </View>
     </View>
   );
 }
@@ -33,5 +38,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     justifyContent: 'space-between',
+    backgroundColor: '#FFF',
+    borderWidth: 1,
+    borderColor: '#EAEAEA',
+    borderRadius: 14,
+  },
+
+  pngTextView: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+
+  discountText: {
+    fontSize: 14,
+    color: '#2F2D2C',
+    fontStyle: 'normal',
+    fontWeight: '600',
   },
 });

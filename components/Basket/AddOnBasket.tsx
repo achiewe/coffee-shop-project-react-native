@@ -6,8 +6,13 @@ export default function AddOnBasket() {
       <View style={styles.lineStyle}>
         <View style={styles.paymentMethodCont}>
           <View style={styles.paymentCashCard}>
-            <Image source={require('../../assets/Heart.png')} />
-            <Text> hello</Text>
+            <Image source={require('../../assets/moneys.png')} />
+            <View style={styles.cashPrice}>
+              <View style={styles.cashView}>
+                <Text style={styles.cashText}> Cash</Text>
+              </View>
+              <Text style={styles.amountOfMoney}> $ 5.53</Text>
+            </View>
           </View>
         </View>
       </View>
@@ -33,6 +38,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderColor: '#EAEAEA',
     borderWidth: 1,
+    paddingTop: 16,
   },
 
   paymentMethodCont: {
@@ -48,5 +54,36 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 22,
     justifyContent: 'center',
+  },
+
+  cashPrice: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+
+  cashView: {
+    width: 51,
+    height: 24,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 20,
+    backgroundColor: '#C67C4E',
+  },
+
+  cashText: {
+    fontSize: 12,
+    fontStyle: 'normal',
+    fontWeight: '400',
+    color: '#FFFFFF',
+  },
+
+  amountOfMoney: {
+    fontSize: 12,
+    fontWeight: '400',
+    fontStyle: 'normal',
+    color: '#2F2D2C',
   },
 });

@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     paddingLeft: 36,
     paddingRight: 36,
     marginTop: 21,
+    marginBottom: 10,
   },
 
   paymentText: {

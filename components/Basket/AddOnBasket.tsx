@@ -1,12 +1,14 @@
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 
 export default function AddOnBasket() {
   return (
     <View style={styles.addBasketView}>
-      <View style={styles.lineStyle} />
-      <View style={styles.paymentMethodCont}>
-        <View style={styles.paymentCashCard}>
-          <Image source={require('../../assets/Heart.png')} />
+      <View style={styles.lineStyle}>
+        <View style={styles.paymentMethodCont}>
+          <View style={styles.paymentCashCard}>
+            <Image source={require('../../assets/Heart.png')} />
+            <Text> hello</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -45,7 +47,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     gap: 22,
-    alignItems: 'center',
     justifyContent: 'center',
   },
 });

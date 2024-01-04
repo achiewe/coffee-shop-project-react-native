@@ -19,7 +19,7 @@ export default function Basket(): React.JSX.Element {
 const styles = StyleSheet.create({
   mainContainer: {
     display: 'flex',
-    width: '100%',
+    flex: 1,
     flexDirection: 'column',
     backgroundColor: '#F9F9F9',
   },

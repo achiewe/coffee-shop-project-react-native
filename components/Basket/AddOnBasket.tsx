@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     gap: 16,
-    marginTop: 20,
+    marginTop: 30,
   },
 
   lineStyle: {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     width: '100%',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
   },
 
@@ -46,5 +46,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 22,
     alignItems: 'center',
+    justifyContent: 'center',
   },
 });

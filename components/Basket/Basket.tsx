@@ -21,5 +21,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     width: '100%',
     flexDirection: 'column',
+    backgroundColor: '#F9F9F9',
   },
 });

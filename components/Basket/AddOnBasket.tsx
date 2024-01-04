@@ -19,7 +19,10 @@ const styles = StyleSheet.create({
 
   lineStyle: {
     width: '100%',
-    height: 1,
-    backgroundColor: 'red',
+    height: '100%',
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+    borderColor: '#EAEAEA',
+    borderWidth: 1,
   },
 });

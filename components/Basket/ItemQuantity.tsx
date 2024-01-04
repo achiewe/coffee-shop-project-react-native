@@ -12,7 +12,15 @@ export default function ItemQuantity() {
       </View>
       <View style={styles.qunatityView}>
         <TouchableOpacity>
-          <View style={styles.minusQuantity}></View>
+          <View style={styles.ButQuantity}>
+            <Image source={require('../../assets/minus.png')} />
+          </View>
+        </TouchableOpacity>
+        <Text style={styles.quantity}>1</Text>
+        <TouchableOpacity>
+          <View style={styles.ButQuantity}>
+            <Image source={require('../../assets/plus.png')} />
+          </View>
         </TouchableOpacity>
       </View>
     </View>
@@ -51,15 +59,24 @@ const styles = StyleSheet.create({
   qunatityView: {
     display: 'flex',
     flexDirection: 'row',
-    gap: 10,
+    gap: 15,
     alignItems: 'center',
   },
 
-  minusQuantity: {
+  ButQuantity: {
     width: 30,
     height: 30,
     borderRadius: 15,
     borderWidth: 1,
     borderColor: '#2F2D2C',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  quantity: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#2F2D2C',
   },
 });

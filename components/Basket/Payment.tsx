@@ -18,6 +18,7 @@ export default function Payment() {
             </View>
           </View>
         </View>
+        <View style={styles.lineStyle} />
       </View>
     </View>
   );
@@ -70,6 +71,13 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
   },
 
+  deliveryAmount: {
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: 8,
+  },
+
   amountPrice: {
     fontSize: 14,
     fontStyle: 'normal',
@@ -80,14 +88,14 @@ const styles = StyleSheet.create({
   amountPriceSale: {
     fontSize: 14,
     fontWeight: '400',
+    fontStyle: 'normal',
     textDecorationLine: 'line-through',
     color: '#2F2D2C',
   },
 
-  deliveryAmount: {
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'row',
-    gap: 8,
+  lineStyle: {
+    width: 315,
+    height: 1,
+    backgroundColor: '#EAEAEA',
   },
 });

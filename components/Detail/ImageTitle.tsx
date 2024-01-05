@@ -9,6 +9,7 @@ export default function ImageTitle() {
           <Text style={styles.title}> Cappucino</Text>
           <View style={styles.ratingView}>
             <Image source={require('../../assets/Rating.png')} />
+            <Text style={styles.rating}> 4.8</Text>
           </View>
         </View>
       </View>
@@ -30,16 +31,17 @@ const styles = StyleSheet.create({
     display: 'flex',
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    paddingLeft: 31,
+    paddingRight: 31,
     flexDirection: 'row',
-    gap: 97,
   },
 
   titleView: {
     display: 'flex',
     flexDirection: 'column',
     gap: 15,
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
 
   title: {
@@ -54,5 +56,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
+  },
+
+  rating: {
+    fontSize: 16,
+    color: '#2F2D2C',
+    fontWeight: '600',
+    fontStyle: 'normal',
   },
 });

@@ -1,6 +1,6 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 
-export default function ImageTitle() {
+export default function ImageTitle(): JSX.Element {
   return (
     <View style={styles.mainContainer}>
       <Image source={require('../../assets/classicCappuccino.png')} />

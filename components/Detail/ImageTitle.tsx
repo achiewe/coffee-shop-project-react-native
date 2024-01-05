@@ -12,7 +12,11 @@ export default function ImageTitle() {
             <Text style={styles.rating}> 4.8</Text>
           </View>
         </View>
-        <View style={styles.coffeeLogoCont}></View>
+        <View style={styles.coffeeLogoCont}>
+          <View style={styles.coffeeGrainView}>
+            <Image source={require('../../assets/coffeeBean.png')} />
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -71,5 +75,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 15,
     alignItems: 'center',
+  },
+
+  coffeeGrainView: {
+    width: 44,
+    height: 44,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFF0F0',
   },
 });

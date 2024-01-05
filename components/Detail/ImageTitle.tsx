@@ -18,9 +18,11 @@ export default function ImageTitle() {
               style={styles.coffeeGrain}
               source={require('../../assets/coffeeGrain.png')}
             />
+          </View>
+          <View style={styles.coffeeGrainView}>
             <Image
               style={styles.coffeeGrain}
-              source={require('../../assets/coffeeGrain.png')}
+              source={require('../../assets/milk.png')}
             />
           </View>
         </View>

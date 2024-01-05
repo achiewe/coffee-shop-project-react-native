@@ -3,6 +3,7 @@ import BasketHeadline from './BasketHeadline';
 import ItemDiscount from './ItemDiscount';
 import Payment from './Payment';
 import AddOnBasket from './AddOnBasket';
+import ButtonBasket from './ButtonBasket';
 
 // component for the basket component
 export default function Basket(): React.JSX.Element {
@@ -12,6 +13,7 @@ export default function Basket(): React.JSX.Element {
       <ItemDiscount />
       <Payment />
       <AddOnBasket />
+      <ButtonBasket />
     </View>
   );
 }
@@ -21,6 +23,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#F9F9F9',
+    // backgroundColor: '#F9F9F9',
   },
 });

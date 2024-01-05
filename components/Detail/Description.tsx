@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
+    gap: 20,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 28,

@@ -17,6 +17,7 @@ export default function AddOnBasket() {
           </View>
           <Image source={require('../../assets/dots.png')} />
         </View>
+        <ButtonBasket />
       </View>
     </View>
   );

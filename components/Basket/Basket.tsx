@@ -13,7 +13,6 @@ export default function Basket(): React.JSX.Element {
       <ItemDiscount />
       <Payment />
       <AddOnBasket />
-      <ButtonBasket />
     </View>
   );
 }
@@ -23,6 +22,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    // backgroundColor: '#F9F9F9',
+    backgroundColor: '#F9F9F9',
   },
 });

@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 17,
   },
 
   buttonText: {

@@ -38,6 +38,8 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     borderTopRightRadius: 20,
+    display: 'flex',
+    alignItems: 'center',
     borderTopLeftRadius: 20,
     borderColor: '#EAEAEA',
     borderWidth: 1,

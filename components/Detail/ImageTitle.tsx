@@ -12,6 +12,7 @@ export default function ImageTitle() {
             <Text style={styles.rating}> 4.8</Text>
           </View>
         </View>
+        <View style={styles.coffeeLogoCont}></View>
       </View>
     </View>
   );
@@ -63,5 +64,12 @@ const styles = StyleSheet.create({
     color: '#2F2D2C',
     fontWeight: '600',
     fontStyle: 'normal',
+  },
+
+  coffeeLogoCont: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 15,
+    alignItems: 'center',
   },
 });

@@ -16,7 +16,11 @@ export default function ImageTitle() {
           <View style={styles.coffeeGrainView}>
             <Image
               style={styles.coffeeGrain}
-              source={require('../../assets/coffeeBean.png')}
+              source={require('../../assets/coffeeGrain.png')}
+            />
+            <Image
+              style={styles.coffeeGrain}
+              source={require('../../assets/coffeeGrain.png')}
             />
           </View>
         </View>
@@ -91,6 +95,7 @@ const styles = StyleSheet.create({
   },
 
   coffeeGrain: {
-    tintColor: 'red',
+    width: 30,
+    height: 30,
   },
 });

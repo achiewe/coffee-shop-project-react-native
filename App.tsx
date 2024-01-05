@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {SafeAreaView, StyleSheet, View} from 'react-native';
 import Login from './components/Login';
 import Footer from './components/Footer';
 
@@ -29,7 +29,7 @@ function App(): React.JSX.Element {
 
   const Stack = createNativeStackNavigator<RootStackParamList>();
   return (
-    <View style={styles.mainDiv}>
+    <SafeAreaView style={styles.mainDiv}>
       {showLogin ? (
         <Login />
       ) : (
@@ -42,7 +42,7 @@ function App(): React.JSX.Element {
           <Footer />
         </NavigationContainer>
       )}
-    </View>
+    </SafeAreaView>
   );
 }
 

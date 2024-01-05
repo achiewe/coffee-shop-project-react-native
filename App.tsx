@@ -10,6 +10,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 //screens
 import MainPage from './components/MainPage/MainPage';
 import Basket from './components/Basket/Basket';
+import Detail from './components/Detail/Detail';
 import {RootStackParamList} from './types';
 
 function App(): React.JSX.Element {
@@ -36,6 +37,7 @@ function App(): React.JSX.Element {
           <Stack.Navigator initialRouteName="Home">
             <Stack.Screen name="Home" component={MainPage} />
             <Stack.Screen name="Basket" component={Basket} />
+            <Stack.Screen name="Detail" component={Detail} />
           </Stack.Navigator>
           <Footer />
         </NavigationContainer>

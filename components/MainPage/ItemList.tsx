@@ -13,7 +13,10 @@ export default function ItemList() {
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <Image style={styles.image} source={{uri: item.image}} />
+              <Image
+                style={styles.image}
+                source={{uri: `data:image/png;base64, ${item.image}`}}
+              />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
             <View style={styles.priceView}>

@@ -14,8 +14,14 @@ export default function ItemList() {
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
               <Image
-                style={styles.image}
-                source={{uri: `data:image/png;base64, ${item.image}`}}
+                style={{
+                  width: 51,
+                  height: 51,
+                  resizeMode: 'contain',
+                }}
+                source={{
+                  uri: `data:image/png;base64, ${item.image}`,
+                }}
               />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>

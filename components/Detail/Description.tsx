@@ -54,5 +54,6 @@ const styles = StyleSheet.create({
     color: '#9B9B9B',
     fontWeight: '400',
     fontStyle: 'normal',
+    lineHeight: 20,
   },
 });

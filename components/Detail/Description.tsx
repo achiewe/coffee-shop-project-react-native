@@ -7,7 +7,7 @@ export default function Description() {
       <View style={styles.titleDescView}>
         <Text style={styles.title}> Description</Text>
         <Text style={styles.paragraph}>
-          A cappuccino is an approximately 150 ml beverage, with 25 ml of
+          A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of
           espresso coffee and 85ml of fresh milk the fo.. Read More
         </Text>
       </View>
@@ -55,5 +55,6 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     fontStyle: 'normal',
     lineHeight: 20,
+    width: 290,
   },
 });

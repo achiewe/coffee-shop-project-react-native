@@ -13,7 +13,7 @@ export default function ItemList() {
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <Image source={{uri: item.image}} />
+              <Image style={styles.image} source={{uri: item.image}} />
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
             <View style={styles.priceView}>
@@ -53,6 +53,11 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     gap: 6,
+  },
+
+  image: {
+    width: 50,
+    height: 60,
   },
 
   CoffeeTitle: {

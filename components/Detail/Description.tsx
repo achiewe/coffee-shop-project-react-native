@@ -16,6 +16,7 @@ export default function Description() {
   );
 }
 
+// description style
 const styles = StyleSheet.create({
   mainDesc: {
     width: '100%',

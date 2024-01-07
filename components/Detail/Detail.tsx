@@ -2,6 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import ImageTitle from './ImageTitle';
 import Description from './Description';
 
+// detail component
 export default function Detail() {
   return (
     <View style={styles.mainDetail}>

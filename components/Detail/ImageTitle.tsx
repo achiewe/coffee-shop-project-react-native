@@ -1,5 +1,6 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 
+// imageTitle component
 export default function ImageTitle(): JSX.Element {
   return (
     <View style={styles.mainContainer}>

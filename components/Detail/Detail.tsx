@@ -12,6 +12,7 @@ export default function Detail() {
   );
 }
 
+// detail style
 const styles = StyleSheet.create({
   mainDetail: {
     flex: 1,

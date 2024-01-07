@@ -1,5 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 
+// description component
 export default function Description() {
   return (
     <View style={styles.mainDesc}>

@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 import data from '../../data.json';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {RootState} from '../../features/store';
 import {setId} from '../../features/TitleCategoryId';
 
@@ -17,8 +17,6 @@ export default function ListCoffeeTitle() {
   const getId = (id: number): void => {
     dispatch(setId(id));
   };
-
-  const titleId = useSelector((store: RootState) => store.id.id);
 
   return (
     <ScrollView

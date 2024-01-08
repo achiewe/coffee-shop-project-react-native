@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import ItemQuantity from './ItemQuantity';
 
+// component basketHeadline
 export default function BasketHeadline() {
   return (
     <View style={styles.mainContainer}>
@@ -12,6 +13,7 @@ export default function BasketHeadline() {
   );
 }
 
+// basketHeadline styles
 const styles = StyleSheet.create({
   mainContainer: {
     display: 'flex',

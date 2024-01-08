@@ -12,6 +12,8 @@ import MainPage from './components/MainPage/MainPage';
 import Basket from './components/Basket/Basket';
 import Detail from './components/Detail/Detail';
 import {RootStackParamList} from './types';
+import {Provider} from 'react-redux';
+import store from './features/store';
 
 function App(): React.JSX.Element {
   // create state for show the login component
@@ -29,20 +31,22 @@ function App(): React.JSX.Element {
 
   const Stack = createNativeStackNavigator<RootStackParamList>();
   return (
-    <SafeAreaView style={styles.mainDiv}>
-      {showLogin ? (
-        <Login />
-      ) : (
-        <NavigationContainer>
-          <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen name="Home" component={MainPage} />
-            <Stack.Screen name="Basket" component={Basket} />
-            <Stack.Screen name="Detail" component={Detail} />
-          </Stack.Navigator>
-          <Footer />
-        </NavigationContainer>
-      )}
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={styles.mainDiv}>
+        {showLogin ? (
+          <Login />
+        ) : (
+          <NavigationContainer>
+            <Stack.Navigator initialRouteName="Home">
+              <Stack.Screen name="Home" component={MainPage} />
+              <Stack.Screen name="Basket" component={Basket} />
+              <Stack.Screen name="Detail" component={Detail} />
+            </Stack.Navigator>
+            <Footer />
+          </NavigationContainer>
+        )}
+      </SafeAreaView>
+    </Provider>
   );
 }
 

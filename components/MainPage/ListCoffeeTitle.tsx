@@ -6,9 +6,13 @@ import {
   View,
 } from 'react-native';
 import data from '../../data.json';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../features/store';
 
 // list of the data
 export default function ListCoffeeTitle() {
+  const TitleId = useSelector((store: RootState) => store.id.id);
+
   return (
     <ScrollView
       horizontal={true}

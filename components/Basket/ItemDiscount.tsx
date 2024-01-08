@@ -1,5 +1,6 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 
+// component ItemDiscount
 export default function ItemDiscount() {
   return (
     <View style={styles.discountCont}>
@@ -12,6 +13,7 @@ export default function ItemDiscount() {
   );
 }
 
+// component styles
 const styles = StyleSheet.create({
   discountCont: {
     width: '100%',

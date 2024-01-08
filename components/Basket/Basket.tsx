@@ -17,6 +17,7 @@ export default function Basket(): React.JSX.Element {
   );
 }
 
+// style for the basket
 const styles = StyleSheet.create({
   mainContainer: {
     display: 'flex',

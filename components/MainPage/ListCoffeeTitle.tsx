@@ -20,8 +20,6 @@ export default function ListCoffeeTitle() {
 
   const titleId = useSelector((store: RootState) => store.id.id);
 
-  console.log(titleId);
-
   return (
     <ScrollView
       horizontal={true}

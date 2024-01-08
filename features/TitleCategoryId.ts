@@ -17,3 +17,6 @@ const TitleCategoryId = createSlice({
     },
   },
 });
+
+export const {setId} = TitleCategoryId.actions;
+export default TitleCategoryId.reducer;

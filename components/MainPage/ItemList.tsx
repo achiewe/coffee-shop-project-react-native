@@ -1,11 +1,15 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import data from '../../data.json';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../features/store';
 
 // function for data map
 export default function ItemList() {
   const cappuccinoCoffee = data.coffee_categories.find(
     category => category.category === 'Cappuccino',
   );
+
+  const TitleId = useSelector((store: RootState) => store.id.id);
 
   return (
     <View style={styles.mainContainer}>

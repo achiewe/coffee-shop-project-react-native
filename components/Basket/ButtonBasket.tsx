@@ -1,5 +1,6 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
+// component buttonBasket
 export default function ButtonBasket() {
   return (
     <TouchableOpacity style={styles.button}>
@@ -8,6 +9,7 @@ export default function ButtonBasket() {
   );
 }
 
+// component style
 const styles = StyleSheet.create({
   button: {
     width: 315,

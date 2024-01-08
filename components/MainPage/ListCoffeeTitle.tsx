@@ -6,11 +6,22 @@ import {
   View,
 } from 'react-native';
 import data from '../../data.json';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
+import {setId} from '../../features/TitleCategoryId';
 
 // list of the data
 export default function ListCoffeeTitle() {
+  const dispatch = useDispatch();
+
+  const getId = (id: number): void => {
+    dispatch(setId(id));
+  };
+
+  const titleId = useSelector((store: RootState) => store.id.id);
+
+  console.log(titleId);
+
   return (
     <ScrollView
       horizontal={true}
@@ -18,7 +29,11 @@ export default function ListCoffeeTitle() {
       style={style.MainContainer}>
       {data.coffee_categories.map(item => {
         return (
-          <TouchableWithoutFeedback key={item.id}>
+          <TouchableWithoutFeedback
+            key={item.id}
+            onPress={() => {
+              getId(item.id);
+            }}>
             <View key={item.id} style={style.TitleView}>
               <Text style={style.titleText}>{item.category}</Text>
             </View>

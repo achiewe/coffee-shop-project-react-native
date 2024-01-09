@@ -8,6 +8,7 @@ const store = configureStore({
   },
 });
 
+// add the state in the RootState
 export type RootState = {
   id: TitleCatProps;
 };

@@ -23,4 +23,6 @@ const TitleCategoryId = createSlice({
 
 // export setState
 export const {setId} = TitleCategoryId.actions;
+
+// export TitleCategoryId reducer
 export default TitleCategoryId.reducer;

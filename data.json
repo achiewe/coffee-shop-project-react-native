@@ -9,6 +9,7 @@
           "title": "Classic Cappuccino",
           "price": 4.99,
           "image": "../../assets/classicCappuccino.png",
+          "description": "A classic cappuccino is a harmonious blend of espresso, steamed milk, and velvety microfoam. This iconic Italian coffee creation captivates the senses with a rich, bold espresso base, topped with a luscious layer of frothy milk that balances the intensity of the coffee. Served in a small cup, the cappuccino is a timeless indulgence, celebrated for its perfect marriage of strong flavors and creamy texture.",
           "rating": 4.5
         },
         {
@@ -16,6 +17,7 @@
           "title": "Caramel Cappuccino",
           "price": 5.99,
           "image": "../../assets/caramel_cappuccino.png",
+          "description": "A Caramel Cappuccino is a delightful fusion of robust espresso, steamed milk, and a decadent swirl of caramel syrup. This indulgent blend marries the boldness of coffee with a velvety texture, while the sweet caramel adds a touch of luxury to every sip. It's a delicious and comforting twist on the classic cappuccino, perfect for those who crave a harmonious balance of rich flavors and sweetness in their coffee.",
           "rating": 4.7
         },
         {
@@ -23,6 +25,7 @@
           "title": "Hazelnut Cappuccino",
           "price": 5.49,
           "image": "../../assets/hazelnut_cappuccino.png",
+          "description":
           "rating": 4.4
         },
         {
@@ -30,6 +33,7 @@
           "title": "Flavored Cappuccino",
           "price": 6.49,
           "image": "../../assets/mocha_cappuccino.png",
+          "description":
           "rating": 4.8
         }
       ]
@@ -43,6 +47,7 @@
           "title": "Caramel Macchiato",
           "price": 5.99,
           "image": "../../assets/caramel_macchiato.png",
+          "description":
           "rating": 4.6
         },
         {
@@ -50,6 +55,7 @@
           "title": "Vanilla Macchiato",
           "price": 5.49,
           "image": "../../assets/vanilla_macchiato.png",
+          "description":
           "rating": 4.5
         },
         {
@@ -57,6 +63,7 @@
           "title": "Toffee Nut Macchiato",
           "price": 6.49,
           "image": "../../assets/toffee_nut_macchiato.png",
+          "description":
           "rating": 4.9
         },
         {
@@ -64,6 +71,7 @@
           "title": "Chocolate Macchiato",
           "price": 6.99,
           "image": "../../assets/chocolate_macchiato.png",
+          "description":
           "rating": 4.7
         }
       ]
@@ -77,6 +85,7 @@
           "title": "Vanilla Latte",
           "price": 4.99,
           "image": "../../assets/vanilla_latte.png",
+          "description":
           "rating": 4.4
         },
         {
@@ -84,6 +93,7 @@
           "title": "Caramel Latte",
           "price": 5.49,
           "image": "../../assets/caramel_latte.png",
+          "description":
           "rating": 4.8
         },
         {
@@ -91,6 +101,7 @@
           "title": "Hazelnut Latte",
           "price": 5.99,
           "image": "../../assets/hazelnut_latte.png",
+          "description":
           "rating": 4.5
         },
         {
@@ -98,6 +109,7 @@
           "title": "White Chocolate Latte",
           "price": 6.49,
           "image": "../../assets/white_chocolate_latte.png",
+          "description":
           "rating": 4.6
         }
       ]
@@ -111,6 +123,7 @@
           "title": "Classic Americano",
           "price": 3.99,
           "image": "../../assets/classic_americano.png",
+          "description":
           "rating": 4.3
         },
         {
@@ -118,6 +131,7 @@
           "title": "Mint Americano",
           "price": 4.49,
           "image": "../../assets/mint_americano.png",
+          "description":
           "rating": 4.7
         },
         {
@@ -125,6 +139,7 @@
           "title": "Cinnamon Americano",
           "price": 4.99,
           "image": "../../assets/cinnamon_americano.png",
+          "description":
           "rating": 4.6
         },
         {
@@ -132,6 +147,7 @@
           "title": "Maple Americano",
           "price": 5.49,
           "image": "../../assets/maple_americano.png",
+          "description":
           "rating": 4.5
         }
       ]

@@ -6,10 +6,10 @@ export default function BuyNow() {
       <View style={styles.viewPrice}>
         <Text style={styles.textPrice}>Price</Text>
         <Text style={styles.priceAmount}>$ 4.53</Text>
-        <TouchableOpacity>
-          <Text> Buy Now</Text>
-        </TouchableOpacity>
       </View>
+      <TouchableOpacity style={styles.buyButton}>
+        <Text>Buy Now</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -18,10 +18,11 @@ const styles = StyleSheet.create({
   mainView: {
     width: '100%',
     height: '100%',
+    flexDirection: 'row',
     borderTopRightRadius: 20,
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
     paddingVertical: 23,
     paddingHorizontal: 18,
     borderTopLeftRadius: 20,
@@ -49,5 +50,15 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '600',
     color: '#C67C4E',
+  },
+
+  buyButton: {
+    width: 217,
+    height: 55,
+    borderRadius: 16,
+    backgroundColor: '#C67C4E',
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
   },
 });

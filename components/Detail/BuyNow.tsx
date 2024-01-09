@@ -1,11 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 export default function BuyNow() {
   return (
     <View style={styles.mainView}>
       <View style={styles.viewPrice}>
-        <Text style={styles.textPrice}>Price </Text>
-        <Text> </Text>
+        <Text style={styles.textPrice}>Price</Text>
+        <Text style={styles.priceAmount}>$ 4.53</Text>
+        <TouchableOpacity>
+          <Text> Buy Now</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -29,7 +32,8 @@ const styles = StyleSheet.create({
   viewPrice: {
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'center',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
     gap: 8,
   },
 
@@ -38,5 +42,12 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '400',
     color: '#9B9B9B',
+  },
+
+  priceAmount: {
+    fontSize: 18,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    color: '#C67C4E',
   },
 });

@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     marginTop: 28,
-    marginBottom: 12,
+    marginBottom: 20,
     paddingLeft: 31,
     paddingRight: 31,
   },

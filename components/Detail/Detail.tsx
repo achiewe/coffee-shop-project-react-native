@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import ImageTitle from './ImageTitle';
 import Description from './Description';
+import BuyNow from './BuyNow';
 
 // detail component
 export default function Detail() {
@@ -8,6 +9,7 @@ export default function Detail() {
     <View style={styles.mainDetail}>
       <ImageTitle />
       <Description />
+      <BuyNow />
     </View>
   );
 }

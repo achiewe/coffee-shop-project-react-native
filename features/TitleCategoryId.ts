@@ -1,5 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+// type for state
 export interface TitleCatProps {
   id: number;
 }

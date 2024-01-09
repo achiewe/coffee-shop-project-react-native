@@ -8,7 +8,7 @@ export default function BuyNow() {
         <Text style={styles.priceAmount}>$ 4.53</Text>
       </View>
       <TouchableOpacity style={styles.buyButton}>
-        <Text>Buy Now</Text>
+        <Text style={styles.buttonText}>Buy Now</Text>
       </TouchableOpacity>
     </View>
   );
@@ -59,6 +59,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#C67C4E',
     display: 'flex',
     justifyContent: 'center',
-    alignContent: 'center',
+    alignItems: 'center',
+  },
+
+  buttonText: {
+    fontSize: 16,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    color: '#FFFFFF',
   },
 });

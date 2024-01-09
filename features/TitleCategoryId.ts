@@ -10,6 +10,7 @@ const initialState: TitleCatProps = {
   id: 1,
 };
 
+// state name and reducer
 const TitleCategoryId = createSlice({
   name: 'id',
   initialState,

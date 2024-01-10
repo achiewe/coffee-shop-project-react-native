@@ -14,6 +14,7 @@ export default function BuyNow() {
   );
 }
 
+// style for BuyNow component
 const styles = StyleSheet.create({
   mainView: {
     width: '100%',

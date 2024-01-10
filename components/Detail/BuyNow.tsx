@@ -1,5 +1,6 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
+// BuyNow component
 export default function BuyNow() {
   return (
     <View style={styles.mainView}>

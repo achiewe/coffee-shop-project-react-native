@@ -1,12 +1,16 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
+interface BuyNowProps {
+  coffeeItem: number | undefined;
+}
+
 // BuyNow component
-export default function BuyNow() {
+export default function BuyNow({coffeeItem}: BuyNowProps): JSX.Element {
   return (
     <View style={styles.mainView}>
       <View style={styles.viewPrice}>
         <Text style={styles.textPrice}>Price</Text>
-        <Text style={styles.priceAmount}>$ 4.53</Text>
+        <Text style={styles.priceAmount}>$ {coffeeItem}</Text>
       </View>
       <TouchableOpacity style={styles.buyButton}>
         <Text style={styles.buttonText}>Buy Now</Text>

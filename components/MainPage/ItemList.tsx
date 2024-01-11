@@ -4,7 +4,6 @@ import {useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
 import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
-import Detail from '../Detail/Detail';
 
 // function for data map
 export default function ItemList() {

@@ -11,9 +11,6 @@ type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Detail'>;
 
 // component for the basket component
 export default function Basket(): React.JSX.Element {
-  const route = useRoute<DetailScreenRouteProp>();
-  const {itemId} = route.params;
-
   return (
     <View style={styles.mainContainer}>
       <BasketHeadline />

@@ -32,6 +32,7 @@ export default function ImageTitle(): JSX.Element {
   );
 }
 
+// style for component
 const styles = StyleSheet.create({
   mainContainer: {
     width: '100%',

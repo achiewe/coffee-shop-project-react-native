@@ -23,8 +23,7 @@ const Detail: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
   return (
     <View style={styles.mainDetail}>
       <ImageTitle />
-      <Description />
-      <Text> {coffeeItem?.description}</Text>
+      <Description coffeeItem={coffeeItem?.description} />
       <BuyNow />
     </View>
   );

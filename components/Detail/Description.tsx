@@ -1,16 +1,17 @@
 import {StyleSheet, Text, View} from 'react-native';
 
+interface coffeItemProps {
+  coffeeItem: string | undefined;
+}
+
 // description component
-export default function Description() {
+export default function Description({coffeeItem}: coffeItemProps): JSX.Element {
   return (
     <View style={styles.mainDesc}>
       <View style={styles.line} />
       <View style={styles.titleDescView}>
         <Text style={styles.title}> Description</Text>
-        <Text style={styles.paragraph}>
-          A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of
-          espresso coffee and 85ml of fresh milk the fo.. Read More
-        </Text>
+        <Text style={styles.paragraph}>{coffeeItem}</Text>
       </View>
     </View>
   );

@@ -12,24 +12,30 @@ export default function ItemList() {
   const cappuccinoCoffee = data.coffee_categories.find(
     category => category.id === TitleId,
   );
-
-  const getJobId = () => {};
+  const getJobId = (itemId: number) => {
+    // Perform any action with the itemId, for example, dispatch an action
+    // or navigate to a new screen with the itemId
+    console.log('Clicked on item with id:', itemId);
+    // You can dispatch an action or navigate to a new screen here
+  };
   return (
     <View style={styles.mainContainer}>
       {cappuccinoCoffee &&
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <Image
-                style={{
-                  width: 51,
-                  height: 51,
-                  resizeMode: 'contain',
-                }}
-                source={{
-                  uri: `data:image/png;base64, ${item.image}`,
-                }}
-              />
+              <TouchableOpacity onPress={() => getJobId(item.id)}>
+                <Image
+                  style={{
+                    width: 51,
+                    height: 51,
+                    resizeMode: 'contain',
+                  }}
+                  source={{
+                    uri: `data:image/png;base64, ${item.image}`,
+                  }}
+                />
+              </TouchableOpacity>
               <Text style={styles.CoffeeTitle}>{item.title}</Text>
             </View>
             <View style={styles.priceView}>

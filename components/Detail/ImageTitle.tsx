@@ -1,5 +1,18 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 
+interface IageTitleProps {
+  coffeeItem:
+    | {
+        id: number;
+        title: string;
+        price: number;
+        image: string;
+        description: string;
+        rating: number;
+      }
+    | undefined;
+}
+
 // imageTitle component
 export default function ImageTitle(): JSX.Element {
   return (

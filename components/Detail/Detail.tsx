@@ -4,16 +4,27 @@ import Description from './Description';
 import BuyNow from './BuyNow';
 import {RouteProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../features/store';
+import data from '../../data.json';
 
 type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Detail'>;
 
 // detail component
 const Detail: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
   const {itemId} = route.params;
+
+  const coffeeItem = useSelector((store: RootState) =>
+    data.coffee_categories
+      .flatMap(category => category.coffees)
+      .find(item => item.id === itemId),
+  );
+
   return (
     <View style={styles.mainDetail}>
       <ImageTitle />
       <Description />
+      <Text> {coffeeItem?.description}</Text>
       <BuyNow />
     </View>
   );

@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import ImageTitle from './ImageTitle';
 import Description from './Description';
 import BuyNow from './BuyNow';
@@ -19,11 +19,11 @@ const Detail: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
     .find(item => item.id === itemId);
 
   return (
-    <View style={styles.mainDetail}>
+    <ScrollView style={styles.mainDetail}>
       <ImageTitle coffeeItem={coffeeItem} />
       <Description coffeeItem={coffeeItem?.description} />
       <BuyNow coffeeItem={coffeeItem?.price} />
-    </View>
+    </ScrollView>
   );
 };
 

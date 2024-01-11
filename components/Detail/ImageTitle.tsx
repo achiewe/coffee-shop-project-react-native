@@ -1,6 +1,6 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 
-interface IageTitleProps {
+interface ImageTitleProps {
   coffeeItem:
     | {
         id: number;
@@ -14,16 +14,16 @@ interface IageTitleProps {
 }
 
 // imageTitle component
-export default function ImageTitle(): JSX.Element {
+export default function ImageTitle({coffeeItem}: ImageTitleProps): JSX.Element {
   return (
     <View style={styles.mainContainer}>
       <Image source={require('../../assets/classicCappuccino.png')} />
       <View style={styles.titleRateCont}>
         <View style={styles.titleView}>
-          <Text style={styles.title}> Cappucino</Text>
+          <Text style={styles.title}> {coffeeItem?.title}</Text>
           <View style={styles.ratingView}>
             <Image source={require('../../assets/Rating.png')} />
-            <Text style={styles.rating}> 4.8</Text>
+            <Text style={styles.rating}> {coffeeItem?.rating}</Text>
           </View>
         </View>
         <View style={styles.coffeeLogoCont}>

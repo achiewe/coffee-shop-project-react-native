@@ -14,17 +14,15 @@ type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Detail'>;
 const Detail: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
   const {itemId} = route.params;
 
-  const coffeeItem = useSelector((store: RootState) =>
-    data.coffee_categories
-      .flatMap(category => category.coffees)
-      .find(item => item.id === itemId),
-  );
+  const coffeeItem = data.coffee_categories
+    .flatMap(category => category.coffees)
+    .find(item => item.id === itemId);
 
   return (
     <View style={styles.mainDetail}>
-      <ImageTitle coffeeItem={coffeeItem?.description} />
+      {/* <ImageTitle coffeeItem={coffeeItem?.description} /> */}
       <Description coffeeItem={coffeeItem?.description} />
-      <BuyNow coffeeItem={coffeeItem?.description} />
+      {/* <BuyNow coffeeItem={coffeeItem?.description} /> */}
     </View>
   );
 };

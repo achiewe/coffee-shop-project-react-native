@@ -12,7 +12,7 @@ export default function ItemList() {
   const cappuccinoCoffee = data.coffee_categories.find(
     category => category.id === TitleId,
   );
-  const getJobId = (itemId: number) => {
+  const getCoffeeId = (itemId: number) => {
     // Perform any action with the itemId, for example, dispatch an action
     // or navigate to a new screen with the itemId
     console.log('Clicked on item with id:', itemId);
@@ -24,7 +24,7 @@ export default function ItemList() {
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <TouchableOpacity onPress={() => getJobId(item.id)}>
+              <TouchableOpacity onPress={() => getCoffeeId(item.id)}>
                 <Image
                   style={{
                     width: 51,

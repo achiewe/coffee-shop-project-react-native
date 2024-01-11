@@ -7,6 +7,7 @@ import {RootState} from '../../features/store';
 export default function ItemList() {
   const TitleId = useSelector((store: RootState) => store.id.id);
 
+  // filter the data with id
   const cappuccinoCoffee = data.coffee_categories.find(
     category => category.id === TitleId,
   );

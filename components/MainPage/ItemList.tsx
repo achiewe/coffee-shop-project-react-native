@@ -2,6 +2,9 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import data from '../../data.json';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
+import {useNavigation, NavigationProp} from '@react-navigation/native';
+import {RootStackParamList} from '../../types';
+import Detail from '../Detail/Detail';
 
 // function for data map
 export default function ItemList() {
@@ -12,11 +15,15 @@ export default function ItemList() {
   const cappuccinoCoffee = data.coffee_categories.find(
     category => category.id === TitleId,
   );
+
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
   const getCoffeeId = (itemId: number) => {
     // Perform any action with the itemId, for example, dispatch an action
     // or navigate to a new screen with the itemId
     console.log('Clicked on item with id:', itemId);
     // You can dispatch an action or navigate to a new screen here
+    navigation.navigate('Detail');
   };
   return (
     <View style={styles.mainContainer}>

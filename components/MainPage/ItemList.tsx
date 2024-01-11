@@ -13,6 +13,7 @@ export default function ItemList() {
     category => category.id === TitleId,
   );
 
+  const getJobId = () => {};
   return (
     <View style={styles.mainContainer}>
       {cappuccinoCoffee &&

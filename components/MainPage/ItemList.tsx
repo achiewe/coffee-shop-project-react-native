@@ -20,7 +20,6 @@ export default function ItemList() {
 
   const getCoffeeId = (itemId: number) => {
     // Navigate to the 'Detail' screen with the selected item id
-    console.log(itemId);
     navigation.navigate('Detail', {itemId});
   };
   return (

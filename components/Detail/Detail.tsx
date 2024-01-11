@@ -4,8 +4,6 @@ import Description from './Description';
 import BuyNow from './BuyNow';
 import {RouteProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
-import {useSelector} from 'react-redux';
-import {RootState} from '../../features/store';
 import data from '../../data.json';
 
 type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Detail'>;

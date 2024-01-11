@@ -20,9 +20,9 @@ const Detail: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
 
   return (
     <View style={styles.mainDetail}>
-      {/* <ImageTitle coffeeItem={coffeeItem?.description} /> */}
+      <ImageTitle coffeeItem={coffeeItem?.description} />
       <Description coffeeItem={coffeeItem?.description} />
-      {/* <BuyNow coffeeItem={coffeeItem?.description} /> */}
+      <BuyNow coffeeItem={coffeeItem?.description} />
     </View>
   );
 };

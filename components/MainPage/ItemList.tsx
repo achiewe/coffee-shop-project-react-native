@@ -19,11 +19,9 @@ export default function ItemList() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const getCoffeeId = (itemId: number) => {
-    // Perform any action with the itemId, for example, dispatch an action
-    // or navigate to a new screen with the itemId
-    console.log('Clicked on item with id:', itemId);
-    // You can dispatch an action or navigate to a new screen here
-    navigation.navigate('Detail');
+    // Navigate to the 'Detail' screen with the selected item id
+    console.log(itemId);
+    navigation.navigate('Detail', {itemId});
   };
   return (
     <View style={styles.mainContainer}>

@@ -25,12 +25,6 @@ export default function Footer(): JSX.Element {
           // style={route.name === 'Basket' ? styles.pagePng : styles.onThePage}
         />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Detail')}>
-        <Image
-          source={require('../assets/Heart.png')}
-          // style={route.name === 'Basket' ? styles.pagePng : styles.onThePage}
-        />
-      </TouchableOpacity>
     </View>
   );
 }

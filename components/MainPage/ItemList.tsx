@@ -5,6 +5,7 @@ import {RootState} from '../../features/store';
 
 // function for data map
 export default function ItemList() {
+  // call id state
   const TitleId = useSelector((store: RootState) => store.id.id);
 
   // filter the data with id

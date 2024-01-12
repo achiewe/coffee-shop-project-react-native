@@ -5,6 +5,7 @@ import {RootState} from '../../features/store';
 import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 import {setAddCard} from '../../features/AddBasketSlice';
+import {useEffect} from 'react';
 
 // function for data map
 export default function ItemList() {
@@ -39,8 +40,8 @@ export default function ItemList() {
             <View style={styles.imageTitle}>
               <TouchableOpacity
                 onPress={() => {
-                  dispatch(setAddCard(false));
                   getCoffeeId(item.id);
+                  dispatch(setAddCard(false));
                 }}>
                 <Image
                   style={{
@@ -60,8 +61,8 @@ export default function ItemList() {
               <TouchableOpacity
                 style={styles.addCartBut}
                 onPress={() => {
-                  dispatch(setAddCard(true));
                   getCoffeeId(item.id);
+                  dispatch(setAddCard(true));
                 }}>
                 <Image source={require('../../assets/add.png')} />
               </TouchableOpacity>

@@ -1,11 +1,13 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import data from '../../data.json';
 import {useDispatch, useSelector} from 'react-redux';
-import {RootState} from '../../features/store';
+import store, {RootState} from '../../features/store';
 import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 import {setAddCard} from '../../features/AddBasketSlice';
 import {useEffect} from 'react';
+import {setFilteredItems} from '../../features/FilteredItemSlice';
+import itemType from '../../typesData';
 
 // function for data map
 export default function ItemList() {
@@ -18,6 +20,22 @@ export default function ItemList() {
   const cappuccinoCoffee = data.coffee_categories.find(
     category => category.id === TitleId,
   );
+
+  const searchText = useSelector(
+    (store: RootState) => store.searchTitle.searchTitle,
+  );
+
+  const filteredItems = useSelector(
+    (store: RootState) => store.filteredItems.filteredItems,
+  );
+
+  useEffect(() => {
+    // Filter the items based on the searchText
+    const filteredData = cappuccinoCoffee?.coffees.filter(item =>
+      item.title.toLowerCase().includes(searchText.toLowerCase()),
+    );
+    dispatch(setFilteredItems(filteredData || []));
+  }, [cappuccinoCoffee, searchText]);
 
   const addBasket = useSelector((store: RootState) => store.addCard.addCard);
   console.log(addBasket);
@@ -34,41 +52,40 @@ export default function ItemList() {
   };
   return (
     <View style={styles.mainContainer}>
-      {cappuccinoCoffee &&
-        cappuccinoCoffee.coffees.map(item => (
-          <View style={styles.itemView} key={item.id}>
-            <View style={styles.imageTitle}>
-              <TouchableOpacity
-                onPress={() => {
-                  getCoffeeId(item.id);
-                  dispatch(setAddCard(false));
-                }}>
-                <Image
-                  style={{
-                    width: 51,
-                    height: 51,
-                    resizeMode: 'contain',
-                  }}
-                  source={{
-                    uri: `data:image/png;base64, ${item.image}`,
-                  }}
-                />
-              </TouchableOpacity>
-              <Text style={styles.CoffeeTitle}>{item.title}</Text>
-            </View>
-            <View style={styles.priceView}>
-              <Text style={styles.price}>{`$ ${item.price}`}</Text>
-              <TouchableOpacity
-                style={styles.addCartBut}
-                onPress={() => {
-                  getCoffeeId(item.id);
-                  dispatch(setAddCard(true));
-                }}>
-                <Image source={require('../../assets/add.png')} />
-              </TouchableOpacity>
-            </View>
+      {filteredItems.map(item => (
+        <View style={styles.itemView} key={item.id}>
+          <View style={styles.imageTitle}>
+            <TouchableOpacity
+              onPress={() => {
+                getCoffeeId(item.id);
+                dispatch(setAddCard(false));
+              }}>
+              <Image
+                style={{
+                  width: 51,
+                  height: 51,
+                  resizeMode: 'contain',
+                }}
+                source={{
+                  uri: `data:image/png;base64, ${item.image}`,
+                }}
+              />
+            </TouchableOpacity>
+            <Text style={styles.CoffeeTitle}>{item.title}</Text>
           </View>
-        ))}
+          <View style={styles.priceView}>
+            <Text style={styles.price}>{`$ ${item.price}`}</Text>
+            <TouchableOpacity
+              style={styles.addCartBut}
+              onPress={() => {
+                getCoffeeId(item.id);
+                dispatch(setAddCard(true));
+              }}>
+              <Image source={require('../../assets/add.png')} />
+            </TouchableOpacity>
+          </View>
+        </View>
+      ))}
     </View>
   );
 }

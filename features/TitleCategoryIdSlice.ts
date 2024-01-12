@@ -11,7 +11,7 @@ const initialState: TitleCatProps = {
 };
 
 // state name and reducer
-const TitleCategoryId = createSlice({
+const TitleCategoryIdSlice = createSlice({
   name: 'id',
   initialState,
   reducers: {
@@ -22,7 +22,7 @@ const TitleCategoryId = createSlice({
 });
 
 // export setState
-export const {setId} = TitleCategoryId.actions;
+export const {setId} = TitleCategoryIdSlice.actions;
 
 // export TitleCategoryId reducer
-export default TitleCategoryId.reducer;
+export default TitleCategoryIdSlice.reducer;

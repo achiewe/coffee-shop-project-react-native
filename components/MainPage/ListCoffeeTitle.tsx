@@ -8,7 +8,7 @@ import {
 import data from '../../data.json';
 import {useDispatch} from 'react-redux';
 import {RootState} from '../../features/store';
-import {setId} from '../../features/TitleCategoryId';
+import {setId} from '../../features/TitleCategoryIdSlice';
 
 // list of the data
 export default function ListCoffeeTitle() {

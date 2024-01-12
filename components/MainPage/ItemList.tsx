@@ -1,6 +1,6 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import data from '../../data.json';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
 import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
@@ -10,10 +10,15 @@ export default function ItemList() {
   // call id state
   const TitleId = useSelector((store: RootState) => store.id.id);
 
+  const dispatch = useDispatch();
+
   // filter the data with id
   const cappuccinoCoffee = data.coffee_categories.find(
     category => category.id === TitleId,
   );
+
+  const addBasket = useSelector((store: RootState) => store.addCard.addCard);
+  console.log(addBasket);
 
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 

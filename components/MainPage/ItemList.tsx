@@ -7,7 +7,6 @@ import {RootStackParamList} from '../../types';
 import {setAddCard} from '../../features/AddBasketSlice';
 import {useEffect} from 'react';
 import {setFilteredItems} from '../../features/FilteredItemSlice';
-import itemType from '../../typesData';
 
 // function for data map
 export default function ItemList() {

@@ -1,15 +1,15 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-export interface titleProps {
+export interface TitleProps {
   searchTitle: string;
 }
 
-const initialState: titleProps = {
+const initialState: TitleProps = {
   searchTitle: '',
 };
 
 const SearchTitleSlice = createSlice({
-  name: 'inputValue',
+  name: 'searchTitle',
   initialState,
   reducers: {
     setSearchTitle: (state, action: PayloadAction<string>) => {

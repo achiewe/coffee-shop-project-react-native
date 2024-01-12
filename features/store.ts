@@ -1,7 +1,8 @@
 import {configureStore} from '@reduxjs/toolkit';
 import TitleCategoryIdSlice, {TitleCatProps} from './TitleCategoryIdSlice';
 import AddBasketSlice, {BasketProps} from './AddBasketSlice';
-import GetInputValueSlice, {inputProps} from './getInputValueSlice';
+import GetInputValueSlice, {InputProps} from './getInputValueSlice';
+import SerarchTitleSlice, {TitleProps} from './SerarchTitleSlice';
 
 // add the state in the store
 const store = configureStore({
@@ -9,6 +10,7 @@ const store = configureStore({
     id: TitleCategoryIdSlice,
     addCard: AddBasketSlice,
     inputValue: GetInputValueSlice,
+    searchTitle: SerarchTitleSlice,
   },
 });
 
@@ -16,7 +18,8 @@ const store = configureStore({
 export type RootState = {
   id: TitleCatProps;
   addCard: BasketProps;
-  inputValue: inputProps;
+  inputValue: InputProps;
+  searchTitle: TitleProps;
 };
 
 export default store;

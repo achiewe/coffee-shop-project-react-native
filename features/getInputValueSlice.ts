@@ -1,10 +1,10 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-export interface inputProps {
+export interface InputProps {
   inputValue: string;
 }
 
-const initialState: inputProps = {
+const initialState: InputProps = {
   inputValue: '',
 };
 

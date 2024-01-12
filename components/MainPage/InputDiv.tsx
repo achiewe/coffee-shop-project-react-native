@@ -6,18 +6,12 @@ import {
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {useDispatch, useSelector} from 'react-redux';
-import {RootState} from '../../features/store';
-import {setInputValue} from '../../features/GetInputValueSlice';
-import {setSearchTitle} from '../../features/SerarchTitleSlice';
+import {useDispatch} from 'react-redux';
+import {setSearchTitle} from '../../features/SearchTitleSlice';
 
 // inputDiv function
 export default function InputDiv() {
   const dispatch = useDispatch();
-  const inputValue = useSelector(
-    (store: RootState) => store.inputValue.inputValue,
-  );
-  console.log(inputValue);
 
   return (
     <LinearGradient
@@ -37,10 +31,9 @@ export default function InputDiv() {
           <TextInput
             style={styles.textInput}
             placeholder="Search coffee"
-            value={inputValue}
+            // value={inputValue}
             placeholderTextColor={'#989898'}
             onChangeText={text => {
-              dispatch(setInputValue(text));
               dispatch(setSearchTitle(text)); // Update the searchText in the parent component
             }}
           />

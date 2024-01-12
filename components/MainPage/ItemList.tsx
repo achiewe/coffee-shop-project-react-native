@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
 import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
+import {setAddCard} from '../../features/AddBasketSlice';
 
 // function for data map
 export default function ItemList() {
@@ -23,8 +24,12 @@ export default function ItemList() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const getCoffeeId = (itemId: number) => {
-    // Navigate to the 'Detail' screen with the selected item id
-    navigation.navigate('Detail', {itemId});
+    // Navigate to the 'Basket' screen if addBasket is true, else navigate to 'Detail'
+    if (addBasket) {
+      navigation.navigate('Basket', {itemId});
+    } else {
+      navigation.navigate('Detail', {itemId});
+    }
   };
   return (
     <View style={styles.mainContainer}>
@@ -32,7 +37,11 @@ export default function ItemList() {
         cappuccinoCoffee.coffees.map(item => (
           <View style={styles.itemView} key={item.id}>
             <View style={styles.imageTitle}>
-              <TouchableOpacity onPress={() => getCoffeeId(item.id)}>
+              <TouchableOpacity
+                onPress={() => {
+                  dispatch(setAddCard(false));
+                  getCoffeeId(item.id);
+                }}>
                 <Image
                   style={{
                     width: 51,
@@ -48,7 +57,12 @@ export default function ItemList() {
             </View>
             <View style={styles.priceView}>
               <Text style={styles.price}>{`$ ${item.price}`}</Text>
-              <TouchableOpacity style={styles.addCartBut}>
+              <TouchableOpacity
+                style={styles.addCartBut}
+                onPress={() => {
+                  dispatch(setAddCard(true));
+                  getCoffeeId(item.id);
+                }}>
                 <Image source={require('../../assets/add.png')} />
               </TouchableOpacity>
             </View>

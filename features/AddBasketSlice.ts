@@ -8,7 +8,7 @@ const initialState: BasketProps = {
   addCard: false,
 };
 
-const AddBasket = createSlice({
+const AddBasketSlice = createSlice({
   name: 'addCard',
   initialState,
   reducers: {
@@ -18,5 +18,5 @@ const AddBasket = createSlice({
   },
 });
 
-export const {setAddCard} = AddBasket.actions;
-export default AddBasket.reducer;
+export const {setAddCard} = AddBasketSlice.actions;
+export default AddBasketSlice.reducer;

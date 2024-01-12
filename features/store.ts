@@ -1,12 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
 import TitleCategoryIdSlice, {TitleCatProps} from './TitleCategoryIdSlice';
-import AddBasket, {BasketProps} from './AddBasketSlice';
+import AddBasketSlice, {BasketProps} from './AddBasketSlice';
 
 // add the state in the store
 const store = configureStore({
   reducer: {
     id: TitleCategoryIdSlice,
-    addCard: AddBasket,
+    addCard: AddBasketSlice,
   },
 });
 

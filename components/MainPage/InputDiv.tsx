@@ -8,7 +8,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
-import {setInputValue} from '../../features/getInputValueSlice';
+import {setInputValue} from '../../features/GetInputValueSlice';
 
 // inputDiv function
 export default function InputDiv() {

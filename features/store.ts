@@ -1,7 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit';
 import TitleCategoryIdSlice, {TitleCatProps} from './TitleCategoryIdSlice';
 import AddBasketSlice, {BasketProps} from './AddBasketSlice';
-import GetInputValueSlice, {InputProps} from './getInputValueSlice';
+import GetInputValueSlice, {InputProps} from './GetInputValueSlice';
 import SerarchTitleSlice, {TitleProps} from './SerarchTitleSlice';
 
 // add the state in the store

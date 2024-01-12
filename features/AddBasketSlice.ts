@@ -12,8 +12,8 @@ const AddBasketSlice = createSlice({
   name: 'addCard',
   initialState,
   reducers: {
-    setAddCard: state => {
-      state.addCard = !state.addCard;
+    setAddCard: (state, action: PayloadAction<boolean>) => {
+      state.addCard = action.payload;
     },
   },
 });

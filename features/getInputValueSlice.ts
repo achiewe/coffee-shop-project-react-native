@@ -8,7 +8,7 @@ const initialState: inputProps = {
   inputValue: '',
 };
 
-const getInputValueSlice = createSlice({
+const GetInputValueSlice = createSlice({
   name: 'inputValue',
   initialState,
   reducers: {
@@ -18,5 +18,5 @@ const getInputValueSlice = createSlice({
   },
 });
 
-export const {setInputValue} = getInputValueSlice.actions;
-export default getInputValueSlice.reducer;
+export const {setInputValue} = GetInputValueSlice.actions;
+export default GetInputValueSlice.reducer;

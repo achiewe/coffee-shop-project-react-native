@@ -9,6 +9,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
 import {setInputValue} from '../../features/GetInputValueSlice';
+import {setSearchTitle} from '../../features/SerarchTitleSlice';
 
 // inputDiv function
 export default function InputDiv() {
@@ -38,7 +39,10 @@ export default function InputDiv() {
             placeholder="Search coffee"
             value={inputValue}
             placeholderTextColor={'#989898'}
-            onChangeText={text => dispatch(setInputValue(text))}
+            onChangeText={text => {
+              dispatch(setInputValue(text));
+              dispatch(setSearchTitle(text)); // Update the searchText in the parent component
+            }}
           />
         </View>
         <TouchableOpacity style={styles.sortButton}>

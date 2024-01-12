@@ -6,9 +6,18 @@ import {
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '../../features/store';
+import {setInputValue} from '../../features/getInputValueSlice';
 
 // inputDiv function
 export default function InputDiv() {
+  const dispatch = useDispatch();
+  const inputValue = useSelector(
+    (store: RootState) => store.inputValue.inputValue,
+  );
+  console.log(inputValue);
+
   return (
     <LinearGradient
       colors={['#131313', '#525252']}
@@ -28,6 +37,7 @@ export default function InputDiv() {
             style={styles.textInput}
             placeholder="Search coffee"
             placeholderTextColor={'#989898'}
+            onChangeText={text => dispatch(setInputValue(text))}
           />
         </View>
         <TouchableOpacity style={styles.sortButton}>

@@ -36,6 +36,7 @@ export default function InputDiv() {
           <TextInput
             style={styles.textInput}
             placeholder="Search coffee"
+            value={inputValue}
             placeholderTextColor={'#989898'}
             onChangeText={text => dispatch(setInputValue(text))}
           />

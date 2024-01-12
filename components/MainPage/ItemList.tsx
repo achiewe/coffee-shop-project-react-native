@@ -1,7 +1,7 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import data from '../../data.json';
 import {useDispatch, useSelector} from 'react-redux';
-import store, {RootState} from '../../features/store';
+import {RootState} from '../../features/store';
 import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 import {setAddCard} from '../../features/AddBasketSlice';

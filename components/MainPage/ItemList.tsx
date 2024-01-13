@@ -20,6 +20,7 @@ export default function ItemList() {
     category => category.id === TitleId,
   );
 
+  // call searchTet in the component
   const searchText = useSelector(
     (store: RootState) => store.searchTitle.searchTitle,
   );

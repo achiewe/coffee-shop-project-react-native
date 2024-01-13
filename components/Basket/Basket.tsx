@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import BasketHeadline from './BasketHeadline';
 import ItemDiscount from './ItemDiscount';
 import Payment from './Payment';
@@ -22,6 +22,7 @@ const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
       <BasketHeadline />
       <ItemDiscount />
       <Payment />
+      <Text> </Text>
       <AddOnBasket />
     </View>
   );

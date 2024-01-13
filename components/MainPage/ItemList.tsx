@@ -13,6 +13,7 @@ export default function ItemList() {
   // call id state
   const TitleId = useSelector((store: RootState) => store.id.id);
 
+  // assign variable dispatch with iseDispatch
   const dispatch = useDispatch();
 
   // filter the data with id

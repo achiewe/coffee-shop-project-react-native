@@ -6,10 +6,10 @@ import AddOnBasket from './AddOnBasket';
 import {RouteProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 
-type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Detail'>;
+type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Basket'>;
 
 // component for the basket component
-export default function Basket(): React.JSX.Element {
+const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
   return (
     <View style={styles.mainContainer}>
       <BasketHeadline />
@@ -18,7 +18,7 @@ export default function Basket(): React.JSX.Element {
       <AddOnBasket />
     </View>
   );
-}
+};
 
 // style for the basket
 const styles = StyleSheet.create({
@@ -29,3 +29,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#F9F9F9',
   },
 });
+
+export default Basket;

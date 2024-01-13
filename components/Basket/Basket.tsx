@@ -5,11 +5,18 @@ import Payment from './Payment';
 import AddOnBasket from './AddOnBasket';
 import {RouteProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
+import data from '../../data.json';
 
 type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Basket'>;
 
 // component for the basket component
 const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
+  const {itemId} = route.params;
+
+  const coffeeItem = data.coffee_categories
+    .flatMap(category => category.coffees)
+    .find(item => item.id === itemId);
+
   return (
     <View style={styles.mainContainer}>
       <BasketHeadline />

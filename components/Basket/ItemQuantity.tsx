@@ -1,6 +1,21 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-export default function ItemQuantity() {
+interface ItemQuantityProp {
+  coffeeItem:
+    | {
+        id: number;
+        title: string;
+        price: number;
+        image: string;
+        description: string;
+        rating: number;
+      }
+    | undefined;
+}
+
+export default function ItemQuantity({
+  coffeeItem,
+}: ItemQuantityProp): JSX.Element {
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>
@@ -8,7 +23,7 @@ export default function ItemQuantity() {
           style={styles.coffeeImage}
           source={require('../../assets/classicCappuccino.png')}
         />
-        <Text style={styles.coffeeTitle}>Cappucino</Text>
+        <Text style={styles.coffeeTitle}>{coffeeItem?.title}</Text>
       </View>
       <View style={styles.qunatityView}>
         <TouchableOpacity>

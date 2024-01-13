@@ -23,7 +23,7 @@ export default function BasketHeadline({
       <View style={styles.basketView}>
         <Text style={styles.componentName}>Basket</Text>
       </View>
-      <ItemQuantity />
+      <ItemQuantity coffeeItem={coffeeItem} />
     </View>
   );
 }

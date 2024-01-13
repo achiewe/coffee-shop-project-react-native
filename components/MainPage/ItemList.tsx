@@ -24,6 +24,7 @@ export default function ItemList() {
     (store: RootState) => store.searchTitle.searchTitle,
   );
 
+  // call state in the component
   const filteredItems = useSelector(
     (store: RootState) => store.filteredItems.filteredItems,
   );

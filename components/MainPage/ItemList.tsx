@@ -40,7 +40,7 @@ export default function ItemList() {
   }, [cappuccinoCoffee, searchText]);
 
   const addBasket = useSelector((store: RootState) => store.addCard.addCard);
-  console.log(addBasket);
+  // console.log(addBasket);
 
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 

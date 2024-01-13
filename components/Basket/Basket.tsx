@@ -3,7 +3,6 @@ import BasketHeadline from './BasketHeadline';
 import ItemDiscount from './ItemDiscount';
 import Payment from './Payment';
 import AddOnBasket from './AddOnBasket';
-import {useRoute} from '@react-navigation/native';
 import {RouteProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 

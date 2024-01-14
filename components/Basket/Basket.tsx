@@ -21,7 +21,7 @@ const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
     <View style={styles.mainContainer}>
       <BasketHeadline coffeeItem={coffeeItem?.title} />
       <ItemDiscount />
-      <Payment />
+      <Payment coffeeItem={coffeeItem} />
       <Text> </Text>
       <AddOnBasket />
     </View>

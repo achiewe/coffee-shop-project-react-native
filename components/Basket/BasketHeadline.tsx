@@ -9,7 +9,6 @@ interface BasketHEadlineProp {
 export default function BasketHeadline({
   coffeeItem,
 }: BasketHEadlineProp): JSX.Element {
-  console.log(coffeeItem);
   return (
     <View style={styles.mainContainer}>
       <View style={styles.basketView}>

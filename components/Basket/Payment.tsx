@@ -1,5 +1,18 @@
 import {StyleSheet, Text, View} from 'react-native';
 
+interface PaymentProps {
+  coffeeItem:
+    | {
+        id: number;
+        title: string;
+        price: number;
+        image: string;
+        description: string;
+        rating: number;
+      }
+    | undefined;
+}
+
 export default function Payment() {
   return (
     <View style={styles.containetPayment}>

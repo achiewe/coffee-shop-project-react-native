@@ -20,7 +20,7 @@ export default function Payment({coffeeItem}: PaymentProps): JSX.Element {
             <Text style={styles.amountPrice}>
               ${' '}
               {coffeeItem?.price !== undefined
-                ? coffeeItem?.price + quantity
+                ? coffeeItem?.price * quantity
                 : 'N/A'}
             </Text>
           </View>

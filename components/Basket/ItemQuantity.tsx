@@ -28,7 +28,9 @@ export default function ItemQuantity({
       <View style={styles.qunatityView}>
         <TouchableOpacity
           onPress={() => {
-            dispatch(settSubtractQuantity());
+            if (quantity !== 0) {
+              dispatch(settSubtractQuantity());
+            }
           }}>
           <View style={styles.ButQuantity}>
             <Image source={require('../../assets/minus.png')} />

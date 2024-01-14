@@ -1,10 +1,10 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-export interface CountProps {
+export interface QuantityProps {
   quantity: number;
 }
 
-const initialState: CountProps = {
+const initialState: QuantityProps = {
   quantity: 0,
 };
 

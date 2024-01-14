@@ -7,7 +7,6 @@ import {
 } from 'react-native';
 import data from '../../data.json';
 import {useDispatch} from 'react-redux';
-import {RootState} from '../../features/store';
 import {setId} from '../../features/TitleCategoryIdSlice';
 
 // list of the data

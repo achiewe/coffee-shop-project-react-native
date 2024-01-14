@@ -13,7 +13,7 @@ export default function Payment({coffeeItem}: PaymentProps): JSX.Element {
         <View style={styles.priceDeliveryView}>
           <View style={styles.priceDelView}>
             <Text style={styles.priceTitle}> Price</Text>
-            <Text style={styles.amountPrice}> $ </Text>
+            <Text style={styles.amountPrice}> $ {coffeeItem?.price} </Text>
           </View>
           <View style={styles.priceDelView}>
             <Text style={styles.priceTitle}> Delivery Fee</Text>

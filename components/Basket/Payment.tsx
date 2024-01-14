@@ -1,11 +1,15 @@
 import {StyleSheet, Text, View} from 'react-native';
 import itemType from '../../typesData';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../features/store';
 
 interface PaymentProps {
   coffeeItem: itemType | undefined;
 }
 
 export default function Payment({coffeeItem}: PaymentProps): JSX.Element {
+  const quantity = useSelector((store: RootState) => store.quantity.quantity);
+
   return (
     <View style={styles.containetPayment}>
       <Text style={styles.paymentText}> Payment Summary</Text>

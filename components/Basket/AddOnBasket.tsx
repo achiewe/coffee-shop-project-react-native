@@ -19,7 +19,12 @@ export default function AddOnBasket({
               <View style={styles.cashView}>
                 <Text style={styles.cashText}> Cash</Text>
               </View>
-              <Text style={styles.amountOfMoney}> $ 5.53</Text>
+              <Text style={styles.amountOfMoney}>
+                $
+                {coffeeItem?.price !== undefined
+                  ? coffeeItem?.price + 1.0
+                  : 'N/A'}
+              </Text>
             </View>
           </View>
           <Image source={require('../../assets/dots.png')} />

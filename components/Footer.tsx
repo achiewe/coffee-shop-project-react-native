@@ -2,6 +2,7 @@ import {
   NavigationProp,
   useNavigation,
   useRoute,
+  getFocusedRouteNameFromRoute,
 } from '@react-navigation/native';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {RootStackParamList} from '../types';
@@ -9,21 +10,16 @@ import {RootStackParamList} from '../types';
 // Footer component
 export default function Footer(): JSX.Element {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-  // const route = useRoute();
+
+  let itemId = 0;
 
   return (
     <View style={styles.footerWarp}>
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-        <Image
-          source={require('../assets/Home.png')}
-          // style={route.name === 'Home' ? styles.pagePng : styles.onThePage}
-        />
+        <Image source={require('../assets/Home.png')} />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Basket')}>
-        <Image
-          source={require('../assets/Bag.png')}
-          // style={route.name === 'Basket' ? styles.pagePng : styles.onThePage}
-        />
+      <TouchableOpacity onPress={() => navigation.navigate('Basket', {itemId})}>
+        <Image source={require('../assets/Bag.png')} />
       </TouchableOpacity>
     </View>
   );

@@ -19,10 +19,16 @@ const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
 
   return (
     <View style={styles.mainContainer}>
-      <BasketHeadline coffeeItem={coffeeItem?.title} />
-      <ItemDiscount />
-      <Payment coffeeItem={coffeeItem} />
-      <AddOnBasket coffeeItem={coffeeItem} />
+      {itemId === 0 ? (
+        <Text>Empty Basket</Text>
+      ) : (
+        <View style={styles.mainContainer}>
+          <BasketHeadline coffeeItem={coffeeItem?.title} />
+          <ItemDiscount />
+          <Payment coffeeItem={coffeeItem} />
+          <AddOnBasket coffeeItem={coffeeItem} />
+        </View>
+      )}
     </View>
   );
 };

@@ -5,7 +5,7 @@ import {RootState} from '../../features/store';
 import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 import {setAddCard} from '../../features/AddBasketSlice';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {setFilteredItems} from '../../features/FilteredItemSlice';
 
 // function for data map
@@ -40,26 +40,37 @@ export default function ItemList() {
   }, [cappuccinoCoffee, searchText]);
 
   const addBasket = useSelector((store: RootState) => store.addCard.addCard);
-  // console.log(addBasket);
 
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
-  const getCoffeeId = (itemId: number) => {
+  const [itemId, setItemId] = useState<number | undefined>();
+
+  const getCoffeeId = () => {
     // Navigate to the 'Basket' screen if addBasket is true, else navigate to 'Detail'
     if (addBasket) {
+      console.log(addBasket);
       navigation.navigate('Basket', {itemId});
     } else {
+      console.log(addBasket, 'elsii varr');
       navigation.navigate('Detail', {itemId});
     }
   };
+
+  useEffect(() => {
+    if (itemId !== undefined) {
+      getCoffeeId();
+    }
+  }, [addBasket, itemId]);
+
   return (
     <View style={styles.mainContainer}>
       {filteredItems.map(item => (
         <View style={styles.itemView} key={item.id}>
           <View style={styles.imageTitle}>
             <TouchableOpacity
+              style={{backgroundColor: 'red'}}
               onPress={() => {
-                getCoffeeId(item.id);
+                setItemId(item.id);
                 dispatch(setAddCard(false));
               }}>
               <Image
@@ -80,7 +91,7 @@ export default function ItemList() {
             <TouchableOpacity
               style={styles.addCartBut}
               onPress={() => {
-                getCoffeeId(item.id);
+                setItemId(item.id);
                 dispatch(setAddCard(true));
               }}>
               <Image source={require('../../assets/add.png')} />

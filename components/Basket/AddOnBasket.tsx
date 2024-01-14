@@ -1,7 +1,14 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import ButtonBasket from './ButtonBasket';
+import itemType from '../../typesData';
 
-export default function AddOnBasket() {
+interface AddOnBasketProps {
+  coffeeItem: itemType | undefined;
+}
+
+export default function AddOnBasket({
+  coffeeItem,
+}: AddOnBasketProps): JSX.Element {
   return (
     <View style={styles.addBasketView}>
       <View style={styles.lineStyle}>

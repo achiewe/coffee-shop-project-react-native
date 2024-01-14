@@ -1,19 +1,11 @@
 import {StyleSheet, Text, View} from 'react-native';
+import itemType from '../../typesData';
 
 interface PaymentProps {
-  coffeeItem:
-    | {
-        id: number;
-        title: string;
-        price: number;
-        image: string;
-        description: string;
-        rating: number;
-      }
-    | undefined;
+  coffeeItem: itemType | undefined;
 }
 
-export default function Payment() {
+export default function Payment({coffeeItem}: PaymentProps): JSX.Element {
   return (
     <View style={styles.containetPayment}>
       <Text style={styles.paymentText}> Payment Summary</Text>
@@ -21,7 +13,7 @@ export default function Payment() {
         <View style={styles.priceDeliveryView}>
           <View style={styles.priceDelView}>
             <Text style={styles.priceTitle}> Price</Text>
-            <Text style={styles.amountPrice}> $ 4.53</Text>
+            <Text style={styles.amountPrice}> $ </Text>
           </View>
           <View style={styles.priceDelView}>
             <Text style={styles.priceTitle}> Delivery Fee</Text>

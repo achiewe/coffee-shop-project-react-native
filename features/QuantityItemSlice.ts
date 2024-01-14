@@ -5,7 +5,7 @@ export interface QuantityProps {
 }
 
 const initialState: QuantityProps = {
-  quantity: 0,
+  quantity: 1,
 };
 
 const QuantityItemSlice = createSlice({

@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
     rowGap: 14,
     columnGap: 24,
     marginTop: 28,
+    paddingBottom: 50,
   },
 
   itemView: {

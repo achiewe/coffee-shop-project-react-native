@@ -1,10 +1,10 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
-export interface BasketProps {
+export interface CountProps {
   count: number;
 }
 
-const initialState: BasketProps = {
+const initialState: CountProps = {
   count: 0,
 };
 

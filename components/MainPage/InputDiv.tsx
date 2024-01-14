@@ -38,9 +38,6 @@ export default function InputDiv() {
             }}
           />
         </View>
-        <TouchableOpacity style={styles.sortButton}>
-          <Image source={require('../../assets/sorting.png')} />
-        </TouchableOpacity>
       </View>
     </LinearGradient>
   );

@@ -1,23 +1,15 @@
 import {StyleSheet, Text, View} from 'react-native';
 import ItemQuantity from './ItemQuantity';
 
-interface coffeItemProp {
-  coffeeItem:
-    | {
-        id: number;
-        title: string;
-        price: number;
-        image: string;
-        description: string;
-        rating: number;
-      }
-    | undefined;
+interface BasketHEadlineProp {
+  coffeeItem: string | undefined;
 }
 
 // component basketHeadline
 export default function BasketHeadline({
   coffeeItem,
-}: coffeItemProp): JSX.Element {
+}: BasketHEadlineProp): JSX.Element {
+  console.log(coffeeItem);
   return (
     <View style={styles.mainContainer}>
       <View style={styles.basketView}>

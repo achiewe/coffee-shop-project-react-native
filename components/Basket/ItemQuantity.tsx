@@ -1,16 +1,7 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 interface ItemQuantityProp {
-  coffeeItem:
-    | {
-        id: number;
-        title: string;
-        price: number;
-        image: string;
-        description: string;
-        rating: number;
-      }
-    | undefined;
+  coffeeItem: string | undefined;
 }
 
 export default function ItemQuantity({
@@ -23,7 +14,7 @@ export default function ItemQuantity({
           style={styles.coffeeImage}
           source={require('../../assets/classicCappuccino.png')}
         />
-        <Text style={styles.coffeeTitle}>{coffeeItem?.title}</Text>
+        <Text style={styles.coffeeTitle}>{coffeeItem}</Text>
       </View>
       <View style={styles.qunatityView}>
         <TouchableOpacity>

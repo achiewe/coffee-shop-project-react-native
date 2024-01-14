@@ -28,7 +28,7 @@ export default function ItemQuantity({
       <View style={styles.qunatityView}>
         <TouchableOpacity
           onPress={() => {
-            if (quantity !== 0) {
+            if (quantity !== 1) {
               dispatch(settSubtractQuantity());
             }
           }}>

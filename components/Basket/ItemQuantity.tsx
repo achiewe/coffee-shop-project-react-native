@@ -1,4 +1,7 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '../../features/store';
+import {settSubtractCount} from '../../features/QuantityItemSlice';
 
 interface ItemQuantityProp {
   coffeeItem: string | undefined;
@@ -7,6 +10,9 @@ interface ItemQuantityProp {
 export default function ItemQuantity({
   coffeeItem,
 }: ItemQuantityProp): JSX.Element {
+  const amount = useSelector((store: RootState) => store.count.count);
+  const dispatch = useDispatch();
+
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>
@@ -17,12 +23,15 @@ export default function ItemQuantity({
         <Text style={styles.coffeeTitle}>{coffeeItem}</Text>
       </View>
       <View style={styles.qunatityView}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            dispatch(settSubtractCount());
+          }}>
           <View style={styles.ButQuantity}>
             <Image source={require('../../assets/minus.png')} />
           </View>
         </TouchableOpacity>
-        <Text style={styles.quantity}>1</Text>
+        <Text style={styles.quantity}>{amount}</Text>
         <TouchableOpacity>
           <View style={styles.ButQuantity}>
             <Image source={require('../../assets/plus.png')} />

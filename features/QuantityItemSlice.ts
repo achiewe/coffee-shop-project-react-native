@@ -1,26 +1,26 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 export interface CountProps {
-  count: number;
+  quantity: number;
 }
 
 const initialState: CountProps = {
-  count: 0,
+  quantity: 0,
 };
 
 const QuantityItemSlice = createSlice({
-  name: 'count',
+  name: 'quantity',
   initialState,
   reducers: {
-    setaddCount: state => {
-      state.count = state.count + 1;
+    setaddQuantity: state => {
+      state.quantity = state.quantity + 1;
     },
 
-    settSubtractCount: state => {
-      state.count = state.count - 1;
+    settSubtractQuantity: state => {
+      state.quantity = state.quantity - 1;
     },
   },
 });
 
-export const {setaddCount, settSubtractCount} = QuantityItemSlice.actions;
+export const {setaddQuantity, settSubtractQuantity} = QuantityItemSlice.actions;
 export default QuantityItemSlice.reducer;

@@ -10,7 +10,7 @@ interface ItemQuantityProp {
 export default function ItemQuantity({
   coffeeItem,
 }: ItemQuantityProp): JSX.Element {
-  const amount = useSelector((store: RootState) => store.count.count);
+  const quantity = useSelector((store: RootState) => store.count.count);
   const dispatch = useDispatch();
 
   return (
@@ -31,7 +31,7 @@ export default function ItemQuantity({
             <Image source={require('../../assets/minus.png')} />
           </View>
         </TouchableOpacity>
-        <Text style={styles.quantity}>{amount}</Text>
+        <Text style={styles.quantity}>{quantity}</Text>
         <TouchableOpacity>
           <View style={styles.ButQuantity}>
             <Image source={require('../../assets/plus.png')} />

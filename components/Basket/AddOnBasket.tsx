@@ -26,7 +26,7 @@ export default function AddOnBasket({
               <Text style={styles.amountOfMoney}>
                 $
                 {coffeeItem?.price !== undefined
-                  ? coffeeItem?.price + 1.0
+                  ? coffeeItem?.price * quantity + 1.0
                   : 'N/A'}
               </Text>
             </View>

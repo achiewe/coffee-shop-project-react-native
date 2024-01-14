@@ -1,6 +1,8 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import ButtonBasket from './ButtonBasket';
 import itemType from '../../typesData';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../features/store';
 
 interface AddOnBasketProps {
   coffeeItem: itemType | undefined;
@@ -9,6 +11,8 @@ interface AddOnBasketProps {
 export default function AddOnBasket({
   coffeeItem,
 }: AddOnBasketProps): JSX.Element {
+  const quantity = useSelector((store: RootState) => store.quantity.quantity);
+
   return (
     <View style={styles.addBasketView}>
       <View style={styles.lineStyle}>

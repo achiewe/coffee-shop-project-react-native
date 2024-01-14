@@ -1,7 +1,10 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
-import {settSubtractQuantity} from '../../features/QuantityItemSlice';
+import {
+  setaddQuantity,
+  settSubtractQuantity,
+} from '../../features/QuantityItemSlice';
 
 interface ItemQuantityProp {
   coffeeItem: string | undefined;
@@ -32,7 +35,10 @@ export default function ItemQuantity({
           </View>
         </TouchableOpacity>
         <Text style={styles.quantity}>{quantity}</Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            dispatch(setaddQuantity());
+          }}>
           <View style={styles.ButQuantity}>
             <Image source={require('../../assets/plus.png')} />
           </View>

@@ -26,7 +26,9 @@ export default function Payment({coffeeItem}: PaymentProps): JSX.Element {
         <View style={styles.lineStyle} />
         <View style={styles.priceDelView}>
           <Text style={styles.priceTitle}> Total Payment</Text>
-          <Text style={styles.amountPrice}>$ 5.53</Text>
+          <Text style={styles.amountPrice}>
+            ${coffeeItem?.price !== undefined ? coffeeItem?.price + 1.0 : 'N/A'}
+          </Text>
         </View>
       </View>
     </View>

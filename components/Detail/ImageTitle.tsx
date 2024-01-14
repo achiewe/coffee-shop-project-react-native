@@ -1,16 +1,8 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
+import itemType from '../../typesData';
 
 interface ImageTitleProps {
-  coffeeItem:
-    | {
-        id: number;
-        title: string;
-        price: number;
-        image: string;
-        description: string;
-        rating: number;
-      }
-    | undefined;
+  coffeeItem: itemType | undefined;
 }
 
 // imageTitle component

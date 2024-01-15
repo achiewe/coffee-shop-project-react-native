@@ -4,6 +4,7 @@ import AddBasketSlice, {BasketProps} from './AddBasketSlice';
 import SerarchTitleSlice, {TitleProps} from './SearchTitleSlice';
 import FilteredItemSlice, {ItemProps} from './FilteredItemSlice';
 import QuantityItemSlice, {QuantityProps} from './QuantityItemSlice';
+import BuyProductSlice, {ProductProps} from './BuyProductSlice';
 
 // add the state in the store
 const store = configureStore({
@@ -13,6 +14,7 @@ const store = configureStore({
     searchTitle: SerarchTitleSlice,
     filteredItems: FilteredItemSlice,
     quantity: QuantityItemSlice,
+    AddProduct: BuyProductSlice,
   },
 });
 
@@ -23,6 +25,7 @@ export type RootState = {
   searchTitle: TitleProps;
   filteredItems: ItemProps;
   quantity: QuantityProps;
+  AddProduct: ProductProps;
 };
 
 export default store;

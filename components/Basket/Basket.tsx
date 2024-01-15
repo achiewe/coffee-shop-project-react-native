@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import BasketHeadline from './BasketHeadline';
 import ItemDiscount from './ItemDiscount';
 import Payment from './Payment';
@@ -22,6 +22,7 @@ const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
       {itemId === 0 ? (
         <View style={styles.emptyView}>
           <Text style={styles.emptyText}>Empty Basket</Text>
+          <Image source={require('../../assets/emptyBasket.png')} />
         </View>
       ) : (
         <View style={styles.mainContainer}>

@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     gap: 10,
-    justifyContent: 'center',
+    alignItems: 'center',
     position: 'absolute',
   },
 

@@ -83,6 +83,7 @@ export default function ItemList() {
                   uri: `data:image/png;base64, ${item.image}`,
                 }}
               />
+              <View> </View>
             </TouchableOpacity>
             <Text style={styles.CoffeeTitle}>{item.title}</Text>
           </View>

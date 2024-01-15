@@ -37,14 +37,13 @@ export default function Basket(): JSX.Element {
           <View style={styles.basketView}>
             <Text style={styles.componentName}>Basket</Text>
           </View>
-          {coffeeItems.map(item => (
-            <View style={styles.mainContainer} key={item.id}>
-              <BasketHeadline coffeeItems={coffeeItems} />
-              <ItemDiscount />
-              <Payment coffeeItem={item} />
-              <AddOnBasket coffeeItem={item} />
-            </View>
-          ))}
+
+          <View style={styles.mainContainer}>
+            <BasketHeadline coffeeItems={coffeeItems} />
+            <ItemDiscount />
+            <Payment coffeeItems={coffeeItems} />
+            <AddOnBasket coffeeItems={coffeeItems} />
+          </View>
         </View>
       )}
     </ScrollView>

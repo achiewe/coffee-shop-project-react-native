@@ -5,11 +5,11 @@ import {useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
 
 interface AddOnBasketProps {
-  coffeeItem: itemType | undefined;
+  coffeeItems: itemType[];
 }
 
 export default function AddOnBasket({
-  coffeeItem,
+  coffeeItems,
 }: AddOnBasketProps): JSX.Element {
   const quantity = useSelector((store: RootState) => store.quantity.quantity);
 
@@ -25,8 +25,8 @@ export default function AddOnBasket({
               </View>
               <Text style={styles.amountOfMoney}>
                 $
-                {coffeeItem?.price !== undefined
-                  ? coffeeItem?.price * quantity + 1.0
+                {coffeeItems[0].price !== undefined
+                  ? coffeeItems[0].price * quantity + 1.0
                   : 'N/A'}
               </Text>
             </View>

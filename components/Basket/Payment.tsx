@@ -4,10 +4,10 @@ import {useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
 
 interface PaymentProps {
-  coffeeItem: itemType | undefined;
+  coffeeItems: itemType[];
 }
 
-export default function Payment({coffeeItem}: PaymentProps): JSX.Element {
+export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
   const quantity = useSelector((store: RootState) => store.quantity.quantity);
 
   return (
@@ -19,8 +19,8 @@ export default function Payment({coffeeItem}: PaymentProps): JSX.Element {
             <Text style={styles.priceTitle}> Price</Text>
             <Text style={styles.amountPrice}>
               $
-              {coffeeItem?.price !== undefined
-                ? coffeeItem?.price * quantity
+              {coffeeItems[0].price !== undefined
+                ? coffeeItems[0].price * quantity
                 : 'N/A'}
             </Text>
           </View>
@@ -37,8 +37,8 @@ export default function Payment({coffeeItem}: PaymentProps): JSX.Element {
           <Text style={styles.priceTitle}> Total Payment</Text>
           <Text style={styles.amountPrice}>
             $
-            {coffeeItem?.price !== undefined
-              ? coffeeItem?.price * quantity + 1.0
+            {coffeeItems[0].price !== undefined
+              ? coffeeItems[0].price * quantity + 1.0
               : 'N/A'}
           </Text>
         </View>

@@ -21,8 +21,11 @@ const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
     <View style={styles.mainContainer}>
       {itemId === 0 ? (
         <View style={styles.emptyView}>
-          <Text style={styles.emptyText}>Empty Basket</Text>
-          <Image source={require('../../assets/emptyBasket2.png')} />
+          <Text style={styles.emptyText}>Your basket is empty </Text>
+          <Image
+            style={styles.emptyBasketImg}
+            source={require('../../assets/sadBasket.png')}
+          />
         </View>
       ) : (
         <View style={styles.mainContainer}>
@@ -59,6 +62,11 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '600',
     color: '#2F2D2C',
+  },
+
+  emptyBasketImg: {
+    width: 70,
+    height: 70,
   },
 });
 

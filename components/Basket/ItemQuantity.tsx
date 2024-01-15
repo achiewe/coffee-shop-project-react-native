@@ -2,18 +2,20 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
 import {
-  setaddQuantity,
-  settSubtractQuantity,
+  decrementQuantity,
+  incrementQuantity,
 } from '../../features/QuantityItemSlice';
 
 interface ItemQuantityProp {
   coffeeItem: string | undefined;
+  index: number;
 }
 
 export default function ItemQuantity({
   coffeeItem,
+  index,
 }: ItemQuantityProp): JSX.Element {
-  const quantity = useSelector((store: RootState) => store.quantity.quantity);
+  const quantity = useSelector((store: RootState) => store.quantity.quantities);
   const dispatch = useDispatch();
 
   return (
@@ -28,9 +30,7 @@ export default function ItemQuantity({
       <View style={styles.qunatityView}>
         <TouchableOpacity
           onPress={() => {
-            if (quantity !== 1) {
-              dispatch(settSubtractQuantity());
-            }
+            dispatch(decrementQuantity(index));
           }}>
           <View style={styles.ButQuantity}>
             <Image source={require('../../assets/minus.png')} />
@@ -39,7 +39,7 @@ export default function ItemQuantity({
         <Text style={styles.quantity}>{quantity}</Text>
         <TouchableOpacity
           onPress={() => {
-            dispatch(setaddQuantity());
+            dispatch(incrementQuantity(index));
           }}>
           <View style={styles.ButQuantity}>
             <Image source={require('../../assets/plus.png')} />

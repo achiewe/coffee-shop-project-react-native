@@ -11,7 +11,7 @@ interface AddOnBasketProps {
 export default function AddOnBasket({
   coffeeItems,
 }: AddOnBasketProps): JSX.Element {
-  const quantity = useSelector((store: RootState) => store.quantity.quantity);
+  const quantity = useSelector((store: RootState) => store.quantity.quantities);
 
   return (
     <View style={styles.addBasketView}>
@@ -26,7 +26,7 @@ export default function AddOnBasket({
               <Text style={styles.amountOfMoney}>
                 $
                 {coffeeItems[0].price !== undefined
-                  ? coffeeItems[0].price * quantity + 1.0
+                  ? coffeeItems[0].price * 1 + 1.0
                   : 'N/A'}
               </Text>
             </View>

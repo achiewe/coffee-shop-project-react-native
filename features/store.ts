@@ -13,8 +13,8 @@ const store = configureStore({
     addCard: AddBasketSlice,
     searchTitle: SerarchTitleSlice,
     filteredItems: FilteredItemSlice,
-    quantity: QuantityItemSlice,
     AddProduct: BuyProductSlice,
+    quantity: QuantityItemSlice,
   },
 });
 

@@ -12,8 +12,8 @@ export default function BasketHeadline({
 }: BasketHeadlineProps): JSX.Element {
   return (
     <View style={styles.mainContainer}>
-      {coffeeItems.map(item => (
-        <ItemQuantity key={item.id} coffeeItem={item.title} />
+      {coffeeItems.map((item, index) => (
+        <ItemQuantity key={item.id} coffeeItem={item.title} index={index} />
       ))}
     </View>
   );

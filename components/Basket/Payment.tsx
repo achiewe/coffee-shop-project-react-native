@@ -1,14 +1,25 @@
 import {StyleSheet, Text, View} from 'react-native';
 import itemType from '../../typesData';
 import {useSelector} from 'react-redux';
-import {RootState} from '../../features/store';
+import store, {RootState} from '../../features/store';
+import {useState} from 'react';
 
 interface PaymentProps {
   coffeeItems: itemType[];
 }
 
 export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
-  const quantity = useSelector((store: RootState) => store.quantity.quantity);
+  const quantity = useSelector((store: RootState) => store.quantity.quantities);
+
+  console.log(quantity);
+
+  // const calculateTotalPrice = (): number => {
+  //   let totalPrice = 0;
+  //   for (let i = 0; i < coffeeItems.length; i++) {
+  //     totalPrice += coffeeItems[i].price * quantities[i];
+  //   }
+  //   return totalPrice;
+  // };
 
   return (
     <View style={styles.containetPayment}>
@@ -17,12 +28,7 @@ export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
         <View style={styles.priceDeliveryView}>
           <View style={styles.priceDelView}>
             <Text style={styles.priceTitle}> Price</Text>
-            <Text style={styles.amountPrice}>
-              $
-              {coffeeItems[0].price !== undefined
-                ? coffeeItems[0].price * quantity
-                : 'N/A'}
-            </Text>
+            <Text style={styles.amountPrice}>${coffeeItems[0].price * 1}</Text>
           </View>
           <View style={styles.priceDelView}>
             <Text style={styles.priceTitle}> Delivery Fee</Text>
@@ -36,10 +42,7 @@ export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
         <View style={styles.priceDelView}>
           <Text style={styles.priceTitle}> Total Payment</Text>
           <Text style={styles.amountPrice}>
-            $
-            {coffeeItems[0].price !== undefined
-              ? coffeeItems[0].price * quantity + 1.0
-              : 'N/A'}
+            ${coffeeItems[0].price * 1 + 1.0}
           </Text>
         </View>
       </View>

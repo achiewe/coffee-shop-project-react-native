@@ -83,7 +83,7 @@ export default function ItemList() {
                   uri: `data:image/png;base64, ${item.image}`,
                 }}
               />
-              <View> </View>
+              <View style={styles.ratingStarView}> </View>
             </TouchableOpacity>
             <Text style={styles.CoffeeTitle}>{item.title}</Text>
           </View>
@@ -131,6 +131,14 @@ const styles = StyleSheet.create({
     width: 150,
     height: 70,
     backgroundColor: 'red',
+  },
+
+  ratingStarView: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 10,
+    justifyContent: 'center',
+    position: 'absolute',
   },
 
   imageTitle: {

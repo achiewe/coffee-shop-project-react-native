@@ -7,6 +7,7 @@ import {RootStackParamList} from '../../types';
 import {setAddCard} from '../../features/AddBasketSlice';
 import {useEffect, useState} from 'react';
 import {setFilteredItems} from '../../features/FilteredItemSlice';
+import {setAddProduct} from '../../features/BuyProductSlice';
 
 // function for data map
 export default function ItemList() {
@@ -47,11 +48,7 @@ export default function ItemList() {
 
   const getCoffeeId = () => {
     // Navigate to the 'Basket' screen if addBasket is true, else navigate to 'Detail'
-    if (addBasket) {
-      console.log(addBasket);
-      navigation.navigate('Basket', {itemId});
-    } else {
-      console.log(addBasket, 'elsii varr');
+    if (addBasket === false) {
       navigation.navigate('Detail', {itemId});
     }
   };
@@ -61,6 +58,10 @@ export default function ItemList() {
       getCoffeeId();
     }
   }, [addBasket, itemId]);
+
+  const product = useSelector(
+    (store: RootState) => store.AddProduct.AddProduct,
+  );
 
   return (
     <View style={styles.mainContainer}>
@@ -95,8 +96,7 @@ export default function ItemList() {
             <TouchableOpacity
               style={styles.addCartBut}
               onPress={() => {
-                setItemId(item.id);
-                dispatch(setAddCard(true));
+                dispatch(setAddProduct(item.id));
               }}>
               <Image source={require('../../assets/add.png')} />
             </TouchableOpacity>

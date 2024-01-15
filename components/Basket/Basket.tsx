@@ -22,7 +22,7 @@ const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
       {itemId === 0 ? (
         <View style={styles.emptyView}>
           <Text style={styles.emptyText}>Empty Basket</Text>
-          <Image source={require('../../assets/emptyBasket.png')} />
+          <Image source={require('../../assets/emptyBasket2.png')} />
         </View>
       ) : (
         <View style={styles.mainContainer}>

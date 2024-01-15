@@ -68,7 +68,7 @@ export default function ItemList() {
         <View style={styles.itemView} key={item.id}>
           <View style={styles.imageTitle}>
             <TouchableOpacity
-              style={{backgroundColor: 'red'}}
+              style={styles.itemImage}
               onPress={() => {
                 setItemId(item.id);
                 dispatch(setAddCard(false));
@@ -121,9 +121,15 @@ const styles = StyleSheet.create({
   itemView: {
     display: 'flex',
     flexDirection: 'column',
-    position: 'absolute',
+    position: 'relative',
     width: 141,
     gap: 15,
+  },
+
+  itemImage: {
+    width: 150,
+    height: 70,
+    backgroundColor: 'red',
   },
 
   imageTitle: {

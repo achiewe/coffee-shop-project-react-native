@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import BasketHeadline from './BasketHeadline';
 import ItemDiscount from './ItemDiscount';
 import Payment from './Payment';
@@ -6,20 +6,25 @@ import AddOnBasket from './AddOnBasket';
 import {RouteProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 import data from '../../data.json';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../features/store';
 
 type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Basket'>;
 
 // component for the basket component
-const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
-  const {itemId} = route.params;
+export default function Basket(): JSX.Element {
+  const product = useSelector(
+    (store: RootState) => store.AddProduct.AddProduct,
+  );
 
-  const coffeeItem = data.coffee_categories
+  const coffeeItems = data.coffee_categories
     .flatMap(category => category.coffees)
-    .find(item => item.id === itemId);
+    .filter(item => product.includes(item.id));
 
+  console.log(coffeeItems);
   return (
-    <View style={styles.mainContainer}>
-      {itemId === 0 ? (
+    <ScrollView style={styles.mainContainer}>
+      {coffeeItems.length < 1 ? (
         <View style={styles.emptyView}>
           <Text style={styles.emptyText}>Your basket is empty </Text>
           <Image
@@ -28,16 +33,23 @@ const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
           />
         </View>
       ) : (
-        <View style={styles.mainContainer}>
-          <BasketHeadline coffeeItem={coffeeItem?.title} />
-          <ItemDiscount />
-          <Payment coffeeItem={coffeeItem} />
-          <AddOnBasket coffeeItem={coffeeItem} />
+        <View>
+          <View style={styles.basketView}>
+            <Text style={styles.componentName}>Basket</Text>
+          </View>
+          {coffeeItems.map(item => (
+            <View style={styles.mainContainer} key={item.id}>
+              <BasketHeadline coffeeItems={coffeeItems} />
+              <ItemDiscount />
+              <Payment coffeeItem={item} />
+              <AddOnBasket coffeeItem={item} />
+            </View>
+          ))}
         </View>
       )}
-    </View>
+    </ScrollView>
   );
-};
+}
 
 // style for the basket
 const styles = StyleSheet.create({
@@ -46,6 +58,24 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#F9F9F9',
+  },
+
+  basketView: {
+    width: 154,
+    backgroundColor: '#C67C4E',
+    borderRadius: 10,
+    paddingBottom: 10,
+    paddingTop: 10,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  componentName: {
+    fontSize: 16,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    color: '#FFFFFF',
   },
 
   emptyView: {
@@ -69,5 +99,3 @@ const styles = StyleSheet.create({
     height: 70,
   },
 });
-
-export default Basket;

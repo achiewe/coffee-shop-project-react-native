@@ -1,20 +1,20 @@
 import {StyleSheet, Text, View} from 'react-native';
 import ItemQuantity from './ItemQuantity';
+import itemType from '../../typesData';
 
-interface BasketHEadlineProp {
-  coffeeItem: string | undefined;
+interface BasketHeadlineProps {
+  coffeeItems: itemType[];
 }
 
 // component basketHeadline
 export default function BasketHeadline({
-  coffeeItem,
-}: BasketHEadlineProp): JSX.Element {
+  coffeeItems,
+}: BasketHeadlineProps): JSX.Element {
   return (
     <View style={styles.mainContainer}>
-      <View style={styles.basketView}>
-        <Text style={styles.componentName}>Basket</Text>
-      </View>
-      <ItemQuantity coffeeItem={coffeeItem} />
+      {coffeeItems.map(item => (
+        <ItemQuantity key={item.id} coffeeItem={item.title} />
+      ))}
     </View>
   );
 }
@@ -28,23 +28,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 40,
-  },
-
-  basketView: {
-    width: 154,
-    backgroundColor: '#C67C4E',
-    borderRadius: 10,
-    paddingBottom: 10,
-    paddingTop: 10,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  componentName: {
-    fontSize: 16,
-    fontStyle: 'normal',
-    fontWeight: '600',
-    color: '#FFFFFF',
   },
 });

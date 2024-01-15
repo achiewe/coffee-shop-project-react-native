@@ -6,14 +6,12 @@ import {RootStackParamList} from '../types';
 export default function Footer(): JSX.Element {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
-  let itemId = 0;
-
   return (
     <View style={styles.footerWarp}>
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Image source={require('../assets/Home.png')} />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Basket', {itemId})}>
+      <TouchableOpacity onPress={() => navigation.navigate('Basket')}>
         <Image source={require('../assets/Bag.png')} />
       </TouchableOpacity>
     </View>

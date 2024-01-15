@@ -63,7 +63,6 @@ export default function ItemList() {
     (store: RootState) => store.AddProduct.AddProduct,
   );
 
-  console.log(product);
   return (
     <View style={styles.mainContainer}>
       {filteredItems.map(item => (

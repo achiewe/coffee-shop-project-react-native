@@ -1,9 +1,4 @@
-import {
-  NavigationProp,
-  useNavigation,
-  useRoute,
-  getFocusedRouteNameFromRoute,
-} from '@react-navigation/native';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {RootStackParamList} from '../types';
 

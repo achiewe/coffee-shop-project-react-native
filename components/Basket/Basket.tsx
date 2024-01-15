@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    gap: 5,
+    gap: 20,
   },
 
   emptyText: {

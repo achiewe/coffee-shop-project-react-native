@@ -13,7 +13,11 @@ const BuyProductSlice = createSlice({
   initialState,
   reducers: {
     setAddProduct: (state, action: PayloadAction<number>) => {
-      state.AddProduct.push(action.payload);
+      if (state.AddProduct.includes(action.payload)) {
+        state.AddProduct;
+      } else {
+        state.AddProduct.push(action.payload);
+      }
     },
   },
 });

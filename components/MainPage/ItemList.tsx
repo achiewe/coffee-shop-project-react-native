@@ -85,6 +85,7 @@ export default function ItemList() {
               />
               <View style={styles.ratingStarView}>
                 <Image source={require('../../assets/Rating.png')} />
+                <Text style={styles.ratingNumber}>{item.rating} </Text>
               </View>
             </TouchableOpacity>
             <Text style={styles.CoffeeTitle}>{item.title}</Text>
@@ -141,6 +142,13 @@ const styles = StyleSheet.create({
     gap: 10,
     justifyContent: 'center',
     position: 'absolute',
+  },
+
+  ratingNumber: {
+    color: '#FFFFFF',
+    fontSize: 13,
+    fontStyle: 'normal',
+    fontWeight: '600',
   },
 
   imageTitle: {

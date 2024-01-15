@@ -20,7 +20,9 @@ const Basket: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
   return (
     <View style={styles.mainContainer}>
       {itemId === 0 ? (
-        <Text style={styles.emptyText}>Empty Basket</Text>
+        <View style={styles.emptyView}>
+          <Text style={styles.emptyText}>Empty Basket</Text>
+        </View>
       ) : (
         <View style={styles.mainContainer}>
           <BasketHeadline coffeeItem={coffeeItem?.title} />
@@ -40,6 +42,15 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#F9F9F9',
+  },
+
+  emptyView: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    gap: 5,
   },
 
   emptyText: {},

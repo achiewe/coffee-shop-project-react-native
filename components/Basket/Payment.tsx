@@ -11,8 +11,6 @@ interface PaymentProps {
 export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
   const quantity = useSelector((store: RootState) => store.quantity.quantities);
 
-  console.log(quantity);
-
   // const calculateTotalPrice = (): number => {
   //   let totalPrice = 0;
   //   for (let i = 0; i < coffeeItems.length; i++) {

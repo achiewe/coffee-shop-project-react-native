@@ -33,7 +33,7 @@ export default function Basket(): JSX.Element {
           />
         </View>
       ) : (
-        <View>
+        <View style={styles.basketDiv}>
           <View style={styles.basketView}>
             <Text style={styles.componentName}>Basket</Text>
           </View>
@@ -96,5 +96,12 @@ const styles = StyleSheet.create({
   emptyBasketImg: {
     width: 70,
     height: 70,
+  },
+
+  basketDiv: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 30,
   },
 });

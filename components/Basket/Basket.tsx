@@ -53,7 +53,12 @@ const styles = StyleSheet.create({
     gap: 5,
   },
 
-  emptyText: {},
+  emptyText: {
+    fontSize: 20,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    color: '#2F2D2C',
+  },
 });
 
 export default Basket;

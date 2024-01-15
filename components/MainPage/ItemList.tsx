@@ -83,7 +83,9 @@ export default function ItemList() {
                   uri: `data:image/png;base64, ${item.image}`,
                 }}
               />
-              <View style={styles.ratingStarView}> </View>
+              <View style={styles.ratingStarView}>
+                <Image source={require('../../assets/Rating.png')} />
+              </View>
             </TouchableOpacity>
             <Text style={styles.CoffeeTitle}>{item.title}</Text>
           </View>

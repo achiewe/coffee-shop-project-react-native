@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
   itemView: {
     display: 'flex',
     flexDirection: 'column',
+    position: 'absolute',
     width: 141,
     gap: 15,
   },

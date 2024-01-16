@@ -19,7 +19,6 @@ export default function SuccessOrder(): JSX.Element {
   useEffect(() => {
     const timeout = setTimeout(() => {
       navigation.navigate('Home');
-      dispatch(setFilteredItems([]));
       dispatch(setDefaultProduct([]));
     }, 2000); // Change 3000 to the desired delay in milliseconds
 

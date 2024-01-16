@@ -14,6 +14,7 @@ import Detail from './components/Detail/Detail';
 import {RootStackParamList} from './types';
 import {Provider} from 'react-redux';
 import store from './features/store';
+import SuccessOrder from './components/SuccessOrder';
 
 function App(): React.JSX.Element {
   // create state for show the login component
@@ -32,6 +33,7 @@ function App(): React.JSX.Element {
   const Stack = createNativeStackNavigator<RootStackParamList>();
   return (
     <Provider store={store}>
+      <SuccessOrder />
       <SafeAreaView style={styles.mainDiv}>
         {showLogin ? (
           <Login />

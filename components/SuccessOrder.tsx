@@ -1,10 +1,15 @@
-import {Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 export default function SuccessOrder() {
   return (
-    <View>
-      {' '}
-      <Text> </Text>{' '}
+    <View style={styles.MainCont}>
+      <Text>adasdas </Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  MainCont: {
+    flex: 1,
+  },
+});

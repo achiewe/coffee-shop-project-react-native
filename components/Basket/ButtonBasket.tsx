@@ -13,7 +13,6 @@ export default function ButtonBasket() {
     <TouchableOpacity
       style={styles.button}
       onPress={() => {
-        // Use navigation.dispatch to replace the current screen with 'Success' screen
         navigation.dispatch(StackActions.replace('Success'));
       }}>
       <Text style={styles.buttonText}> Order</Text>

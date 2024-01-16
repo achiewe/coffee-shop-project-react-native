@@ -26,5 +26,5 @@ const BuyProductSlice = createSlice({
   },
 });
 
-export const {setAddProduct} = BuyProductSlice.actions;
+export const {setAddProduct, setDefaultProduct} = BuyProductSlice.actions;
 export default BuyProductSlice.reducer;

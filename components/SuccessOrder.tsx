@@ -13,10 +13,12 @@ export default function SuccessOrder(): JSX.Element {
     (store: RootState) => store.filteredItems.filteredItems,
   );
 
+  console.log(filterItems);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       navigation.navigate('Home');
-      setFilteredItems(filterItems);
+      dispatch(setFilteredItems([]));
     }, 2000); // Change 3000 to the desired delay in milliseconds
 
     // Clear the timeout if the component is unmounted before the delay completes

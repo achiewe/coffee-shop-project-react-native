@@ -26,8 +26,6 @@ export default function ItemQuantity({
     dispatch(setQuantity(Array(product.length).fill(1)));
   }, [product]);
 
-  console.log(quantity);
-
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>

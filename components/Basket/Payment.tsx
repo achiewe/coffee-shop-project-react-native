@@ -2,22 +2,29 @@ import {StyleSheet, Text, View} from 'react-native';
 import itemType from '../../typesData';
 import {useSelector} from 'react-redux';
 import store, {RootState} from '../../features/store';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 interface PaymentProps {
   coffeeItems: itemType[];
 }
 
 export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
+  const [totalPrice, setTotalPrice] = useState<string | undefined>();
+
   const quantity = useSelector((store: RootState) => store.quantity.quantities);
 
-  // const calculateTotalPrice = (): number => {
-  //   let totalPrice = 0;
-  //   for (let i = 0; i < coffeeItems.length; i++) {
-  //     totalPrice += coffeeItems[i].price * quantities[i];
-  //   }
-  //   return totalPrice;
-  // };
+  const calculateTotalPrice = (): number => {
+    let totalPrice = 0;
+    for (let i = 0; i < coffeeItems.length; i++) {
+      totalPrice += coffeeItems[i].price * quantity[i];
+    }
+    setTotalPrice(totalPrice.toFixed(2));
+    return totalPrice;
+  };
+
+  useEffect(() => {
+    calculateTotalPrice();
+  }, [quantity]);
 
   return (
     <View style={styles.containetPayment}>
@@ -26,7 +33,7 @@ export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
         <View style={styles.priceDeliveryView}>
           <View style={styles.priceDelView}>
             <Text style={styles.priceTitle}> Price</Text>
-            <Text style={styles.amountPrice}>${coffeeItems[0].price * 1}</Text>
+            <Text style={styles.amountPrice}>${totalPrice}</Text>
           </View>
           <View style={styles.priceDelView}>
             <Text style={styles.priceTitle}> Delivery Fee</Text>
@@ -40,7 +47,10 @@ export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
         <View style={styles.priceDelView}>
           <Text style={styles.priceTitle}> Total Payment</Text>
           <Text style={styles.amountPrice}>
-            ${coffeeItems[0].price * 1 + 1.0}
+            $
+            {totalPrice !== undefined
+              ? parseFloat(totalPrice) * 1 + 1.0
+              : 'N/A'}
           </Text>
         </View>
       </View>

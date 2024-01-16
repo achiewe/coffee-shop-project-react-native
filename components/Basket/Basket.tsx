@@ -3,13 +3,9 @@ import BasketHeadline from './BasketHeadline';
 import ItemDiscount from './ItemDiscount';
 import Payment from './Payment';
 import AddOnBasket from './AddOnBasket';
-import {RouteProp} from '@react-navigation/native';
-import {RootStackParamList} from '../../types';
 import data from '../../data.json';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
-
-type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Basket'>;
 
 // component for the basket component
 export default function Basket(): JSX.Element {

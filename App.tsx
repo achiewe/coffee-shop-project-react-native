@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import Login from './components/Login';
 import Footer from './components/Footer';
 
@@ -33,7 +33,6 @@ function App(): React.JSX.Element {
   const Stack = createNativeStackNavigator<RootStackParamList>();
   return (
     <Provider store={store}>
-      <SuccessOrder />
       <SafeAreaView style={styles.mainDiv}>
         {showLogin ? (
           <Login />
@@ -43,6 +42,7 @@ function App(): React.JSX.Element {
               <Stack.Screen name="Home" component={MainPage} />
               <Stack.Screen name="Basket" component={Basket} />
               <Stack.Screen name="Detail" component={Detail} />
+              <Stack.Screen name="Success" component={SuccessOrder} />
             </Stack.Navigator>
             <Footer />
           </NavigationContainer>

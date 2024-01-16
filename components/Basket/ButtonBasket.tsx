@@ -1,9 +1,21 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {useDispatch} from 'react-redux';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {RootStackParamList} from '../../types';
+import {StackActions} from '@react-navigation/native';
 
 // component buttonBasket
 export default function ButtonBasket() {
+  const dispatch = useDispatch();
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity
+      style={styles.button}
+      onPress={() => {
+        // Use navigation.dispatch to replace the current screen with 'Success' screen
+        navigation.dispatch(StackActions.replace('Success'));
+      }}>
       <Text style={styles.buttonText}> Order</Text>
     </TouchableOpacity>
   );

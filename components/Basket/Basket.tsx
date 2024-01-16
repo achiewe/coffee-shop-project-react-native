@@ -79,7 +79,6 @@ const styles = StyleSheet.create({
 
   emptyView: {
     flex: 1,
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',

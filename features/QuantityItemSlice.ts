@@ -5,29 +5,18 @@ export interface QuantityProps {
   quantities: number[];
 }
 
-// Function to initialize quantities array based on coffeeItems length
-const initializeQuantities = (coffeeItems: itemType[]): number[] => {
-  return Array(coffeeItems.length).fill(1);
-};
-
 const initialState: QuantityProps = {
-  quantities: [], // Initial state will be set dynamically based on coffeeItems
+  quantities: [],
 };
 
 const QuantityItemSlice = createSlice({
   name: 'quantity',
-  initialState: {
-    ...initialState,
-    quantities: initializeQuantities([]), // Initialize with an empty array for now
-  },
+  initialState,
   reducers: {
-    setQuantity: (
-      state,
-      action: PayloadAction<{index: number; quantity: number}>,
-    ) => {
-      const {index, quantity} = action.payload;
-      state.quantities[index] = quantity;
+    setQuantity: (state, action: PayloadAction<number[]>) => {
+      state.quantities = action.payload;
     },
+
     incrementQuantity: (state, action: PayloadAction<number>) => {
       const index = action.payload;
       state.quantities[index] += 1;

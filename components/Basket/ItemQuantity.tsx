@@ -4,7 +4,9 @@ import {RootState} from '../../features/store';
 import {
   decrementQuantity,
   incrementQuantity,
+  setQuantity,
 } from '../../features/QuantityItemSlice';
+import {useEffect} from 'react';
 
 interface ItemQuantityProp {
   coffeeItem: string | undefined;
@@ -17,6 +19,14 @@ export default function ItemQuantity({
 }: ItemQuantityProp): JSX.Element {
   const quantity = useSelector((store: RootState) => store.quantity.quantities);
   const dispatch = useDispatch();
+  const product = useSelector(
+    (store: RootState) => store.AddProduct.AddProduct,
+  );
+  useEffect(() => {
+    dispatch(setQuantity(Array(product.length).fill(1)));
+  }, [product]);
+
+  console.log(quantity);
 
   return (
     <View style={styles.viewQuantity}>
@@ -36,7 +46,7 @@ export default function ItemQuantity({
             <Image source={require('../../assets/minus.png')} />
           </View>
         </TouchableOpacity>
-        <Text style={styles.quantity}>{quantity}</Text>
+        <Text style={styles.quantity}>{quantity[index]}</Text>
         <TouchableOpacity
           onPress={() => {
             dispatch(incrementQuantity(index));

@@ -42,7 +42,11 @@ function App(): React.JSX.Element {
               <Stack.Screen name="Home" component={MainPage} />
               <Stack.Screen name="Basket" component={Basket} />
               <Stack.Screen name="Detail" component={Detail} />
-              <Stack.Screen name="Success" component={SuccessOrder} />
+              <Stack.Screen
+                name="Success"
+                component={SuccessOrder}
+                options={{headerShown: false, headerBackVisible: false}}
+              />
             </Stack.Navigator>
             <Footer />
           </NavigationContainer>

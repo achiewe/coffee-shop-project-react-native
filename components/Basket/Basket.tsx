@@ -34,10 +34,6 @@ export default function Basket(): JSX.Element {
         </View>
       ) : (
         <View style={styles.basketDiv}>
-          <View style={styles.basketView}>
-            <Text style={styles.componentName}>Basket</Text>
-          </View>
-
           <View style={styles.mainContainer}>
             <BasketHeadline coffeeItems={coffeeItems} />
             <ItemDiscount />
@@ -103,6 +99,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 30,
+    paddingBottom: 30,
   },
 });

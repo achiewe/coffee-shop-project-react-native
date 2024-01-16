@@ -1,18 +1,30 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {useDispatch} from 'react-redux';
+import {setAddProduct} from '../../features/BuyProductSlice';
 
 interface BuyNowProps {
   coffeeItem: number | undefined;
+  coffeeItemId: number | undefined;
 }
 
 // BuyNow component
-export default function BuyNow({coffeeItem}: BuyNowProps): JSX.Element {
+export default function BuyNow({
+  coffeeItem,
+  coffeeItemId,
+}: BuyNowProps): JSX.Element {
+  const dispatch = useDispatch();
+
   return (
     <View style={styles.mainView}>
       <View style={styles.viewPrice}>
         <Text style={styles.textPrice}>Price</Text>
         <Text style={styles.priceAmount}>$ {coffeeItem}</Text>
       </View>
-      <TouchableOpacity style={styles.buyButton}>
+      <TouchableOpacity
+        style={styles.buyButton}
+        onPress={() => {
+          coffeeItemId && dispatch(setAddProduct(coffeeItemId));
+        }}>
         <Text style={styles.buttonText}>Buy Now</Text>
       </TouchableOpacity>
     </View>

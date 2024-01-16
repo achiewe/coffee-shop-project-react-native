@@ -19,6 +19,10 @@ const BuyProductSlice = createSlice({
         state.AddProduct.push(action.payload);
       }
     },
+
+    setDefaultProduct: (state, action: PayloadAction<number[]>) => {
+      state.AddProduct = action.payload;
+    },
   },
 });
 

@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   qunatityView: {
     display: 'flex',
     flexDirection: 'row',
-    gap: 15,
+    gap: 10,
     alignItems: 'center',
   },
 

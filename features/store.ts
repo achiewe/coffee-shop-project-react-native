@@ -6,6 +6,7 @@ import FilteredItemSlice, {ItemProps} from './FilteredItemSlice';
 import QuantityItemSlice, {QuantityProps} from './QuantityItemSlice';
 import BuyProductSlice, {ProductProps} from './BuyProductSlice';
 import TotalPriceSlice, {TotalPriceProps} from './TotalPriceSlice';
+import ItemCountSlice, {CountProps} from './ItemCountSlice';
 
 // add the state in the store
 const store = configureStore({
@@ -17,6 +18,7 @@ const store = configureStore({
     AddProduct: BuyProductSlice,
     quantity: QuantityItemSlice,
     TotalPrice: TotalPriceSlice,
+    ItemCount: ItemCountSlice,
   },
 });
 
@@ -29,6 +31,7 @@ export type RootState = {
   quantity: QuantityProps;
   AddProduct: ProductProps;
   TotalPrice: TotalPriceProps;
+  ItemCount: CountProps;
 };
 
 export default store;

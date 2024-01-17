@@ -13,9 +13,6 @@ export default function SuccessOrder(): JSX.Element {
   const filterItems = useSelector(
     (store: RootState) => store.filteredItems.filteredItems,
   );
-
-  console.log(filterItems);
-
   useEffect(() => {
     const timeout = setTimeout(() => {
       navigation.navigate('Home');

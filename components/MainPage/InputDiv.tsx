@@ -1,10 +1,4 @@
-import {
-  Image,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, StyleSheet, TextInput, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useDispatch} from 'react-redux';
 import {setSearchTitle} from '../../features/SearchTitleSlice';

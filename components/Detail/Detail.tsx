@@ -1,4 +1,4 @@
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import ImageTitle from './ImageTitle';
 import Description from './Description';
 import BuyNow from './BuyNow';

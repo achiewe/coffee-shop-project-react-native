@@ -10,7 +10,7 @@ interface AddOnBasketProps {
 export default function AddOnBasket({
   coffeeItems,
 }: AddOnBasketProps): JSX.Element {
-  const TotalPrice = useSelector(
+  const totalPrice = useSelector(
     (store: RootState) => store.TotalPrice.TotalPrice,
   );
 
@@ -26,8 +26,8 @@ export default function AddOnBasket({
               </View>
               <Text style={styles.amountOfMoney}>
                 $
-                {coffeeItems[0].price !== undefined
-                  ? coffeeItems[0].price * 1 + 1.0
+                {totalPrice !== undefined
+                  ? parseFloat(totalPrice) * 1 + 1.0
                   : 'N/A'}
               </Text>
             </View>

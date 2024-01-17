@@ -17,7 +17,7 @@ export default function Footer(): JSX.Element {
           source={require('../assets/Bag.png')}
         />
         <View style={styles.amountOfCoffeeView}>
-          <Text> 2</Text>
+          <Text style={styles.CoffeeQuantityText}> 2</Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -60,14 +60,20 @@ const styles = StyleSheet.create({
 
   amountOfCoffeeView: {
     position: 'absolute',
-    width: 15,
-    height: 15,
+    width: 20,
+    height: 17,
     backgroundColor: 'red',
     borderRadius: 5,
-    right: -7,
+    right: -10,
     top: -3,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+
+  CoffeeQuantityText: {
+    color: 'white',
+    fontSize: 12,
+    fontStyle: 'normal',
   },
 });

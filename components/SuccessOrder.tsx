@@ -28,6 +28,12 @@ export default function SuccessOrder(): JSX.Element {
   return (
     <View style={styles.MainCont}>
       <Image source={require('../assets/iconSuccess.png')} />
+      <View style={styles.viewSuccess}>
+        <Text style={styles.congratSuccess}>Congratulations!</Text>
+        <Text style={styles.successText}>
+          Your order have been submitted successfully
+        </Text>
+      </View>
     </View>
   );
 }
@@ -39,5 +45,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 20,
+  },
+
+  viewSuccess: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  congratSuccess: {
+    color: '#2F2D2C',
+    fontSize: 20,
+    fontWeight: '600',
+    fontStyle: 'normal',
+  },
+
+  successText: {
+    color: '#9B9B9B',
+    fontSize: 15,
+    fontWeight: '600',
+    fontStyle: 'normal',
   },
 });

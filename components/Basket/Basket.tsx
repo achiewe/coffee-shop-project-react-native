@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
 
   basketDiv: {
     flex: 1,
+    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     paddingBottom: 30,

@@ -1,5 +1,5 @@
 import {NavigationProp, useNavigation} from '@react-navigation/native';
-import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {RootStackParamList} from '../types';
 
 // Footer component
@@ -12,7 +12,13 @@ export default function Footer(): JSX.Element {
         <Image source={require('../assets/Home.png')} />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('Basket')}>
-        <Image source={require('../assets/Bag.png')} />
+        <Image
+          style={styles.basketImage}
+          source={require('../assets/Bag.png')}
+        />
+        <View style={styles.amountOfCoffeeView}>
+          <Text></Text>
+        </View>
       </TouchableOpacity>
     </View>
   );
@@ -46,5 +52,22 @@ const styles = StyleSheet.create({
     tintColor: '#C67C4E',
     width: 23,
     height: 23,
+  },
+
+  basketImage: {
+    position: 'relative',
+  },
+
+  amountOfCoffeeView: {
+    position: 'absolute',
+    width: 15,
+    height: 15,
+    backgroundColor: 'red',
+    borderRadius: 5,
+    right: -7,
+    top: -3,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

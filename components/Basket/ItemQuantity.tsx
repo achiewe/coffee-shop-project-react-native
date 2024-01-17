@@ -7,7 +7,7 @@ import {
   setQuantity,
 } from '../../features/QuantityItemSlice';
 import {useEffect} from 'react';
-import {setAddProduct} from '../../features/BuyProductSlice';
+import {setAddProduct, setRemoveProduct} from '../../features/BuyProductSlice';
 import {setItemCountDeduction} from '../../features/ItemCountSlice';
 
 interface ItemQuantityProp {
@@ -35,7 +35,7 @@ export default function ItemQuantity({
 
   const handleRemoveItem = () => {
     const itemIdToRemove = product[index]; // Use the individual item, not an array
-    dispatch(setAddProduct(itemIdToRemove));
+    dispatch(setRemoveProduct(itemIdToRemove));
   };
 
   return (
@@ -44,7 +44,6 @@ export default function ItemQuantity({
         <TouchableOpacity
           onPress={() => {
             handleRemoveItem();
-            dispatch(setItemCountDeduction());
           }}>
           <Image
             style={styles.deleteIcon}
@@ -112,6 +111,9 @@ const styles = StyleSheet.create({
     color: '#2F2D2C',
     fontStyle: 'normal',
     fontWeight: '600',
+    maxWidth: 150,
+    minWidth: 150,
+    alignSelf: 'flex-start',
   },
 
   qunatityView: {

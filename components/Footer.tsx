@@ -12,6 +12,10 @@ export default function Footer(): JSX.Element {
     (store: RootState) => store.ItemCount.ItemCount,
   );
 
+  const product = useSelector(
+    (store: RootState) => store.AddProduct.AddProduct,
+  );
+
   return (
     <View style={styles.footerWarp}>
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
@@ -25,9 +29,9 @@ export default function Footer(): JSX.Element {
         <View
           style={[
             styles.amountOfCoffeeView,
-            {display: itemCount === 0 ? 'none' : 'flex'},
+            {display: product.length === 0 ? 'none' : 'flex'},
           ]}>
-          <Text style={styles.CoffeeQuantityText}>{itemCount}</Text>
+          <Text style={styles.CoffeeQuantityText}>{product.length}</Text>
         </View>
       </TouchableOpacity>
     </View>

@@ -124,13 +124,18 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    width: 141,
-    gap: 15,
+    width: 149,
+    height: 238,
+    backgroundColor: 'white',
+    borderRadius: 16,
+    padding: 5,
+    justifyContent: 'space-between',
   },
 
   itemImage: {
-    width: 150,
-    height: 70,
+    width: '100%',
+    borderRadius: 16,
+    height: 132,
     backgroundColor: 'red',
   },
 
@@ -165,6 +170,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     fontStyle: 'normal',
+    alignSelf: 'flex-start',
   },
 
   priceView: {
@@ -172,6 +178,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: 10,
   },
 
   price: {

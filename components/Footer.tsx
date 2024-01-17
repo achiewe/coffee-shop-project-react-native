@@ -1,10 +1,16 @@
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {RootStackParamList} from '../types';
+import {useSelector} from 'react-redux';
+import {RootState} from '../features/store';
 
 // Footer component
 export default function Footer(): JSX.Element {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+  const itemCount = useSelector(
+    (store: RootState) => store.ItemCount.ItemCount,
+  );
 
   return (
     <View style={styles.footerWarp}>
@@ -16,8 +22,12 @@ export default function Footer(): JSX.Element {
           style={styles.basketImage}
           source={require('../assets/Bag.png')}
         />
-        <View style={styles.amountOfCoffeeView}>
-          <Text style={styles.CoffeeQuantityText}> 2</Text>
+        <View
+          style={[
+            styles.amountOfCoffeeView,
+            {display: itemCount === 0 ? 'none' : 'flex'},
+          ]}>
+          <Text style={styles.CoffeeQuantityText}>{itemCount}</Text>
         </View>
       </TouchableOpacity>
     </View>

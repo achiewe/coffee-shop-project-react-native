@@ -17,7 +17,7 @@ export default function Footer(): JSX.Element {
           source={require('../assets/Bag.png')}
         />
         <View style={styles.amountOfCoffeeView}>
-          <Text></Text>
+          <Text> 2</Text>
         </View>
       </TouchableOpacity>
     </View>

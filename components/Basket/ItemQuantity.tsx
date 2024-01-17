@@ -8,6 +8,7 @@ import {
 } from '../../features/QuantityItemSlice';
 import {useEffect} from 'react';
 import {setAddProduct} from '../../features/BuyProductSlice';
+import {setItemCountDeduction} from '../../features/ItemCountSlice';
 
 interface ItemQuantityProp {
   coffeeItem: string | undefined;
@@ -40,7 +41,11 @@ export default function ItemQuantity({
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>
-        <TouchableOpacity onPress={handleRemoveItem}>
+        <TouchableOpacity
+          onPress={() => {
+            handleRemoveItem();
+            dispatch(setItemCountDeduction());
+          }}>
           <Image
             style={styles.deleteIcon}
             source={require('../../assets/delete.png')}

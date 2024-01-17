@@ -92,10 +92,7 @@ const styles = StyleSheet.create({
   },
 
   basketDiv: {
-    flex: 1,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    width: '100%',
     paddingBottom: 30,
   },
 });

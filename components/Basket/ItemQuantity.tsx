@@ -29,7 +29,12 @@ export default function ItemQuantity({
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>
-        <TouchableOpacity></TouchableOpacity>
+        <TouchableOpacity>
+          <Image
+            style={styles.deleteIcon}
+            source={require('../../assets/delete.png')}
+          />
+        </TouchableOpacity>
         <Image
           style={styles.coffeeImage}
           source={require('../../assets/classicCappuccino.png')}
@@ -66,19 +71,24 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 43,
+    gap: 30,
   },
 
   imageTitleView: {
     display: 'flex',
     flexDirection: 'row',
-    gap: 21,
+    gap: 20,
     alignItems: 'center',
   },
 
+  deleteIcon: {
+    width: 20,
+    height: 20,
+  },
+
   coffeeImage: {
-    width: 54,
-    height: 54,
+    width: 37,
+    height: 37,
   },
 
   coffeeTitle: {

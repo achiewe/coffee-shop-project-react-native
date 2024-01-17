@@ -7,20 +7,19 @@ export interface ProductProps {
 const initialState: ProductProps = {
   AddProduct: [],
 };
+
 const BuyProductSlice = createSlice({
   name: 'AddProduct',
   initialState,
   reducers: {
-    setAddProduct: (state, action: PayloadAction<number | number[]>) => {
-      const payloadArray = Array.isArray(action.payload)
-        ? action.payload
-        : [action.payload];
+    setAddProduct: (state, action: PayloadAction<number>) => {
+      const itemId = action.payload;
 
-      payloadArray.forEach(payload => {
-        if (!state.AddProduct.includes(payload)) {
-          state.AddProduct.push(payload);
-        }
-      });
+      if (state.AddProduct.includes(itemId)) {
+        state.AddProduct = state.AddProduct.filter(id => id !== itemId);
+      } else {
+        state.AddProduct.push(itemId);
+      }
     },
 
     setDefaultProduct: (state, action: PayloadAction<number[]>) => {

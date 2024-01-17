@@ -33,9 +33,10 @@ export default function ItemQuantity({
   }, [product]);
 
   const handleRemoveItem = () => {
-    const itemIdToRemove = [product[index]]; // Wrap the id in an array
-    dispatch(setAddProduct(product.filter(id => !itemIdToRemove.includes(id))));
+    const itemIdToRemove = product[index]; // Use the individual item, not an array
+    dispatch(setAddProduct(itemIdToRemove));
   };
+
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>

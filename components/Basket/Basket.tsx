@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#F9F9F9',
+    backgroundColor: 'red',
   },
 
   basketView: {
@@ -70,10 +70,11 @@ const styles = StyleSheet.create({
   },
 
   emptyView: {
-    flex: 1,
     display: 'flex',
     justifyContent: 'center',
+    flex: 1,
     alignItems: 'center',
+    backgroundColor: 'white',
     gap: 20,
   },
 

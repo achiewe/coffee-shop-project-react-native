@@ -1,6 +1,7 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {setAddProduct} from '../../features/BuyProductSlice';
+import {setItemCount} from '../../features/ItemCountSlice';
 
 interface BuyNowProps {
   coffeeItem: number | undefined;
@@ -24,6 +25,7 @@ export default function BuyNow({
         style={styles.buyButton}
         onPress={() => {
           coffeeItemId && dispatch(setAddProduct(coffeeItemId));
+          dispatch(setItemCount());
         }}>
         <Text style={styles.buttonText}>Buy Now</Text>
       </TouchableOpacity>

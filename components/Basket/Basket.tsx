@@ -19,7 +19,13 @@ export default function Basket(): JSX.Element {
 
   console.log(coffeeItems);
   return (
-    <ScrollView style={styles.mainContainer}>
+    <ScrollView
+      style={styles.mainContainer}
+      contentContainerStyle={{
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
       {coffeeItems.length < 1 ? (
         <View style={styles.emptyView}>
           <Text style={styles.emptyText}>Your basket is empty </Text>
@@ -48,7 +54,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: 'red',
+    backgroundColor: '#F9F9F9',
   },
 
   basketView: {
@@ -70,11 +76,10 @@ const styles = StyleSheet.create({
   },
 
   emptyView: {
+    width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    flex: 1,
     alignItems: 'center',
-    backgroundColor: 'white',
     gap: 20,
   },
 

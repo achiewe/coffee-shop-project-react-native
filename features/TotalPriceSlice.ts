@@ -1,22 +1,22 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-export interface TitleProps {
-  searchTitle: string;
+export interface TotalPriceProps {
+  TotalPrice: string;
 }
 
-const initialState: TitleProps = {
-  searchTitle: '',
+const initialState: TotalPriceProps = {
+  TotalPrice: '',
 };
 
-const SearchTitleSlice = createSlice({
+const TotalPriceSlice = createSlice({
   name: 'searchTitle',
   initialState,
   reducers: {
-    setSearchTitle: (state, action: PayloadAction<string>) => {
-      state.searchTitle = action.payload;
+    setTotalPrice: (state, action: PayloadAction<string>) => {
+      state.TotalPrice = action.payload;
     },
   },
 });
 
-export const {setSearchTitle} = SearchTitleSlice.actions;
-export default SearchTitleSlice.reducer;
+export const {setTotalPrice} = TotalPriceSlice.actions;
+export default TotalPriceSlice.reducer;

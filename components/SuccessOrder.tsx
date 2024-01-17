@@ -19,7 +19,7 @@ export default function SuccessOrder(): JSX.Element {
     const timeout = setTimeout(() => {
       navigation.navigate('Home');
       dispatch(setDefaultProduct([]));
-    }, 400000); // Change 3000 to the desired delay in milliseconds
+    }, 3000); // Change 3000 to the desired delay in milliseconds
 
     // Clear the timeout if the component is unmounted before the delay completes
     return () => clearTimeout(timeout);

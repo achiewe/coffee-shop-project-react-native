@@ -4,7 +4,6 @@ import {RootState} from '../../features/store';
 import {
   decrementQuantity,
   incrementQuantity,
-  removeItem,
   setQuantity,
 } from '../../features/QuantityItemSlice';
 import {useEffect} from 'react';
@@ -33,20 +32,14 @@ export default function ItemQuantity({
     dispatch(setQuantity(Array(product.length).fill(1)));
   }, [product]);
 
-  // const handleRemoveItem = () => {
-  //   // Dispatch an action to remove the item with itemId from the AddProduct array
-  //   dispatch(
-  //     setAddProduct(product.filter(id => id !== filteredItems[index]?.id)),
-  //   );
-  // };
-
+  const handleRemoveItem = () => {
+    const itemIdToRemove = [product[index]]; // Wrap the id in an array
+    dispatch(setAddProduct(product.filter(id => !itemIdToRemove.includes(id))));
+  };
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>
-        <TouchableOpacity
-          onPress={() => {
-            dispatch(removeItem(index)); // Dispatch the removeItem action with the item index
-          }}>
+        <TouchableOpacity onPress={handleRemoveItem}>
           <Image
             style={styles.deleteIcon}
             source={require('../../assets/delete.png')}

@@ -25,14 +25,9 @@ const QuantityItemSlice = createSlice({
       const index = action.payload;
       state.quantities[index] = Math.max(1, state.quantities[index] - 1);
     },
-
-    removeItem: (state, action: PayloadAction<number>) => {
-      // Remove the item at the specified index
-      state.quantities.splice(action.payload, 1);
-    },
   },
 });
 
-export const {setQuantity, incrementQuantity, decrementQuantity, removeItem} =
+export const {setQuantity, incrementQuantity, decrementQuantity} =
   QuantityItemSlice.actions;
 export default QuantityItemSlice.reducer;

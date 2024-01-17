@@ -1,6 +1,6 @@
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {useEffect} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import {RootStackParamList} from '../types';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../features/store';
@@ -27,7 +27,7 @@ export default function SuccessOrder(): JSX.Element {
 
   return (
     <View style={styles.MainCont}>
-      <Text>adasdas </Text>
+      <Image source={require('../assets/iconSuccess.png')} />
     </View>
   );
 }

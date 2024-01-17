@@ -4,9 +4,11 @@ import {RootState} from '../../features/store';
 import {
   decrementQuantity,
   incrementQuantity,
+  removeItem,
   setQuantity,
 } from '../../features/QuantityItemSlice';
 import {useEffect} from 'react';
+import {setAddProduct} from '../../features/BuyProductSlice';
 
 interface ItemQuantityProp {
   coffeeItem: string | undefined;
@@ -22,14 +24,29 @@ export default function ItemQuantity({
   const product = useSelector(
     (store: RootState) => store.AddProduct.AddProduct,
   );
+
+  const filteredItems = useSelector(
+    (store: RootState) => store.filteredItems.filteredItems,
+  );
+
   useEffect(() => {
     dispatch(setQuantity(Array(product.length).fill(1)));
   }, [product]);
 
+  // const handleRemoveItem = () => {
+  //   // Dispatch an action to remove the item with itemId from the AddProduct array
+  //   dispatch(
+  //     setAddProduct(product.filter(id => id !== filteredItems[index]?.id)),
+  //   );
+  // };
+
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            dispatch(removeItem(index)); // Dispatch the removeItem action with the item index
+          }}>
           <Image
             style={styles.deleteIcon}
             source={require('../../assets/delete.png')}

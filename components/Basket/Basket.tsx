@@ -17,7 +17,6 @@ export default function Basket(): JSX.Element {
     .flatMap(category => category.coffees)
     .filter(item => product.includes(item.id));
 
-  console.log(coffeeItems);
   return (
     <ScrollView
       style={styles.mainContainer}

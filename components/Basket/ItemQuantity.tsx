@@ -29,6 +29,7 @@ export default function ItemQuantity({
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>
+        <TouchableOpacity></TouchableOpacity>
         <Image
           style={styles.coffeeImage}
           source={require('../../assets/classicCappuccino.png')}

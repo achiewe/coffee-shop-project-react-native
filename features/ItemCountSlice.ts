@@ -15,8 +15,12 @@ const ItemCountSlice = createSlice({
     setItemCount: state => {
       state.ItemCount = state.ItemCount + 1;
     },
+
+    resetItemCount: state => {
+      state.ItemCount = 0;
+    },
   },
 });
 
-export const {setItemCount} = ItemCountSlice.actions;
+export const {setItemCount, resetItemCount} = ItemCountSlice.actions;
 export default ItemCountSlice.reducer;

@@ -8,6 +8,7 @@ import {setAddCard} from '../../features/AddBasketSlice';
 import {useEffect, useState} from 'react';
 import {setFilteredItems} from '../../features/FilteredItemSlice';
 import {setAddProduct} from '../../features/BuyProductSlice';
+import {setItemCount} from '../../features/ItemCountSlice';
 
 // function for data map
 export default function ItemList() {
@@ -99,6 +100,7 @@ export default function ItemList() {
               style={styles.addCartBut}
               onPress={() => {
                 dispatch(setAddProduct(item.id));
+                dispatch(setItemCount());
               }}>
               <Image source={require('../../assets/add.png')} />
             </TouchableOpacity>

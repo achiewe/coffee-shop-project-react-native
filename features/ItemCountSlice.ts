@@ -12,7 +12,7 @@ const ItemCountSlice = createSlice({
   name: 'ItemCount',
   initialState,
   reducers: {
-    setItemCount: (state, action: PayloadAction<boolean>) => {
+    setItemCount: state => {
       state.ItemCount = state.ItemCount + 1;
     },
   },

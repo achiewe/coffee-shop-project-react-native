@@ -1,15 +1,22 @@
 import {StyleSheet, Text, View} from 'react-native';
 import itemType from '../../typesData';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import store, {RootState} from '../../features/store';
 import {useEffect, useState} from 'react';
+import {setTotalPrice} from '../../features/TotalPriceSlice';
 
 interface PaymentProps {
   coffeeItems: itemType[];
 }
 
 export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
-  const [totalPrice, setTotalPrice] = useState<string | undefined>();
+  // const [totalPrice, setTotalPrice] = useState<string | undefined>();
+
+  const totalPrice = useSelector(
+    (store: RootState) => store.TotalPrice.TotalPrice,
+  );
+
+  const dispatch = useDispatch();
 
   const quantity = useSelector((store: RootState) => store.quantity.quantities);
 
@@ -18,7 +25,7 @@ export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
     for (let i = 0; i < coffeeItems.length; i++) {
       totalPrice += coffeeItems[i].price * quantity[i];
     }
-    setTotalPrice(totalPrice.toFixed(2));
+    dispatch(setTotalPrice(totalPrice.toFixed(2)));
     return totalPrice;
   };
 

@@ -1,12 +1,10 @@
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {useDispatch} from 'react-redux';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 import {StackActions} from '@react-navigation/native';
 
 // component buttonBasket
 export default function ButtonBasket() {
-  const dispatch = useDispatch();
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   return (

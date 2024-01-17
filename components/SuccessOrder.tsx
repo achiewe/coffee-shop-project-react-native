@@ -5,6 +5,7 @@ import {RootStackParamList} from '../types';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../features/store';
 import {setDefaultProduct} from '../features/BuyProductSlice';
+import {resetItemCount} from '../features/ItemCountSlice';
 
 export default function SuccessOrder(): JSX.Element {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
@@ -19,6 +20,7 @@ export default function SuccessOrder(): JSX.Element {
     const timeout = setTimeout(() => {
       navigation.navigate('Home');
       dispatch(setDefaultProduct([]));
+      dispatch(resetItemCount());
     }, 3000); // Change 3000 to the desired delay in milliseconds
 
     // Clear the timeout if the component is unmounted before the delay completes

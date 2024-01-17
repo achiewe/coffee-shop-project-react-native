@@ -70,12 +70,9 @@ const styles = StyleSheet.create({
   },
 
   emptyView: {
-    height: '100%',
-    width: '100%',
-    display: 'flex',
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column',
     gap: 20,
   },
 

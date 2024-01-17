@@ -1,8 +1,8 @@
 import {StyleSheet, Text, View} from 'react-native';
 import itemType from '../../typesData';
 import {useDispatch, useSelector} from 'react-redux';
-import store, {RootState} from '../../features/store';
-import {useEffect, useState} from 'react';
+import {RootState} from '../../features/store';
+import {useEffect} from 'react';
 import {setTotalPrice} from '../../features/TotalPriceSlice';
 
 interface PaymentProps {

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   ScrollView,
   StyleSheet,
@@ -13,6 +13,16 @@ import {setId} from '../../features/TitleCategoryIdSlice';
 export default function ListCoffeeTitle() {
   const dispatch = useDispatch();
   const [selectedId, setSelectedId] = useState<number | null>(null);
+
+  // Set the initially selected ID (you can change this logic based on your requirement)
+  useEffect(() => {
+    // For example, set the first item's ID as initially selected
+    if (data.coffee_categories.length > 0) {
+      const initialId = data.coffee_categories[0].id;
+      dispatch(setId(initialId));
+      setSelectedId(initialId);
+    }
+  }, [dispatch]);
 
   const getId = (id: number): void => {
     dispatch(setId(id));
@@ -39,7 +49,13 @@ export default function ListCoffeeTitle() {
                 style.TitleView,
                 {backgroundColor: isSelected ? '#C67C4E' : '#F3F3F3'},
               ]}>
-              <Text style={style.titleText}>{item.category}</Text>
+              <Text
+                style={[
+                  style.titleText,
+                  {color: isSelected ? '#FFFFFF' : '#2F4B4E'},
+                ]}>
+                {item.category}
+              </Text>
             </View>
           </TouchableWithoutFeedback>
         );

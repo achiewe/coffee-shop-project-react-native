@@ -19,7 +19,10 @@ const Detail: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
   return (
     <ScrollView style={styles.mainDetail}>
       <ImageTitle coffeeItem={coffeeItem} />
-      <Description coffeeItem={coffeeItem?.description} />
+      <Description
+        coffeeItem={coffeeItem?.description}
+        coffeeItemShort={coffeeItem?.shortDescription}
+      />
       <BuyNow coffeeItem={coffeeItem?.price} coffeeItemId={coffeeItem?.id} />
     </ScrollView>
   );

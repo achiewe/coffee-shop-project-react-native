@@ -2,10 +2,14 @@ import {StyleSheet, Text, View} from 'react-native';
 
 interface coffeItemProps {
   coffeeItem: string | undefined;
+  coffeeItemShort: string | undefined;
 }
 
 // description component
-export default function Description({coffeeItem}: coffeItemProps): JSX.Element {
+export default function Description({
+  coffeeItem,
+  coffeeItemShort,
+}: coffeItemProps): JSX.Element {
   return (
     <View style={styles.mainDesc}>
       <View style={styles.line} />

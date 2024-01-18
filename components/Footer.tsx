@@ -20,17 +20,24 @@ export default function Footer(): JSX.Element {
     (store: RootState) => store.AddProduct.AddProduct,
   );
 
+  const RouteState = useSelector(
+    (store: RootState) => store.stateRoute.stateRoute,
+  );
+
   return (
     <View style={styles.footerWarp}>
-      <TouchableOpacity
-        onPress={() => {
-          navigation.dispatch(StackActions.replace('Home'));
-        }}>
-        <Image source={require('../assets/Home.png')} />
+      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <Image
+          source={require('../assets/Home.png')}
+          style={[{tintColor: RouteState === 'Home' ? '#C67C4E' : '#8D8D8D'}]}
+        />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('Basket')}>
         <Image
-          style={styles.basketImage}
+          style={[
+            styles.basketImage,
+            {tintColor: RouteState === 'Basket' ? '#C46200' : '#8D8D8D'},
+          ]}
           source={require('../assets/Bag.png')}
         />
         <View

@@ -1,8 +1,4 @@
-import {
-  NavigationProp,
-  StackActions,
-  useNavigation,
-} from '@react-navigation/native';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {RootStackParamList} from '../types';
 import {useSelector} from 'react-redux';

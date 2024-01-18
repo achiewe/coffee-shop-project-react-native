@@ -27,7 +27,7 @@ export default function Basket(): JSX.Element {
   useEffect(() => {
     const name = route.name;
     dispatch(setStateRoute(name));
-  });
+  }, []);
 
   return (
     <ScrollView

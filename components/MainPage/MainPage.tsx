@@ -4,7 +4,7 @@ import Advertisment from './Advertisment';
 import ListCoffeeTitle from './ListCoffeeTitle';
 import ItemList from './ItemList';
 import {useFocusEffect, useRoute} from '@react-navigation/native';
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {setStateRoute} from '../../features/RouteStateSlice';
 import {RootState} from '../../features/store';

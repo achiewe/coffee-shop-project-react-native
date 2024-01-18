@@ -32,7 +32,7 @@
           "id": 5,
           "title": "Flavored Cappuccino",
           "price": 6.49,
-          "image": "../../assets/mocha_cappuccino.png",
+          "image": "https://png.pngtree.com/png-vector/20231102/ourmid/pngtree-a-cup-of-cappuccino-with-christmas-tree-latte-art-png-image_10357696.png",
           "description": "The Flavored Cappuccino is a delightful twist on the classic espresso and steamed milk combination, infused with tempting flavors like vanilla, caramel, or hazelnut. Each sip offers a harmonious blend of robust coffee and the chosen flavor, topped with creamy microfoam. This cappuccino provides a unique and indulgent experience, perfect for those seeking a touch of flair in their coffee ritual.",
           "rating": 4.8
         }
@@ -46,7 +46,7 @@
           "id": 7,
           "title": "Caramel Macchiato",
           "price": 5.99,
-          "image": "../../assets/caramel_macchiato.png",
+          "image": "https://media.istockphoto.com/id/901577982/photo/top-view-of-hot-coffee-caramel-macchiato-cappuccino-cup-isolated-on-white-background-clipping.jpg?s=612x612&w=0&k=20&c=vn_Xr2iVgmVBzH4X1prg8WUZXXqPJtCaSzJk4VzGWqs=",
           "description": "The Caramel Macchiato is a tantalizing coffee creation featuring a perfect harmony of espresso, steamed milk, and a drizzle of sweet caramel. The bold espresso is complemented by velvety steamed milk, with the caramel adding a luscious touch of sweetness. This layered concoction showcases a beautiful presentation, with the caramel gently staining the creamy surface. A Caramel Macchiato is a luxurious and visually appealing coffee indulgence that effortlessly balances rich coffee flavors with the allure of caramel sweetness.",
           "rating": 4.6
         },
@@ -54,7 +54,7 @@
           "id": 8,
           "title": "Vanilla Macchiato",
           "price": 5.49,
-          "image": "../../assets/vanilla_macchiato.png",
+          "image": "https://thumbs.dreamstime.com/b/hot-coffee-caramel-macchiato-espresso-dash-frothy-steamed-milk-vanilla-syrup-topped-ceramic-cup-top-view-isolated-164245449.jpg",
           "description": "A Vanilla Macchiato is a sweet and creamy espresso drink featuring vanilla syrup. Topped with frothy milk, it offers a perfect balance of bold coffee and comforting sweetness.",
           "rating": 4.5
         },
@@ -62,7 +62,7 @@
           "id": 9,
           "title": "Toffee Nut Macchiato",
           "price": 6.49,
-          "image": "../../assets/toffee_nut_macchiato.png",
+          "image": "https://thumbs.dreamstime.com/b/top-view-hot-coffee-latte-art-caramel-macchiato-isolated-white-background-path-clipping-included-98309826.jpg",
           "description": "A Toffee Nut Macchiato is a delightful espresso-based beverage infused with the rich and nutty flavor of toffee. This sweet and aromatic drink combines bold espresso with steamed milk, creating a velvety texture. Topped with a drizzle of toffee nut syrup, it delivers a perfect harmony of espresso intensity and sweet, nutty undertones for a truly indulgent experience.",
           "rating": 4.9
         },
@@ -70,7 +70,7 @@
           "id": 10,
           "title": "Chocolate Macchiato",
           "price": 6.99,
-          "image": "../../assets/chocolate_macchiato.png",
+          "image": "https://us.123rf.com/450wm/ketmut/ketmut2210/ketmut221000036/192891933-cup-of-coffee-with-milk-and-chocolate-cappuccino-with-cinnamon-macchiato-cocoa-top-view-easy-to-edit.jpg",
           "description": "A Chocolate Macchiato is a decadent espresso drink featuring the perfect blend of rich chocolate and bold coffee. Steamed milk adds a creamy texture, while a drizzle of chocolate syrup crowns the beverage. This delightful combination creates a luscious and indulgent flavor profile, making the Chocolate Macchiato a delicious treat for those who enjoy the harmony of coffee and chocolate.",
           "rating": 4.7
         }
@@ -84,7 +84,7 @@
           "id": 12,
           "title": "Vanilla Latte",
           "price": 4.99,
-          "image": "../../assets/vanilla_latte.png",
+          "image": "https://png.pngtree.com/png-vector/20231102/ourmid/pngtree-a-cup-of-cappuccino-with-christmas-tree-latte-art-png-image_10357696.png",
           "description": "A Vanilla Latte is a classic and comforting coffee beverage made with smooth espresso, steamed milk, and a hint of sweet vanilla syrup. The rich espresso is balanced by the creamy texture of the milk, while the addition of vanilla syrup imparts a subtle and delightful sweetness. This popular and well-loved drink offers a perfect harmony of flavors, making it a go-to choice for those seeking a smooth and mildly sweet coffee experience.",
           "rating": 4.4
         },
@@ -92,7 +92,7 @@
           "id": 13,
           "title": "Caramel Latte",
           "price": 5.49,
-          "image": "../../assets/caramel_latte.png",
+          "image": "https://thumbs.dreamstime.com/b/top-view-hot-coffee-latte-art-caramel-macchiato-isolated-white-background-path-clipping-included-98309826.jpg",
           "description": "A Caramel Latte is a delicious coffee treat featuring espresso, steamed milk, and a luscious caramel syrup. The robust espresso is complemented by the velvety texture of steamed milk, and the sweet caramel syrup adds a rich and indulgent flavor. This popular beverage strikes a perfect balance between the boldness of coffee and the sweetness of caramel, making it a delightful choice for those who enjoy a harmonious blend of flavors in their coffee.",
           "rating": 4.8
         },

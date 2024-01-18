@@ -22,18 +22,12 @@ export default function Basket(): JSX.Element {
     .flatMap(category => category.coffees)
     .filter(item => product.includes(item.id));
 
-  const stateRoute = useSelector(
-    (store: RootState) => store.stateRoute.stateRoute,
-  );
-
   const route = useRoute();
 
   useEffect(() => {
     const name = route.name;
     dispatch(setStateRoute(name));
   });
-
-  console.log(stateRoute);
 
   return (
     <ScrollView

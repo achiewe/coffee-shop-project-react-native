@@ -14,10 +14,6 @@ export default function MainPage() {
   const route = useRoute();
   const dispatch = useDispatch();
 
-  const stateRoute = useSelector(
-    (store: RootState) => store.stateRoute.stateRoute,
-  );
-
   useEffect(() => {
     const name = route.name;
     dispatch(setStateRoute(name));

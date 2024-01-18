@@ -7,26 +7,23 @@ import {
   setQuantity,
 } from '../../features/QuantityItemSlice';
 import {useEffect} from 'react';
-import {setAddProduct, setRemoveProduct} from '../../features/BuyProductSlice';
-import {setItemCountDeduction} from '../../features/ItemCountSlice';
+import {setRemoveProduct} from '../../features/BuyProductSlice';
 
 interface ItemQuantityProp {
   coffeeItem: string | undefined;
+  coffeeImage: string | undefined;
   index: number;
 }
 
 export default function ItemQuantity({
   coffeeItem,
+  coffeeImage,
   index,
 }: ItemQuantityProp): JSX.Element {
   const quantity = useSelector((store: RootState) => store.quantity.quantities);
   const dispatch = useDispatch();
   const product = useSelector(
     (store: RootState) => store.AddProduct.AddProduct,
-  );
-
-  const filteredItems = useSelector(
-    (store: RootState) => store.filteredItems.filteredItems,
   );
 
   useEffect(() => {
@@ -52,7 +49,9 @@ export default function ItemQuantity({
         </TouchableOpacity>
         <Image
           style={styles.coffeeImage}
-          source={require('../../assets/classicCappuccino.png')}
+          source={{
+            uri: coffeeImage,
+          }}
         />
         <Text style={styles.coffeeTitle}>{coffeeItem}</Text>
       </View>
@@ -102,8 +101,8 @@ const styles = StyleSheet.create({
   },
 
   coffeeImage: {
-    width: 37,
-    height: 37,
+    width: 40,
+    height: 45,
   },
 
   coffeeTitle: {

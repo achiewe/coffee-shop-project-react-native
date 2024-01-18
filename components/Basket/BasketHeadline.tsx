@@ -13,7 +13,12 @@ export default function BasketHeadline({
   return (
     <View style={styles.mainContainer}>
       {coffeeItems.map((item, index) => (
-        <ItemQuantity key={item.id} coffeeItem={item.title} index={index} />
+        <ItemQuantity
+          key={item.id}
+          coffeeItem={item.title}
+          coffeeImage={item.image}
+          index={index}
+        />
       ))}
     </View>
   );

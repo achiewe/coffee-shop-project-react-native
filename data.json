@@ -100,7 +100,7 @@
           "id": 14,
           "title": "Hazelnut Latte",
           "price": 5.99,
-          "image": "../../assets/hazelnut_latte.png",
+          "image": "https://img.freepik.com/premium-photo/top-view-cup-coffee-latte_33900-5549.jpg",
           "description": "A Hazelnut Latte is a delightful coffee creation combining espresso, steamed milk, and the warm, nutty essence of hazelnut syrup. The robustness of the espresso pairs smoothly with the creamy steamed milk, while the addition of hazelnut syrup imparts a comforting and nutty flavor. This harmonious blend creates a satisfying and flavorful experience, making the Hazelnut Latte a popular choice for those who appreciate a touch of nuttiness in their coffee.",
           "rating": 4.5
         },
@@ -108,7 +108,7 @@
           "id": 15,
           "title": "White Chocolate Latte",
           "price": 6.49,
-          "image": "../../assets/white_chocolate_latte.png",
+          "image": "https://img.freepik.com/premium-photo/top-view-latte-art-coffee-white-background_33900-5429.jpg",
           "description": "A White Chocolate Latte is a luxurious coffee beverage that melds rich espresso with creamy steamed milk and the sweet, velvety notes of white chocolate. The espresso provides a bold foundation, while the steamed milk adds a smooth texture. The addition of white chocolate syrup brings a delightful sweetness, creating a harmonious and indulgent flavor profile. This popular latte variation is perfect for those who enjoy a decadent twist on their coffee experience.",
           "rating": 4.6
         }

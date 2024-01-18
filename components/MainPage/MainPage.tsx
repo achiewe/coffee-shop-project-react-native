@@ -5,20 +5,13 @@ import ListCoffeeTitle from './ListCoffeeTitle';
 import ItemList from './ItemList';
 import {useFocusEffect, useRoute} from '@react-navigation/native';
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {setStateRoute} from '../../features/RouteStateSlice';
-import {RootState} from '../../features/store';
 
 // mainPage function
 export default function MainPage() {
   const route = useRoute();
   const dispatch = useDispatch();
-
-  const RouteState = useSelector(
-    (store: RootState) => store.stateRoute.stateRoute,
-  );
-
-  console.log(RouteState);
 
   useFocusEffect(
     React.useCallback(() => {

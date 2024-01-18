@@ -4,8 +4,11 @@ import ItemDiscount from './ItemDiscount';
 import Payment from './Payment';
 import AddOnBasket from './AddOnBasket';
 import data from '../../data.json';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
+import {useRoute} from '@react-navigation/native';
+import {useEffect} from 'react';
+import {setStateRoute} from '../../features/RouteStateSlice';
 
 // component for the basket component
 export default function Basket(): JSX.Element {
@@ -13,9 +16,24 @@ export default function Basket(): JSX.Element {
     (store: RootState) => store.AddProduct.AddProduct,
   );
 
+  const dispatch = useDispatch();
+
   const coffeeItems = data.coffee_categories
     .flatMap(category => category.coffees)
     .filter(item => product.includes(item.id));
+
+  const stateRoute = useSelector(
+    (store: RootState) => store.stateRoute.stateRoute,
+  );
+
+  const route = useRoute();
+
+  useEffect(() => {
+    const name = route.name;
+    dispatch(setStateRoute(name));
+  });
+
+  console.log(stateRoute);
 
   return (
     <ScrollView

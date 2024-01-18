@@ -122,7 +122,7 @@
           "id": 17,
           "title": "Classic Americano",
           "price": 3.99,
-          "image": "../../assets/classic_americano.png",
+          "image": "https://png.pngtree.com/png-vector/20191027/ourlarge/pngtree-coffee-cup-vector-top-view-hot-americano-coffee-espresso-fast-food-png-image_1887885.jpg",
           "description": "A Classic Americano is a simple yet robust coffee drink made by diluting a shot of espresso with hot water. This results in a bold and full-bodied cup of coffee, akin to drip coffee but with the distinctive espresso strength. The Americano retains the rich flavor of espresso while offering a milder taste, making it an ideal choice for those who appreciate a straightforward and strong coffee experience.",
           "rating": 4.3
         },
@@ -130,7 +130,7 @@
           "id": 18,
           "title": "Mint Americano",
           "price": 4.49,
-          "image": "../../assets/mint_americano.png",
+          "image": "https://img.freepik.com/premium-photo/cup-coffee-is-shown-top-view-isolated-white-background_410516-20340.jpg?w=360",
           "description": "A Mint Americano is a refreshing twist on the classic Americano. This invigorating coffee drink is created by combining a shot of espresso with hot water and a touch of mint syrup. The result is a harmonious blend of bold coffee flavor, subtle minty freshness, and a hint of sweetness. This unique variation provides a cooling sensation, making it a delightful choice for those who enjoy a mint-infused and revitalizing coffee experience.",
           "rating": 4.7
         },
@@ -138,7 +138,7 @@
           "id": 19,
           "title": "Cinnamon Americano",
           "price": 4.99,
-          "image": "../../assets/cinnamon_americano.png",
+          "image": "https://t4.ftcdn.net/jpg/05/69/90/07/360_F_569900749_yLgjVp0MMgS7SdZ1NLaVTky0tOOWz8Sa.jpg",
           "description": "A Cinnamon Americano is a flavorful variation of the classic Americano. It involves combining a shot of espresso with hot water and a dash of cinnamon syrup. This infusion adds a warm and aromatic dimension to the bold coffee, creating a delightful balance between the robust espresso and the subtle spiciness of cinnamon. The Cinnamon Americano offers a unique and comforting twist for those seeking a bit of spice in their coffee experience.",
           "rating": 4.6
         },
@@ -146,7 +146,7 @@
           "id": 20,
           "title": "Maple Americano",
           "price": 5.49,
-          "image": "../../assets/maple_americano.png",
+          "image": "https://www.shutterstock.com/image-photo/black-coffee-cup-top-view-600nw-771758605.jpg",
           "description": "A Maple Americano is a delightful rendition of the classic Americano, featuring a shot of espresso mixed with hot water and a touch of sweet maple syrup. This unique blend offers a harmonious combination of bold coffee flavor and the natural sweetness of maple, creating a warm and comforting beverage. The Maple Americano provides a cozy and slightly sweet twist for those who enjoy a touch of natural sweetness in their coffee.",
           "rating": 4.5
         }

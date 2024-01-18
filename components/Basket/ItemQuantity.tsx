@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
 
   coffeeImage: {
     width: 40,
-    height: 45,
+    height: 40,
   },
 
   coffeeTitle: {

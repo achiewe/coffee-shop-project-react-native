@@ -24,7 +24,6 @@ export default function MainPage() {
     React.useCallback(() => {
       const name = route.name;
       dispatch(setStateRoute(name));
-      console.log(name);
     }, [route]),
   );
 

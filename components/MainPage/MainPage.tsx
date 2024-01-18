@@ -4,13 +4,26 @@ import Advertisment from './Advertisment';
 import ListCoffeeTitle from './ListCoffeeTitle';
 import ItemList from './ItemList';
 import {useRoute} from '@react-navigation/native';
+import {useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {setStateRoute} from '../../features/RouteStateSlice';
+import {RootState} from '../../features/store';
 
 // mainPage function
 export default function MainPage() {
   const route = useRoute();
-  const name = route.name;
+  const dispatch = useDispatch();
 
-  console.log(name);
+  const stateRoute = useSelector(
+    (store: RootState) => store.stateRoute.stateRoute,
+  );
+
+  useEffect(() => {
+    const name = route.name;
+    dispatch(setStateRoute(name));
+  });
+
+  console.log(stateRoute);
 
   return (
     <ScrollView style={styles.mainDiv}>

@@ -23,8 +23,6 @@ export default function MainPage() {
     dispatch(setStateRoute(name));
   });
 
-  console.log(stateRoute);
-
   return (
     <ScrollView style={styles.mainDiv}>
       <InputDiv />

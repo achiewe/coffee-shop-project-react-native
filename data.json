@@ -8,7 +8,7 @@
           "id": 2,
           "title": "Classic Cappuccino",
           "price": 4.99,
-          "image": "../../assets/classicCappuccino.png",
+          "image": "https://img.freepik.com/premium-photo/top-view-hot-coffee-cappuccino-latte-art-isolated-white-background_158502-316.jpg?w=996",
           "description": "A classic cappuccino is a harmonious blend of espresso, steamed milk, and velvety microfoam. This iconic Italian coffee creation captivates the senses with a rich, bold espresso base, topped with a luscious layer of frothy milk that balances the intensity of the coffee. Served in a small cup, the cappuccino is a timeless indulgence, celebrated for its perfect marriage of strong flavors and creamy texture.",
           "rating": 4.5
         },

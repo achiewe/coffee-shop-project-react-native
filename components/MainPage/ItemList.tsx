@@ -72,13 +72,9 @@ export default function ItemList() {
                 dispatch(setAddCard(false));
               }}>
               <Image
-                style={{
-                  width: 51,
-                  height: 51,
-                  resizeMode: 'contain',
-                }}
+                style={styles.coffeeImage}
                 source={{
-                  uri: `data:image/png;base64, ${item.image}`,
+                  uri: item.image,
                 }}
               />
               <View style={styles.ratingStarView}>
@@ -139,6 +135,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
   },
 
+  coffeeImage: {
+    width: '100%',
+    height: 132,
+  },
+
   ratingStarView: {
     display: 'flex',
     flexDirection: 'row',
@@ -148,7 +149,7 @@ const styles = StyleSheet.create({
   },
 
   ratingNumber: {
-    color: '#FFFFFF',
+    color: '#2F2D2C',
     fontSize: 13,
     fontStyle: 'normal',
     fontWeight: '600',

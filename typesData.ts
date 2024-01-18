@@ -4,6 +4,7 @@ type itemType = {
   price: number;
   image: string;
   description: string;
+  shortDescription: string;
   rating: number;
 };
 

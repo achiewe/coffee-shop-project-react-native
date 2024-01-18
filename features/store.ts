@@ -7,6 +7,7 @@ import QuantityItemSlice, {QuantityProps} from './QuantityItemSlice';
 import BuyProductSlice, {ProductProps} from './BuyProductSlice';
 import TotalPriceSlice, {TotalPriceProps} from './TotalPriceSlice';
 import ItemCountSlice, {CountProps} from './ItemCountSlice';
+import RouteStateSlice, {RouteProps} from './RouteStateSlice';
 
 // add the state in the store
 const store = configureStore({
@@ -19,6 +20,7 @@ const store = configureStore({
     quantity: QuantityItemSlice,
     TotalPrice: TotalPriceSlice,
     ItemCount: ItemCountSlice,
+    stateRoute: RouteStateSlice,
   },
 });
 
@@ -32,6 +34,7 @@ export type RootState = {
   AddProduct: ProductProps;
   TotalPrice: TotalPriceProps;
   ItemCount: CountProps;
+  stateRoute: RouteProps;
 };
 
 export default store;

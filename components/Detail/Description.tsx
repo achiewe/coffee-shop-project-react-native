@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 interface coffeItemProps {
   coffeeItem: string | undefined;
@@ -15,7 +15,12 @@ export default function Description({
       <View style={styles.line} />
       <View style={styles.titleDescView}>
         <Text style={styles.title}> Description</Text>
-        <Text style={styles.paragraph}>{coffeeItem}</Text>
+        <Text style={styles.paragraph}>
+          {coffeeItem}
+          <TouchableOpacity>
+            <Text style={styles.readMoreText}>Read more</Text>
+          </TouchableOpacity>
+        </Text>
       </View>
     </View>
   );
@@ -64,5 +69,13 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     lineHeight: 20,
     width: 290,
+  },
+
+  readMoreText: {
+    fontSize: 14,
+    color: '#C67C4E',
+    fontWeight: '600',
+    fontStyle: 'normal',
+    lineHeight: 20,
   },
 });

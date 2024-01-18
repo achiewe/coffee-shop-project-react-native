@@ -16,19 +16,19 @@ import {RootState} from '../../features/store';
 
 // mainPage function
 export default function MainPage() {
-  const route = useRoute();
-  const dispatch = useDispatch();
+  // const route = useRoute();
+  // const dispatch = useDispatch();
 
-  const RouteState = useSelector(
-    (store: RootState) => store.stateRoute.stateRoute,
-  );
+  // const RouteState = useSelector(
+  //   (store: RootState) => store.stateRoute.stateRoute,
+  // );
 
-  console.log(RouteState);
+  // console.log(RouteState);
 
-  useEffect(() => {
-    const name = route.name;
-    dispatch(setStateRoute(name));
-  }, []);
+  // useEffect(() => {
+  //   const name = route.name;
+  //   dispatch(setStateRoute(name));
+  // }, []);
 
   return (
     <ScrollView style={styles.mainDiv}>

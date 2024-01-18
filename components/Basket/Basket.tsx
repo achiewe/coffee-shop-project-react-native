@@ -16,18 +16,18 @@ export default function Basket(): JSX.Element {
     (store: RootState) => store.AddProduct.AddProduct,
   );
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const coffeeItems = data.coffee_categories
     .flatMap(category => category.coffees)
     .filter(item => product.includes(item.id));
 
-  const route = useRoute();
+  // const route = useRoute();
 
-  useEffect(() => {
-    const name = route.name;
-    dispatch(setStateRoute(name));
-  }, []);
+  // useEffect(() => {
+  //   const name = route.name;
+  //   dispatch(setStateRoute(name));
+  // }, []);
 
   return (
     <ScrollView

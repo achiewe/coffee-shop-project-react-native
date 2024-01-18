@@ -16,9 +16,9 @@ export default function Description({
       <View style={styles.titleDescView}>
         <Text style={styles.title}> Description</Text>
         <Text style={styles.paragraph}>
-          {coffeeItem}
-          <TouchableOpacity>
-            <Text style={styles.readMoreText}>Read more</Text>
+          {coffeeItemShort}
+          <TouchableOpacity style={styles.toucOpa}>
+            <Text style={styles.readMoreText}> Read more</Text>
           </TouchableOpacity>
         </Text>
       </View>
@@ -67,15 +67,17 @@ const styles = StyleSheet.create({
     color: '#9B9B9B',
     fontWeight: '400',
     fontStyle: 'normal',
+    alignSelf: 'center',
     lineHeight: 20,
     width: 290,
   },
 
+  toucOpa: {},
+
   readMoreText: {
     fontSize: 14,
+    lineHeight: 23,
     color: '#C67C4E',
     fontWeight: '600',
-    fontStyle: 'normal',
-    lineHeight: 20,
   },
 });

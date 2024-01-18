@@ -3,11 +3,15 @@ import InputDiv from './InputDiv';
 import Advertisment from './Advertisment';
 import ListCoffeeTitle from './ListCoffeeTitle';
 import ItemList from './ItemList';
-import {useRoute} from '@react-navigation/native';
+import {
+  NavigationProp,
+  StackActions,
+  useNavigation,
+  useRoute,
+} from '@react-navigation/native';
 import {useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {setStateRoute} from '../../features/RouteStateSlice';
-import {RootState} from '../../features/store';
 
 // mainPage function
 export default function MainPage() {

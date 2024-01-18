@@ -1,4 +1,8 @@
-import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {
+  NavigationProp,
+  StackActions,
+  useNavigation,
+} from '@react-navigation/native';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {RootStackParamList} from '../types';
 import {useSelector} from 'react-redux';
@@ -18,7 +22,10 @@ export default function Footer(): JSX.Element {
 
   return (
     <View style={styles.footerWarp}>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.dispatch(StackActions.replace('Home'));
+        }}>
         <Image source={require('../assets/Home.png')} />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('Basket')}>

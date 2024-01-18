@@ -1,26 +1,18 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import ReadMore from '@fawazahmed/react-native-read-more';
 
 interface coffeItemProps {
   coffeeItem: string | undefined;
-  coffeeItemShort: string | undefined;
 }
 
 // description component
-export default function Description({
-  coffeeItem,
-  coffeeItemShort,
-}: coffeItemProps): JSX.Element {
+export default function Description({coffeeItem}: coffeItemProps): JSX.Element {
   return (
     <View style={styles.mainDesc}>
       <View style={styles.line} />
       <View style={styles.titleDescView}>
         <Text style={styles.title}> Description</Text>
-        <Text style={styles.paragraph}>
-          {coffeeItemShort}
-          <TouchableOpacity style={styles.toucOpa}>
-            <Text style={styles.readMoreText}> Read more</Text>
-          </TouchableOpacity>
-        </Text>
+        <ReadMore style={styles.paragraph}>{coffeeItem}</ReadMore>
       </View>
     </View>
   );
@@ -67,17 +59,23 @@ const styles = StyleSheet.create({
     color: '#9B9B9B',
     fontWeight: '400',
     fontStyle: 'normal',
-    alignSelf: 'center',
+    alignSelf: 'flex-end',
     lineHeight: 20,
-    width: 290,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
-  toucOpa: {},
+  // toucOpa: {
+  //   backgroundColor: 'red',
+  // },
 
-  readMoreText: {
-    fontSize: 14,
-    lineHeight: 23,
-    color: '#C67C4E',
-    fontWeight: '600',
-  },
+  // readMoreText: {
+  //   fontSize: 14,
+  //   color: '#9B9B9B',
+  //   fontWeight: '400',
+  //   fontStyle: 'normal',
+  //   alignSelf: 'center',
+  //   lineHeight: 20,
+  // },
 });

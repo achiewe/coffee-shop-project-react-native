@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fawazahmed/react-native-read-more": "^3.0.3",
     "@react-native-community/google-signin": "^5.0.0",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",

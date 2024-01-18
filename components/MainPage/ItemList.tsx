@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     width: '100%',
     borderRadius: 16,
     height: 132,
-    backgroundColor: 'red',
+    backgroundColor: 'white',
   },
 
   coffeeImage: {

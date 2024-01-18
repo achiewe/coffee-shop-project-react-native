@@ -9,7 +9,12 @@ interface ImageTitleProps {
 export default function ImageTitle({coffeeItem}: ImageTitleProps): JSX.Element {
   return (
     <View style={styles.mainContainer}>
-      <Image source={require('../../assets/classicCappuccino.png')} />
+      <Image
+        style={styles.CoffeeImage}
+        source={{
+          uri: coffeeItem?.image,
+        }}
+      />
       <View style={styles.titleRateCont}>
         <View style={styles.titleView}>
           <Text style={styles.title}> {coffeeItem?.title}</Text>
@@ -46,6 +51,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 20,
     marginTop: 29,
+  },
+
+  CoffeeImage: {
+    width: 250,
+    height: 226,
   },
 
   titleRateCont: {

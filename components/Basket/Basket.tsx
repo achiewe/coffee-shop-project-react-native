@@ -10,25 +10,31 @@ import {useRoute} from '@react-navigation/native';
 import {useEffect} from 'react';
 import {setStateRoute} from '../../features/RouteStateSlice';
 
-// component for the basket component
+// Component for displaying the basket
 export default function Basket(): JSX.Element {
+  // Redux state for selected products in the basket
   const product = useSelector(
     (store: RootState) => store.AddProduct.AddProduct,
   );
 
+  // Redux dispatch function
   const dispatch = useDispatch();
 
+  // Extracting coffee items based on selected product IDs
   const coffeeItems = data.coffee_categories
     .flatMap(category => category.coffees)
     .filter(item => product.includes(item.id));
 
+  // Accessing the current route using React Navigation
   const route = useRoute();
 
+  // Update route state in Redux on component mount
   useEffect(() => {
     const name = route.name;
     dispatch(setStateRoute(name));
   }, []);
 
+  // Render the basket component
   return (
     <ScrollView
       style={styles.mainContainer}

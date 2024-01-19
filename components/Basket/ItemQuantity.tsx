@@ -9,6 +9,7 @@ import {
 import {useEffect} from 'react';
 import {setRemoveProduct} from '../../features/BuyProductSlice';
 
+// ItemQuantity component for managing the quantity of individual items in the basket
 interface ItemQuantityProp {
   coffeeItem: string | undefined;
   coffeeImage: string | undefined;
@@ -20,21 +21,25 @@ export default function ItemQuantity({
   coffeeImage,
   index,
 }: ItemQuantityProp): JSX.Element {
+  // Redux state for item quantities and selected products
   const quantity = useSelector((store: RootState) => store.quantity.quantities);
   const dispatch = useDispatch();
   const product = useSelector(
     (store: RootState) => store.AddProduct.AddProduct,
   );
 
+  // Set initial quantities when the product list changes
   useEffect(() => {
     dispatch(setQuantity(Array(product.length).fill(1)));
   }, [product]);
 
+  // Handler to remove the item from the basket
   const handleRemoveItem = () => {
     const itemIdToRemove = product[index]; // Use the individual item, not an array
     dispatch(setRemoveProduct(itemIdToRemove));
   };
 
+  // Render the component
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>

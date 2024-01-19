@@ -1,19 +1,25 @@
+// Import necessary components and modules
 import {Image, StyleSheet, Text, View} from 'react-native';
 import ButtonBasket from './ButtonBasket';
 import itemType from '../../typesData';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../features/store';
+
+// Define the props interface for the component
 interface AddOnBasketProps {
   coffeeItems: itemType[];
 }
 
+// Functional component for displaying additional items in the basket
 export default function AddOnBasket({
   coffeeItems,
 }: AddOnBasketProps): JSX.Element {
+  // Retrieve the total price from the Redux store using useSelector
   const totalPrice = useSelector(
     (store: RootState) => store.TotalPrice.TotalPrice,
   );
 
+  // Render the component
   return (
     <View style={styles.addBasketView}>
       <View style={styles.lineStyle}>
@@ -40,6 +46,7 @@ export default function AddOnBasket({
   );
 }
 
+// Styles for the component using StyleSheet.create
 const styles = StyleSheet.create({
   addBasketView: {
     width: '100%',

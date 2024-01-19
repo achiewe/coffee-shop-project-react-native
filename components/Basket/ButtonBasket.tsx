@@ -3,14 +3,17 @@ import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 import {StackActions} from '@react-navigation/native';
 
-// component buttonBasket
+// ButtonBasket component for handling the order button
 export default function ButtonBasket() {
+  // Access navigation functions using useNavigation hook
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
+  // Render the button component
   return (
     <TouchableOpacity
       style={styles.button}
       onPress={() => {
+        // Navigate to the 'Success' screen on button press
         navigation.dispatch(StackActions.replace('Success'));
       }}>
       <Text style={styles.buttonText}> Order</Text>
@@ -18,7 +21,7 @@ export default function ButtonBasket() {
   );
 }
 
-// component style
+// Styles for the ButtonBasket component
 const styles = StyleSheet.create({
   button: {
     width: 315,

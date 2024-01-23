@@ -6,17 +6,21 @@ import {RouteProp} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';
 import data from '../../data.json';
 
+// Define the type for the Detail screen route
 type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Detail'>;
 
-// detail component
+// Detail component
 const Detail: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
+  // Extract the itemId from the route params
   const {itemId} = route.params;
 
+  // Find the coffee item based on the itemId from the data
   const coffeeItem = data.coffee_categories
     .flatMap(category => category.coffees)
     .find(item => item.id === itemId);
 
   return (
+    // ScrollView containing ImageTitle, Description, and BuyNow components
     <ScrollView style={styles.mainDetail}>
       <ImageTitle coffeeItem={coffeeItem} />
       <Description
@@ -28,7 +32,7 @@ const Detail: React.FC<{route: DetailScreenRouteProp}> = ({route}) => {
   );
 };
 
-// detail style
+// Styles for the Detail component
 const styles = StyleSheet.create({
   mainDetail: {
     flex: 1,

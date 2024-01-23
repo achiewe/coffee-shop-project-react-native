@@ -6,8 +6,10 @@ import {RootState} from '../features/store';
 
 // Footer component
 export default function Footer(): JSX.Element {
+  // Access the navigation prop for navigating between screens
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
+  // Retrieve the item count and product data from the Redux store
   const itemCount = useSelector(
     (store: RootState) => store.ItemCount.ItemCount,
   );
@@ -16,23 +18,29 @@ export default function Footer(): JSX.Element {
     (store: RootState) => store.AddProduct.AddProduct,
   );
 
-  const RouteState = useSelector(
+  // Retrieve the current route state from the Redux store
+  const routeState = useSelector(
     (store: RootState) => store.stateRoute.stateRoute,
   );
 
   return (
-    <View style={styles.footerWarp}>
+    // Footer container with Home and Basket icons
+    <View style={styles.footerWrap}>
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Image
           source={require('../assets/Home.png')}
-          style={[{tintColor: RouteState === 'Home' ? '#C67C4E' : '#8D8D8D'}]}
+          style={[
+            styles.pagePng,
+            {tintColor: routeState === 'Home' ? '#C67C4E' : '#8D8D8D'},
+          ]}
         />
       </TouchableOpacity>
+
       <TouchableOpacity onPress={() => navigation.navigate('Basket')}>
         <Image
           style={[
             styles.basketImage,
-            {tintColor: RouteState === 'Basket' ? '#C46200' : '#8D8D8D'},
+            {tintColor: routeState === 'Basket' ? '#C46200' : '#8D8D8D'},
           ]}
           source={require('../assets/Bag.png')}
         />
@@ -48,9 +56,9 @@ export default function Footer(): JSX.Element {
   );
 }
 
-// styles for the footer
+// Styles for the Footer component
 const styles = StyleSheet.create({
-  footerWarp: {
+  footerWrap: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',

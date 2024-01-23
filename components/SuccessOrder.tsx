@@ -7,36 +7,43 @@ import {RootState} from '../features/store';
 import {setDefaultProduct} from '../features/BuyProductSlice';
 import {resetItemCount} from '../features/ItemCountSlice';
 
+// SuccessOrder component
 export default function SuccessOrder(): JSX.Element {
+  // Access the navigation prop for navigating between screens
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const dispatch = useDispatch();
+
+  // Retrieve the filtered items from the Redux store
   const filterItems = useSelector(
     (store: RootState) => store.filteredItems.filteredItems,
   );
+
+  // useEffect hook to navigate back to the Home screen after a delay
   useEffect(() => {
     const timeout = setTimeout(() => {
       navigation.navigate('Home');
       dispatch(setDefaultProduct([]));
       dispatch(resetItemCount());
-    }, 3000); // Change 3000 to the desired delay in milliseconds
+    }, 3000);
 
-    // Clear the timeout if the component is unmounted before the delay completes
     return () => clearTimeout(timeout);
   }, []);
 
   return (
+    // Main container with success message and image
     <View style={styles.MainCont}>
       <Image source={require('../assets/iconSuccess.png')} />
       <View style={styles.viewSuccess}>
         <Text style={styles.congratSuccess}>Congratulations!</Text>
         <Text style={styles.successText}>
-          Your order have been submitted successfully
+          Your order has been submitted successfully
         </Text>
       </View>
     </View>
   );
 }
 
+// Styles for the SuccessOrder component
 const styles = StyleSheet.create({
   MainCont: {
     flex: 1,

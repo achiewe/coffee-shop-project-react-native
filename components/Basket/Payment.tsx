@@ -10,25 +10,26 @@ interface PaymentProps {
 }
 
 export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
-  // const [totalPrice, setTotalPrice] = useState<string | undefined>();
-
+  // Redux selectors to get total price and quantity from the store
   const totalPrice = useSelector(
     (store: RootState) => store.TotalPrice.TotalPrice,
   );
-
-  const dispatch = useDispatch();
-
   const quantity = useSelector((store: RootState) => store.quantity.quantities);
+
+  // Redux dispatcher for updating total price in the store
+  const dispatch = useDispatch();
 
   const calculateTotalPrice = (): number => {
     let totalPrice = 0;
     for (let i = 0; i < coffeeItems.length; i++) {
       totalPrice += coffeeItems[i].price * quantity[i];
     }
+    // Dispatching action to update total price in the store
     dispatch(setTotalPrice(totalPrice.toFixed(2)));
     return totalPrice;
   };
 
+  // useEffect to recalculate total price whenever the quantity changes
   useEffect(() => {
     calculateTotalPrice();
   }, [quantity]);
@@ -65,6 +66,7 @@ export default function Payment({coffeeItems}: PaymentProps): JSX.Element {
   );
 }
 
+// Styles for the component
 const styles = StyleSheet.create({
   containetPayment: {
     display: 'flex',

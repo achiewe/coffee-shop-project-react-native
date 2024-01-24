@@ -5,7 +5,6 @@ import {RootStackParamList} from '../types';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../features/store';
 import {setDefaultProduct} from '../features/BuyProductSlice';
-import {resetItemCount} from '../features/ItemCountSlice';
 
 // SuccessOrder component
 export default function SuccessOrder(): JSX.Element {
@@ -23,7 +22,6 @@ export default function SuccessOrder(): JSX.Element {
     const timeout = setTimeout(() => {
       navigation.navigate('Home');
       dispatch(setDefaultProduct([]));
-      dispatch(resetItemCount());
     }, 3000);
 
     return () => clearTimeout(timeout);

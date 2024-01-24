@@ -9,11 +9,6 @@ export default function Footer(): JSX.Element {
   // Access the navigation prop for navigating between screens
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
-  // Retrieve the item count and product data from the Redux store
-  const itemCount = useSelector(
-    (store: RootState) => store.ItemCount.ItemCount,
-  );
-
   const product = useSelector(
     (store: RootState) => store.AddProduct.AddProduct,
   );

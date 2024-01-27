@@ -1,5 +1,4 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import ReadMore from '@fawazahmed/react-native-read-more';
+import {StyleSheet, Text, View} from 'react-native';
 import {useState} from 'react';
 
 interface coffeItemProps {

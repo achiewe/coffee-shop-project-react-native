@@ -2,6 +2,7 @@ import {StyleSheet, View} from 'react-native';
 import ItemQuantity from './ItemQuantity';
 import itemType from '../../typesData';
 
+// state type
 interface BasketHeadlineProps {
   coffeeItems: itemType[];
 }

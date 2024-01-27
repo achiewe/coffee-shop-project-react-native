@@ -4,6 +4,10 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 ![](./assets/preview.png)
 
+### Links
+
+- app video URL: [https://www.linkedin.com/feed/update/urn:li:activity:7153796702334857216/]
+
 # Getting Started
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.

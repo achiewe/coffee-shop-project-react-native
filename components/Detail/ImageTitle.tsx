@@ -1,6 +1,7 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import itemType from '../../typesData';
 
+// state type
 interface ImageTitleProps {
   coffeeItem: itemType | undefined;
 }

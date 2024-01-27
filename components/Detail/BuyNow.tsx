@@ -2,6 +2,7 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {setAddProduct} from '../../features/BuyProductSlice';
 
+// state types
 interface BuyNowProps {
   coffeeItem: number | undefined;
   coffeeItemId: number | undefined;

@@ -5,6 +5,7 @@ import {RootState} from '../../features/store';
 import {useEffect} from 'react';
 import {setTotalPrice} from '../../features/TotalPriceSlice';
 
+// state type
 interface PaymentProps {
   coffeeItems: itemType[];
 }

@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import {useState} from 'react';
 
+// state type
 interface coffeItemProps {
   coffeeItem: string | undefined;
   coffeeItemShort: string | undefined;

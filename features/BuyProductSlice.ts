@@ -29,6 +29,7 @@ const BuyProductSlice = createSlice({
       state.AddProduct = action.payload;
     },
 
+    // set state to delete item from the basket
     setRemoveProduct: (state, action: PayloadAction<number>) => {
       const itemId = action.payload;
 

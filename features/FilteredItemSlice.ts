@@ -16,6 +16,7 @@ const FilteredItemSlice = createSlice({
   name: 'filteredItems',
   initialState,
   reducers: {
+    // set stte for filteredItems
     setFilteredItems: (state, action: PayloadAction<itemType[]>) => {
       state.filteredItems = action.payload;
     },

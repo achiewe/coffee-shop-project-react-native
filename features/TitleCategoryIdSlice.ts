@@ -15,6 +15,7 @@ const TitleCategoryIdSlice = createSlice({
   name: 'id',
   initialState,
   reducers: {
+    // set state to take id
     setId: (state, action: PayloadAction<number>) => {
       state.id = action.payload;
     },

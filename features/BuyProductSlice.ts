@@ -24,6 +24,7 @@ const BuyProductSlice = createSlice({
       }
     },
 
+    // set state for default value
     setDefaultProduct: (state, action: PayloadAction<number[]>) => {
       state.AddProduct = action.payload;
     },

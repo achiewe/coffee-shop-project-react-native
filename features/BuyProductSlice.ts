@@ -15,6 +15,7 @@ const BuyProductSlice = createSlice({
   name: 'AddProduct',
   initialState,
   reducers: {
+    // set state
     setAddProduct: (state, action: PayloadAction<number>) => {
       const itemId = action.payload;
 

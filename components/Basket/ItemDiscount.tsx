@@ -1,7 +1,7 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 
 // component ItemDiscount
-export default function ItemDiscount() {
+export default function ItemDiscount(): JSX.Element {
   return (
     <View style={styles.discountCont}>
       <View style={styles.line}></View>

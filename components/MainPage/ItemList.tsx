@@ -10,7 +10,7 @@ import {setFilteredItems} from '../../features/FilteredItemSlice';
 import {setAddProduct} from '../../features/BuyProductSlice';
 
 // function for data map
-export default function ItemList() {
+export default function ItemList(): JSX.Element {
   // call id state
   const TitleId = useSelector((store: RootState) => store.id.id);
 
@@ -59,6 +59,7 @@ export default function ItemList() {
     }
   }, [addBasket, itemId]);
 
+  // return jsx element
   return (
     <View style={styles.mainContainer}>
       {filteredItems.map(item => (

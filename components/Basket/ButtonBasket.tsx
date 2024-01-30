@@ -4,7 +4,7 @@ import {RootStackParamList} from '../../types';
 import {StackActions} from '@react-navigation/native';
 
 // ButtonBasket component for handling the order button
-export default function ButtonBasket() {
+export default function ButtonBasket(): JSX.Element {
   // Access navigation functions using useNavigation hook
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 

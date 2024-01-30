@@ -18,6 +18,7 @@ export default function Footer(): JSX.Element {
     (store: RootState) => store.stateRoute.stateRoute,
   );
 
+  // return jsx element
   return (
     // Footer container with Home and Basket icons
     <View style={styles.footerWrap}>

@@ -4,6 +4,7 @@ import {LinearGradient} from 'react-native-linear-gradient';
 
 // add login function for first page
 export default function Login(): JSX.Element {
+  // return jsx element
   return (
     <View style={styles.container}>
       <LinearGradient

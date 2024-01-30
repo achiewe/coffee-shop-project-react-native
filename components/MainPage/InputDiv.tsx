@@ -4,9 +4,10 @@ import {useDispatch} from 'react-redux';
 import {setSearchTitle} from '../../features/SearchTitleSlice';
 
 // inputDiv function
-export default function InputDiv() {
+export default function InputDiv(): JSX.Element {
   const dispatch = useDispatch();
 
+  // return jsx element
   return (
     <LinearGradient
       colors={['#131313', '#525252']}

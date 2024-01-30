@@ -1,7 +1,8 @@
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 
 // advertisment funtion
-export default function Advertisment() {
+export default function Advertisment(): JSX.Element {
+  // return jsx.element
   return (
     <View style={styles.viewImg}>
       <ImageBackground

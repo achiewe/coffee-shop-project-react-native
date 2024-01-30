@@ -26,6 +26,7 @@ export default function SuccessOrder(): JSX.Element {
     return () => clearTimeout(timeout);
   }, []);
 
+  // return jsx element
   return (
     // Main container with success message and image
     <View style={styles.MainCont}>

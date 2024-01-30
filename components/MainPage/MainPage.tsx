@@ -9,7 +9,7 @@ import {useDispatch} from 'react-redux';
 import {setStateRoute} from '../../features/RouteStateSlice';
 
 // mainPage function
-export default function MainPage() {
+export default function MainPage(): JSX.Element {
   const route = useRoute();
   const dispatch = useDispatch();
 
@@ -20,6 +20,7 @@ export default function MainPage() {
     }, [route]),
   );
 
+  // retun jsx element
   return (
     <ScrollView style={styles.mainDiv}>
       <InputDiv />

@@ -10,7 +10,7 @@ import data from '../../data.json';
 import {useDispatch} from 'react-redux';
 import {setId} from '../../features/TitleCategoryIdSlice';
 
-export default function ListCoffeeTitle() {
+export default function ListCoffeeTitle(): JSX.Element {
   const dispatch = useDispatch();
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
@@ -29,6 +29,7 @@ export default function ListCoffeeTitle() {
     setSelectedId(id);
   };
 
+  // return jsx element
   return (
     <ScrollView
       horizontal={true}

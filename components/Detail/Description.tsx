@@ -19,6 +19,7 @@ export default function Description({
     setShowFullDescription(!showFullDescription);
   };
 
+  // return jsx element
   return (
     <View style={styles.mainDesc}>
       <View style={styles.line} />

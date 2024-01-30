@@ -31,6 +31,8 @@ function App(): React.JSX.Element {
   }, []);
 
   const Stack = createNativeStackNavigator<RootStackParamList>();
+
+  // return jsx element
   return (
     <Provider store={store}>
       <SafeAreaView style={styles.mainDiv}>

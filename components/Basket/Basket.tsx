@@ -1,3 +1,4 @@
+// import packages
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import BasketHeadline from './BasketHeadline';
 import ItemDiscount from './ItemDiscount';

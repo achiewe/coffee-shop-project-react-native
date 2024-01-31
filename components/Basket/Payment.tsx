@@ -1,3 +1,4 @@
+// import packages
 import {StyleSheet, Text, View} from 'react-native';
 import itemType from '../../typesData';
 import {useDispatch, useSelector} from 'react-redux';

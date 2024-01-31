@@ -1,3 +1,4 @@
+//import packages
 import {StyleSheet, View} from 'react-native';
 import ItemQuantity from './ItemQuantity';
 import itemType from '../../typesData';

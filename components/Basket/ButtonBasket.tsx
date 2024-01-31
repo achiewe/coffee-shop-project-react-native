@@ -1,3 +1,4 @@
+// import packages
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {RootStackParamList} from '../../types';

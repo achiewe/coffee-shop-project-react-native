@@ -84,6 +84,7 @@ export default function ItemQuantity({
   );
 }
 
+// style of the component
 const styles = StyleSheet.create({
   viewQuantity: {
     width: '100%',

@@ -10,6 +10,7 @@ import data from '../../data.json';
 import {useDispatch} from 'react-redux';
 import {setId} from '../../features/TitleCategoryIdSlice';
 
+// export default function
 export default function ListCoffeeTitle(): JSX.Element {
   const dispatch = useDispatch();
   const [selectedId, setSelectedId] = useState<number | null>(null);

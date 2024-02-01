@@ -40,7 +40,7 @@ export default function ItemQuantity({
     dispatch(setRemoveProduct(itemIdToRemove));
   };
 
-  // Render the component
+  // Render the component ssas
   return (
     <View style={styles.viewQuantity}>
       <View style={styles.imageTitleView}>
